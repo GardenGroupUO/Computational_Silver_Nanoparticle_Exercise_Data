@@ -33,7 +33,7 @@ def silver_nanoprism_growing_model(path_to_input):
 	print('locally optimising')
 	#dyn.run(fmax=0.001,steps=5000)
 
-	traj_name = '.'.join(path_to_input.split('.')[:-1:])+'_animation.traj'
+	traj_path = '.'.join(path_to_input.split('.')[:-1:])+'_animation.traj'
 	import pdb; pdb.set_trace()
 
 	symbol = system[0].symbol
@@ -65,29 +65,16 @@ def silver_nanoprism_growing_model(path_to_input):
 
 	tags = system.get_tags() #get_chemical_symbols()
 	for index in range(len(tags)):
-		tags[index] = 'Ag'
+		tags[index] = 0 # 'Ag'
 	for indices in squares:
 		for index in indices:
-			tags[index] = 'Fe'
+			tags[index] = 1 # 'Fe'
 	system.set_tags(tags) #set_chemical_symbols(tags)
 
-	if os.path.exists(traj_name):
-		os.remove(traj_name)
-	with Trajectory(traj_name,'a') as traj_file:
+	if os.path.exists(traj_path):
+		os.remove(traj_path)
+	with Trajectory(traj_path,'a') as traj_file:
 		traj_file.write(system.copy())
-
-	tags = system.get_tags() #get_chemical_symbols()
-	for index in range(len(tags)):
-		tags[index] = 0 #'Ag'
-	for indices in squ_pos_new_atoms_indices:
-		for index in indices:
-			tags[index] = 1 # 'Ni'
-	system.set_tags(tags) #set_chemical_symbols(tags)
-
-	if os.path.exists('check_'+traj_name):
-		os.remove('check_'+traj_name)
-	with Trajectory('check_'+traj_name,'a') as check_traj_file:
-		check_traj_file.write(system.copy())
 
 	surface_data = []
 	surface_data.append(surface_neighbourlist.copy())
@@ -197,13 +184,4 @@ def silver_nanoprism_growing_model(path_to_input):
 		with Trajectory(traj_name,'a') as traj_file:
 			traj_file.write(system.copy())
 
-		tags = system.get_tags() #get_chemical_symbols()
-		for index in range(len(tags)):
-			tags[index] = 0 # 'Ag'
-		for indices in squ_pos_new_atoms_indices:
-			for index in indices:
-				tags[index] = 1 # 'Ni'
-		system.set_tags(tags) #set_chemical_symbols(tags)
-
-		with Trajectory('check_'+traj_name,'a') as check_traj_file:
-			check_traj_file.write(system.copy())
+		return traj_name
