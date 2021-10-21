@@ -87,7 +87,7 @@ def silver_nanoprism_growing_model(path_to_input):
 	while True:
 		counter += 1
 		print('----------------------------------')
-		print('Adding atom'+str(counter))
+		print('Adding atom '+str(counter))
 		print()
 		square_or_triangle = randrange(0, 100, 1)
 		positions_to_add = tri_pos_new_atoms if (square_or_triangle == 0) else squ_pos_new_atoms # nearly_squ_pos_new_atoms
@@ -180,7 +180,8 @@ def silver_nanoprism_growing_model(path_to_input):
 				tags[index] = 1 #'Fe'
 		system.set_tags(tags) #set_chemical_symbols(tags)
 
+		print('Adding image to Traj')
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
-		return traj_path
+	return traj_path
