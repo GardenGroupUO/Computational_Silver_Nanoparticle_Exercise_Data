@@ -1,0 +1,1641 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Chemistry Outreach Chemistry Viewer</title>
+    <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"> </script>
+    <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
+
+    <script>
+        //Viewing functions
+
+        function move_view(viewpoint_id)
+        {
+            var viewpoint = document.getElementById(viewpoint_id)
+
+            var viewpoint_id_1 = viewpoint_id+'_1'
+            var viewpoint_id_2 = viewpoint_id+'_2'
+
+            var centerOfRotation = document.getElementById(viewpoint_id_1).getAttribute("centerOfRotation")
+            var last_pressed = document.getElementById(viewpoint_id_1).getAttribute("last_pressed")
+
+            if(last_pressed=='false'){
+                document.getElementById(viewpoint_id_1).setAttribute('centerOfRotation', centerOfRotation);
+                document.getElementById(viewpoint_id_1).setAttribute('set_bind','true');
+                document.getElementById(viewpoint_id_1).setAttribute('last_pressed','true');
+            }else{
+                document.getElementById(viewpoint_id_2).setAttribute('centerOfRotation', centerOfRotation);
+                document.getElementById(viewpoint_id_2).setAttribute('set_bind','true');
+                document.getElementById(viewpoint_id_1).setAttribute('last_pressed','false');
+            }
+        }
+
+        function take_snapshot()
+        {
+            var imgUrl = document.getElementById("boxes").runtime.getScreenshot();
+            var newScreenshotDownloadLink = document.createElement("a");
+            newScreenshotDownloadLink.href = imgUrl;
+            // newScreenshotDownloadLink.download = "screenshot.png";
+            newScreenshotDownloadLink.download = "Image_from_testing.png";
+            newScreenshotDownloadLink.click();
+        }
+
+        function turn_on_off_transparancy()
+        {
+            var no_of_atoms = document.getElementById("Chemical_Group").getAttribute("no_of_atoms")
+            for (let id = 0; id < no_of_atoms; id++) {
+                var transparency = document.getElementById(id.toString()).getAttribute("transparency")
+                var transparency_original = document.getElementById(id.toString()).getAttribute("transparency_original")
+                if(transparency==transparency_original){
+                    document.getElementById(id.toString()).setAttribute("transparency",0.0)
+                }else{
+                    document.getElementById(id.toString()).setAttribute("transparency",transparency_original)
+                }
+            }
+        }
+
+        function turn_on_off_unit_cell()
+        {
+            //var no_of_lines = 10 //document.getElementById("Chemical_Group").getAttribute("unit_cell_lines")
+            //for (let index = 0; index < no_of_lines; index++) {
+            //var unit_cell = document.getElementById("Unit_Cell");
+            var dirLight = document.getElementById("switcher");
+            var switch_value = dirLight.getAttribute("whichChoice")
+            if(switch_value == "-1"){
+                var new_switch_value = "0";
+            }else{
+                var new_switch_value = "-1";
+            }
+            dirLight.setAttribute("whichChoice", new_switch_value);
+            //}
+        }
+
+        //Round a float value to x.xx format
+        function roundWithTwoDecimals(value)
+        {
+            if(typeof value == 'number'){
+                return (Math.round(value * 100)) / 100;
+            }else{
+                return value
+            }
+        }
+
+        //Handle click on any group member
+        function handleGroupClick(event)
+        {
+            //Mark hitting point, for debugging with marker object
+            //$("#marker").attr("translation", event.hitPnt);
+            console.log(event);
+
+            //Display coordinates of hitting point (rounded)
+            var coordinates = event.hitPnt;
+            // $("#coordX").html(roundWithTwoDecimals(coordinates[0]));
+            // $("#coordY").html(roundWithTwoDecimals(coordinates[1]));
+            // $("#coordZ").html(roundWithTwoDecimals(coordinates[2]));
+        }
+
+        //Get the distance between two atoms
+        function getDistanceBetweenTwoAtoms(atom1_id,atom2_id)
+        {
+            console.log("Getting distance between atoms list: " + atom1_id + " and " + atom2_id);
+            var atom_centre_position_str = document.getElementById("transform_"+atom1_id).getAttribute("translation");
+            var atom1_centre_position = atom_centre_position_str.split(" ").map(Number);
+            console.log(atom1_id+': '+atom1_centre_position)
+            var atom_centre_position_str = document.getElementById("transform_"+atom2_id).getAttribute("translation");
+            var atom2_centre_position = atom_centre_position_str.split(" ").map(Number);
+            console.log(atom2_id+': '+atom2_centre_position)
+
+            var x_dist = atom1_centre_position[0] - atom2_centre_position[0]
+            var y_dist = atom1_centre_position[1] - atom2_centre_position[1]
+            var z_dist = atom1_centre_position[2] - atom2_centre_position[2]
+
+            var distanceBetweenTwoAtoms = Math.sqrt(x_dist*x_dist + y_dist*y_dist + z_dist*z_dist)
+            return distanceBetweenTwoAtoms
+        }
+
+        //Handle click on a shape
+        var highlighted_atoms = ["-", "-"]
+        var highlighted_atom_positions = [['-','-','-'], ['-','-','-']]
+        function handleSingleClick(shape)
+        {
+            //$("#lastClickedObject").html($(shape).attr("def"));
+            var atom_element_number = $(shape).attr("def");
+            console.log("The new value is " + atom_element_number);
+            var atom_centre_position_str = document.getElementById("transform_"+atom_element_number).getAttribute("translation");
+            var atom_centre_position = atom_centre_position_str.split(" ").map(Number);
+            var distanceBetweenTwoAtoms = '-'
+            var has_atom_been_highlighted = highlighted_atoms.includes(atom_element_number)
+            if(!has_atom_been_highlighted){
+                if(highlighted_atoms[0]=='-'){
+                    highlighted_atoms[0] = atom_element_number
+                    highlighted_atom_positions[0] = atom_centre_position
+                }else if(highlighted_atoms[1]=='-'){
+                    highlighted_atoms[1] = atom_element_number
+                    highlighted_atom_positions[1] = atom_centre_position
+                    var distanceBetweenTwoAtoms = getDistanceBetweenTwoAtoms(highlighted_atoms[0],highlighted_atoms[1])
+                }else{
+                    var original_atom_color = document.getElementById(highlighted_atoms[0]).getAttribute("originalColor");
+                    document.getElementById(highlighted_atoms[0]).setAttribute("diffuseColor", original_atom_color);
+                    highlighted_atoms[0] = '-'
+                    highlighted_atom_positions[0] = ['-','-','-']
+                    var original_atom_color = document.getElementById(highlighted_atoms[1]).getAttribute("originalColor");
+                    document.getElementById(highlighted_atoms[1]).setAttribute("diffuseColor", original_atom_color);
+                    highlighted_atoms[1] = '-'
+                    highlighted_atom_positions[1] = ['-','-','-']
+                    highlighted_atoms[0] = atom_element_number
+                    highlighted_atom_positions[0] = atom_centre_position
+                }
+            }else{
+                if(highlighted_atoms[0]==atom_element_number){
+                    highlighted_atoms[0] = '-'
+                    highlighted_atom_positions[0] = ['-','-','-']
+                    if(!(highlighted_atoms[1] == '-')){
+                        highlighted_atoms[0] = highlighted_atoms[1]
+                        highlighted_atom_positions[0] = highlighted_atom_positions[1].slice();
+                        highlighted_atoms[1] = '-'
+                        highlighted_atom_positions[1] = ['-','-','-']
+                    }
+                }else if(highlighted_atoms[1]==atom_element_number){
+                    highlighted_atoms[1] = '-'
+                    highlighted_atom_positions[1] = ['-','-','-']
+                }
+                var original_atom_color = document.getElementById(atom_element_number).getAttribute("originalColor");
+                document.getElementById(atom_element_number).setAttribute("diffuseColor", original_atom_color);
+            }
+            console.log("highlighted list: " + highlighted_atoms);
+
+            if(!(highlighted_atoms[0]=='-')){
+                document.getElementById(highlighted_atoms[0]).setAttribute("diffuseColor", "1 1 0"); //Yellow
+            }
+            if(!(highlighted_atoms[1]=='-')){
+                document.getElementById(highlighted_atoms[1]).setAttribute("diffuseColor", "0 0 1"); //Blue
+            }
+
+            if(!(highlighted_atoms[0]=='-')){
+                $("#Highlighted_Yellow").html(document.getElementById(highlighted_atoms[0]).getAttribute("name"));
+            }else{
+                $("#Highlighted_Yellow").html('-');
+            }
+            if(!(highlighted_atoms[1]=='-')){
+                $("#Highlighted_Blue").html(document.getElementById(highlighted_atoms[1]).getAttribute("name"));
+            }else{
+                $("#Highlighted_Blue").html('-');
+            }
+
+            $("#Highlighted_Yellow_index").html(highlighted_atoms[0]);
+            $("#Highlighted_Blue_index").html(highlighted_atoms[1]);
+
+            $("#coordX_Yellow").html(roundWithTwoDecimals(highlighted_atom_positions[0][0]));
+            $("#coordY_Yellow").html(roundWithTwoDecimals(highlighted_atom_positions[0][1]));
+            $("#coordZ_Yellow").html(roundWithTwoDecimals(highlighted_atom_positions[0][2]));
+
+            $("#coordX_Blue").html(roundWithTwoDecimals(highlighted_atom_positions[1][0]));
+            $("#coordY_Blue").html(roundWithTwoDecimals(highlighted_atom_positions[1][1]));
+            $("#coordZ_Blue").html(roundWithTwoDecimals(highlighted_atom_positions[1][2]));
+
+            if(distanceBetweenTwoAtoms=='-'){
+                var distanceBetweenTwoAtoms_str = '-'
+            }else{
+                var distanceBetweenTwoAtoms_str = roundWithTwoDecimals(distanceBetweenTwoAtoms/10) + ' nm ('+roundWithTwoDecimals(distanceBetweenTwoAtoms)+' Å)'
+            }
+            $("#distanceBetweenTwoAtoms").html(distanceBetweenTwoAtoms_str);
+        }
+
+        $(document).ready(function(){
+            //Add a onclick callback to every shape
+            $("shape").each(function() { $(this).attr("onclick", "handleSingleClick(this)"); });
+        });
+    </script>
+
+<style type="text/css">
+    #element_atom_table {
+        border:1;
+        font-family: Arial, Helvetica ;
+    }
+    #index_atom_table {
+        border:1;
+        font-family: Arial, Helvetica ;
+    }
+</style>
+<style>
+    .gfg {
+        border-collapse:separate;
+        border-spacing:15px 8px;
+    }
+</style>
+<!--     <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            var screenshotCount = 0;
+
+            //Every time the user clicks on the "take screenhot" button
+            $("#btnTakeScreenshot").on("click", function() {
+                //Get data url from the runtime
+                var imgUrl = document.getElementById("boxes").runtime.getScreenshot();
+                var newScreenshotDownloadLink = document.createElement("a");
+                newScreenshotDownloadLink.href = imgUrl;
+                newScreenshotDownloadLink.download = "screenshot.png";
+                newScreenshotDownloadLink.click();
+
+
+                // //Create preview image...
+                // var newScreenshotImage = document.createElement("img");
+                // newScreenshotImage.src = imgUrl;
+                // newScreenshotImage.id = "screenshot_" + screenshotCount;
+                // $("#screenshotPreviews").append(newScreenshotImage);
+
+                // //...and download link
+                // var newScreenshotDownloadLink = document.createElement("a");
+                // newScreenshotDownloadLink.href = imgUrl;
+                // newScreenshotDownloadLink.download = "screenshot_" + screenshotCount + ".png";
+                // newScreenshotDownloadLink.innerHTML = "Download";
+                // $("#screenshotPreviews").append(newScreenshotDownloadLink);
+
+                // screenshotCount++;
+                // $("#screenshotCount").html(screenshotCount);
+            });
+        });
+    </script> -->
+</head>
+
+<body>
+
+
+
+
+<!-- <h1>Object picking example</h1>
+<p>
+Click on any shape to get the id and the coordinates of the hitting point.
+</p> -->
+<X3D  id="boxes" showStat="false" showLog="false" x="0px" y="0px" width="500px" height="500px">
+    <Scene>
+        <!-- <Viewpoint position="-2.25680 3.36560 14.62828" orientation="-0.60104 -0.28053 0.74837 0.40903"></Viewpoint> -->
+        <Viewpoint id="front_1"  position="10.46518 6.41970 59.86792" orientation="0.0 0.0 1.0 0.0" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" centerOfRotation_original="10.465180361560904 6.419704367544244 13.204293994002422" clicked_last="true" description="camera"></Viewpoint>
+        <Viewpoint id="front_2"  position="10.46518 6.41970 59.86792" orientation="0.0 0.0 1.0 0.0" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" description="camera"></Viewpoint>
+        <Viewpoint id="x_view_1" position="57.12881 6.41970 13.20429" orientation="0.0 1.0 0.0 1.57079632679" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" centerOfRotation_original="10.465180361560904 6.419704367544244 13.204293994002422" clicked_last="false" description="camera"></Viewpoint>
+        <Viewpoint id="x_view_2" position="57.12881 6.41970 13.20429" orientation="0.0 1.0 0.0 1.57079632679" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" description="camera"></Viewpoint>
+        <Viewpoint id="y_view_1" position="10.46518 53.08333 13.20429" orientation="-1.0 0.0 0.0 1.57079632679" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" centerOfRotation_original="10.465180361560904 6.419704367544244 13.204293994002422" clicked_last="false" description="camera"></Viewpoint>
+        <Viewpoint id="y_view_2" position="10.46518 53.08333 13.20429" orientation="-1.0 0.0 0.0 1.57079632679" centerOfRotation="10.465180361560904 6.419704367544244 13.204293994002422" description="camera"></Viewpoint>
+
+<!-- ------------------------------- -->
+<!-- Adding unit cell here -->
+<!-- ------------------------------- -->
+        <Switch whichChoice="0" id="switcher">
+        <Group id="Unit_Cell">
+        <Transform translation="7.848885271170678,0.0,0.0" rotation="0.0,0.0,-1.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341356"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="3.924442635585339,6.797334036223319,0.0" rotation="0.0,0.0,-1.0,0.5235987755982989">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="0.0,0.0,13.204293994002423" rotation="1.0,0.0,0.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="26.408587988004847"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="19.622213177926696,6.797334036223319,0.0" rotation="0.0,0.0,-1.0,0.5235987755982989">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="15.697770542341356,0.0,13.204293994002423" rotation="1.0,0.0,0.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="26.408587988004847"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="15.697770542341356,13.594668072446638,0.0" rotation="0.0,0.0,-1.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="7.848885271170678,13.594668072446638,13.204293994002423" rotation="1.0,0.0,0.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="26.408587988004847"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="7.848885271170678,0.0,26.408587988004847" rotation="0.0,0.0,-1.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341356"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="3.924442635585339,6.797334036223319,26.408587988004847" rotation="0.0,0.0,-1.0,0.5235987755982989">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="23.546655813512032,13.594668072446638,13.204293994002423" rotation="1.0,0.0,0.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="26.408587988004847"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="19.622213177926696,6.797334036223319,26.408587988004847" rotation="0.0,0.0,-1.0,0.5235987755982989">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        <Transform translation="15.697770542341356,13.594668072446638,26.408587988004847" rotation="0.0,0.0,-1.0,1.5707963267948966">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#000000"></Material>
+                </Appearance>
+                <Cylinder DEF="cylinder" radius="0.05" height="15.697770542341354"></Cylinder>
+            </Shape>
+        </Transform>
+        </Group>
+        </Switch>
+<!-- ------------------------------- -->
+
+        <!-- <Group onclick="handleGroupClick(event)"> -->
+        <Group id="Chemical_Group" onclick="handleGroupClick(event)" no_of_atoms=144>
+
+<!-- ------------------------------- -->
+<!-- Adding atoms here -->
+<!-- ------------------------------- -->
+            <Transform id="transform_0" translation="0.00 -0.00 9.49">
+                <Shape DEF="0">
+                    <Appearance DEF="0">
+                        <Material id="0" name="Ag1"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="0" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_1" translation="2.62 -0.00 9.49">
+                <Shape DEF="1">
+                    <Appearance DEF="1">
+                        <Material id="1" name="Ag2"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="1" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_2" translation="5.23 -0.00 9.49">
+                <Shape DEF="2">
+                    <Appearance DEF="2">
+                        <Material id="2" name="Ag3"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="2" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_3" translation="7.85 -0.00 9.49">
+                <Shape DEF="3">
+                    <Appearance DEF="3">
+                        <Material id="3" name="Ag4"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="3" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_4" translation="10.47 -0.00 9.49">
+                <Shape DEF="4">
+                    <Appearance DEF="4">
+                        <Material id="4" name="Ag5"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="4" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_5" translation="13.08 -0.00 9.49">
+                <Shape DEF="5">
+                    <Appearance DEF="5">
+                        <Material id="5" name="Ag6"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="5" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_6" translation="1.31 2.27 9.49">
+                <Shape DEF="6">
+                    <Appearance DEF="6">
+                        <Material id="6" name="Ag7"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="6" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_7" translation="3.92 2.27 9.49">
+                <Shape DEF="7">
+                    <Appearance DEF="7">
+                        <Material id="7" name="Ag8"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="7" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_8" translation="6.54 2.27 9.49">
+                <Shape DEF="8">
+                    <Appearance DEF="8">
+                        <Material id="8" name="Ag9"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="8" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_9" translation="9.16 2.27 9.49">
+                <Shape DEF="9">
+                    <Appearance DEF="9">
+                        <Material id="9" name="Ag10"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="9" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_10" translation="11.77 2.27 9.49">
+                <Shape DEF="10">
+                    <Appearance DEF="10">
+                        <Material id="10" name="Ag11"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="10" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_11" translation="14.39 2.27 9.49">
+                <Shape DEF="11">
+                    <Appearance DEF="11">
+                        <Material id="11" name="Ag12"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="11" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_12" translation="2.62 4.53 9.49">
+                <Shape DEF="12">
+                    <Appearance DEF="12">
+                        <Material id="12" name="Ag13"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="12" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_13" translation="5.23 4.53 9.49">
+                <Shape DEF="13">
+                    <Appearance DEF="13">
+                        <Material id="13" name="Ag14"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="13" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_14" translation="7.85 4.53 9.49">
+                <Shape DEF="14">
+                    <Appearance DEF="14">
+                        <Material id="14" name="Ag15"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="14" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_15" translation="10.47 4.53 9.49">
+                <Shape DEF="15">
+                    <Appearance DEF="15">
+                        <Material id="15" name="Ag16"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="15" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_16" translation="13.08 4.53 9.49">
+                <Shape DEF="16">
+                    <Appearance DEF="16">
+                        <Material id="16" name="Ag17"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="16" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_17" translation="15.70 4.53 9.49">
+                <Shape DEF="17">
+                    <Appearance DEF="17">
+                        <Material id="17" name="Ag18"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="17" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_18" translation="3.92 6.80 9.49">
+                <Shape DEF="18">
+                    <Appearance DEF="18">
+                        <Material id="18" name="Ag19"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="18" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_19" translation="6.54 6.80 9.49">
+                <Shape DEF="19">
+                    <Appearance DEF="19">
+                        <Material id="19" name="Ag20"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="19" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_20" translation="9.16 6.80 9.49">
+                <Shape DEF="20">
+                    <Appearance DEF="20">
+                        <Material id="20" name="Ag21"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="20" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_21" translation="11.77 6.80 9.49">
+                <Shape DEF="21">
+                    <Appearance DEF="21">
+                        <Material id="21" name="Ag22"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="21" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_22" translation="14.39 6.80 9.49">
+                <Shape DEF="22">
+                    <Appearance DEF="22">
+                        <Material id="22" name="Ag23"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="22" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_23" translation="17.01 6.80 9.49">
+                <Shape DEF="23">
+                    <Appearance DEF="23">
+                        <Material id="23" name="Ag24"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="23" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_24" translation="5.23 9.06 9.49">
+                <Shape DEF="24">
+                    <Appearance DEF="24">
+                        <Material id="24" name="Ag25"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="24" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_25" translation="7.85 9.06 9.49">
+                <Shape DEF="25">
+                    <Appearance DEF="25">
+                        <Material id="25" name="Ag26"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="25" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_26" translation="10.47 9.06 9.49">
+                <Shape DEF="26">
+                    <Appearance DEF="26">
+                        <Material id="26" name="Ag27"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="26" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_27" translation="13.08 9.06 9.49">
+                <Shape DEF="27">
+                    <Appearance DEF="27">
+                        <Material id="27" name="Ag28"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="27" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_28" translation="15.70 9.06 9.49">
+                <Shape DEF="28">
+                    <Appearance DEF="28">
+                        <Material id="28" name="Ag29"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="28" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_29" translation="18.31 9.06 9.49">
+                <Shape DEF="29">
+                    <Appearance DEF="29">
+                        <Material id="29" name="Ag30"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="29" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_30" translation="6.54 11.33 9.49">
+                <Shape DEF="30">
+                    <Appearance DEF="30">
+                        <Material id="30" name="Ag31"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="30" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_31" translation="9.16 11.33 9.49">
+                <Shape DEF="31">
+                    <Appearance DEF="31">
+                        <Material id="31" name="Ag32"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="31" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_32" translation="11.77 11.33 9.49">
+                <Shape DEF="32">
+                    <Appearance DEF="32">
+                        <Material id="32" name="Ag33"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="32" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_33" translation="14.39 11.33 9.49">
+                <Shape DEF="33">
+                    <Appearance DEF="33">
+                        <Material id="33" name="Ag34"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="33" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_34" translation="17.01 11.33 9.49">
+                <Shape DEF="34">
+                    <Appearance DEF="34">
+                        <Material id="34" name="Ag35"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="34" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_35" translation="19.62 11.33 9.49">
+                <Shape DEF="35">
+                    <Appearance DEF="35">
+                        <Material id="35" name="Ag36"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="35" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_36" translation="1.31 0.76 11.97">
+                <Shape DEF="36">
+                    <Appearance DEF="36">
+                        <Material id="36" name="Ag37"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="36" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_37" translation="3.92 0.76 11.97">
+                <Shape DEF="37">
+                    <Appearance DEF="37">
+                        <Material id="37" name="Ag38"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="37" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_38" translation="6.54 0.76 11.97">
+                <Shape DEF="38">
+                    <Appearance DEF="38">
+                        <Material id="38" name="Ag39"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="38" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_39" translation="9.16 0.76 11.97">
+                <Shape DEF="39">
+                    <Appearance DEF="39">
+                        <Material id="39" name="Ag40"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="39" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_40" translation="11.77 0.76 11.97">
+                <Shape DEF="40">
+                    <Appearance DEF="40">
+                        <Material id="40" name="Ag41"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="40" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_41" translation="14.39 0.76 11.97">
+                <Shape DEF="41">
+                    <Appearance DEF="41">
+                        <Material id="41" name="Ag42"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="41" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_42" translation="2.62 3.02 11.97">
+                <Shape DEF="42">
+                    <Appearance DEF="42">
+                        <Material id="42" name="Ag43"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="42" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_43" translation="5.23 3.02 11.97">
+                <Shape DEF="43">
+                    <Appearance DEF="43">
+                        <Material id="43" name="Ag44"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="43" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_44" translation="7.85 3.02 11.97">
+                <Shape DEF="44">
+                    <Appearance DEF="44">
+                        <Material id="44" name="Ag45"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="44" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_45" translation="10.47 3.02 11.97">
+                <Shape DEF="45">
+                    <Appearance DEF="45">
+                        <Material id="45" name="Ag46"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="45" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_46" translation="13.08 3.02 11.97">
+                <Shape DEF="46">
+                    <Appearance DEF="46">
+                        <Material id="46" name="Ag47"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="46" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_47" translation="15.70 3.02 11.97">
+                <Shape DEF="47">
+                    <Appearance DEF="47">
+                        <Material id="47" name="Ag48"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="47" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_48" translation="3.92 5.29 11.97">
+                <Shape DEF="48">
+                    <Appearance DEF="48">
+                        <Material id="48" name="Ag49"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="48" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_49" translation="6.54 5.29 11.97">
+                <Shape DEF="49">
+                    <Appearance DEF="49">
+                        <Material id="49" name="Ag50"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="49" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_50" translation="9.16 5.29 11.97">
+                <Shape DEF="50">
+                    <Appearance DEF="50">
+                        <Material id="50" name="Ag51"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="50" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_51" translation="11.77 5.29 11.97">
+                <Shape DEF="51">
+                    <Appearance DEF="51">
+                        <Material id="51" name="Ag52"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="51" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_52" translation="14.39 5.29 11.97">
+                <Shape DEF="52">
+                    <Appearance DEF="52">
+                        <Material id="52" name="Ag53"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="52" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_53" translation="17.01 5.29 11.97">
+                <Shape DEF="53">
+                    <Appearance DEF="53">
+                        <Material id="53" name="Ag54"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="53" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_54" translation="5.23 7.55 11.97">
+                <Shape DEF="54">
+                    <Appearance DEF="54">
+                        <Material id="54" name="Ag55"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="54" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_55" translation="7.85 7.55 11.97">
+                <Shape DEF="55">
+                    <Appearance DEF="55">
+                        <Material id="55" name="Ag56"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="55" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_56" translation="10.47 7.55 11.97">
+                <Shape DEF="56">
+                    <Appearance DEF="56">
+                        <Material id="56" name="Ag57"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="56" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_57" translation="13.08 7.55 11.97">
+                <Shape DEF="57">
+                    <Appearance DEF="57">
+                        <Material id="57" name="Ag58"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="57" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_58" translation="15.70 7.55 11.97">
+                <Shape DEF="58">
+                    <Appearance DEF="58">
+                        <Material id="58" name="Ag59"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="58" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_59" translation="18.31 7.55 11.97">
+                <Shape DEF="59">
+                    <Appearance DEF="59">
+                        <Material id="59" name="Ag60"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="59" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_60" translation="6.54 9.82 11.97">
+                <Shape DEF="60">
+                    <Appearance DEF="60">
+                        <Material id="60" name="Ag61"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="60" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_61" translation="9.16 9.82 11.97">
+                <Shape DEF="61">
+                    <Appearance DEF="61">
+                        <Material id="61" name="Ag62"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="61" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_62" translation="11.77 9.82 11.97">
+                <Shape DEF="62">
+                    <Appearance DEF="62">
+                        <Material id="62" name="Ag63"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="62" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_63" translation="14.39 9.82 11.97">
+                <Shape DEF="63">
+                    <Appearance DEF="63">
+                        <Material id="63" name="Ag64"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="63" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_64" translation="17.01 9.82 11.97">
+                <Shape DEF="64">
+                    <Appearance DEF="64">
+                        <Material id="64" name="Ag65"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="64" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_65" translation="19.62 9.82 11.97">
+                <Shape DEF="65">
+                    <Appearance DEF="65">
+                        <Material id="65" name="Ag66"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="65" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_66" translation="7.85 12.08 11.97">
+                <Shape DEF="66">
+                    <Appearance DEF="66">
+                        <Material id="66" name="Ag67"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="66" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_67" translation="10.47 12.08 11.97">
+                <Shape DEF="67">
+                    <Appearance DEF="67">
+                        <Material id="67" name="Ag68"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="67" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_68" translation="13.08 12.08 11.97">
+                <Shape DEF="68">
+                    <Appearance DEF="68">
+                        <Material id="68" name="Ag69"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="68" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_69" translation="15.70 12.08 11.97">
+                <Shape DEF="69">
+                    <Appearance DEF="69">
+                        <Material id="69" name="Ag70"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="69" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_70" translation="18.31 12.08 11.97">
+                <Shape DEF="70">
+                    <Appearance DEF="70">
+                        <Material id="70" name="Ag71"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="70" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_71" translation="20.93 12.08 11.97">
+                <Shape DEF="71">
+                    <Appearance DEF="71">
+                        <Material id="71" name="Ag72"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="71" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_72" translation="0.00 1.51 14.44">
+                <Shape DEF="72">
+                    <Appearance DEF="72">
+                        <Material id="72" name="Ag73"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="72" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_73" translation="2.62 1.51 14.44">
+                <Shape DEF="73">
+                    <Appearance DEF="73">
+                        <Material id="73" name="Ag74"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="73" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_74" translation="5.23 1.51 14.44">
+                <Shape DEF="74">
+                    <Appearance DEF="74">
+                        <Material id="74" name="Ag75"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="74" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_75" translation="7.85 1.51 14.44">
+                <Shape DEF="75">
+                    <Appearance DEF="75">
+                        <Material id="75" name="Ag76"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="75" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_76" translation="10.47 1.51 14.44">
+                <Shape DEF="76">
+                    <Appearance DEF="76">
+                        <Material id="76" name="Ag77"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="76" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_77" translation="13.08 1.51 14.44">
+                <Shape DEF="77">
+                    <Appearance DEF="77">
+                        <Material id="77" name="Ag78"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="77" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_78" translation="1.31 3.78 14.44">
+                <Shape DEF="78">
+                    <Appearance DEF="78">
+                        <Material id="78" name="Ag79"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="78" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_79" translation="3.92 3.78 14.44">
+                <Shape DEF="79">
+                    <Appearance DEF="79">
+                        <Material id="79" name="Ag80"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="79" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_80" translation="6.54 3.78 14.44">
+                <Shape DEF="80">
+                    <Appearance DEF="80">
+                        <Material id="80" name="Ag81"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="80" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_81" translation="9.16 3.78 14.44">
+                <Shape DEF="81">
+                    <Appearance DEF="81">
+                        <Material id="81" name="Ag82"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="81" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_82" translation="11.77 3.78 14.44">
+                <Shape DEF="82">
+                    <Appearance DEF="82">
+                        <Material id="82" name="Ag83"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="82" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_83" translation="14.39 3.78 14.44">
+                <Shape DEF="83">
+                    <Appearance DEF="83">
+                        <Material id="83" name="Ag84"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="83" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_84" translation="2.62 6.04 14.44">
+                <Shape DEF="84">
+                    <Appearance DEF="84">
+                        <Material id="84" name="Ag85"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="84" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_85" translation="5.23 6.04 14.44">
+                <Shape DEF="85">
+                    <Appearance DEF="85">
+                        <Material id="85" name="Ag86"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="85" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_86" translation="7.85 6.04 14.44">
+                <Shape DEF="86">
+                    <Appearance DEF="86">
+                        <Material id="86" name="Ag87"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="86" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_87" translation="10.47 6.04 14.44">
+                <Shape DEF="87">
+                    <Appearance DEF="87">
+                        <Material id="87" name="Ag88"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="87" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_88" translation="13.08 6.04 14.44">
+                <Shape DEF="88">
+                    <Appearance DEF="88">
+                        <Material id="88" name="Ag89"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="88" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_89" translation="15.70 6.04 14.44">
+                <Shape DEF="89">
+                    <Appearance DEF="89">
+                        <Material id="89" name="Ag90"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="89" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_90" translation="3.92 8.31 14.44">
+                <Shape DEF="90">
+                    <Appearance DEF="90">
+                        <Material id="90" name="Ag91"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="90" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_91" translation="6.54 8.31 14.44">
+                <Shape DEF="91">
+                    <Appearance DEF="91">
+                        <Material id="91" name="Ag92"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="91" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_92" translation="9.16 8.31 14.44">
+                <Shape DEF="92">
+                    <Appearance DEF="92">
+                        <Material id="92" name="Ag93"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="92" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_93" translation="11.77 8.31 14.44">
+                <Shape DEF="93">
+                    <Appearance DEF="93">
+                        <Material id="93" name="Ag94"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="93" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_94" translation="14.39 8.31 14.44">
+                <Shape DEF="94">
+                    <Appearance DEF="94">
+                        <Material id="94" name="Ag95"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="94" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_95" translation="17.01 8.31 14.44">
+                <Shape DEF="95">
+                    <Appearance DEF="95">
+                        <Material id="95" name="Ag96"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="95" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_96" translation="5.23 10.57 14.44">
+                <Shape DEF="96">
+                    <Appearance DEF="96">
+                        <Material id="96" name="Ag97"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="96" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_97" translation="7.85 10.57 14.44">
+                <Shape DEF="97">
+                    <Appearance DEF="97">
+                        <Material id="97" name="Ag98"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="97" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_98" translation="10.47 10.57 14.44">
+                <Shape DEF="98">
+                    <Appearance DEF="98">
+                        <Material id="98" name="Ag99"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="98" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_99" translation="13.08 10.57 14.44">
+                <Shape DEF="99">
+                    <Appearance DEF="99">
+                        <Material id="99" name="Ag100"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="99" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_100" translation="15.70 10.57 14.44">
+                <Shape DEF="100">
+                    <Appearance DEF="100">
+                        <Material id="100" name="Ag101"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="100" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_101" translation="18.31 10.57 14.44">
+                <Shape DEF="101">
+                    <Appearance DEF="101">
+                        <Material id="101" name="Ag102"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="101" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_102" translation="6.54 12.84 14.44">
+                <Shape DEF="102">
+                    <Appearance DEF="102">
+                        <Material id="102" name="Ag103"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="102" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_103" translation="9.16 12.84 14.44">
+                <Shape DEF="103">
+                    <Appearance DEF="103">
+                        <Material id="103" name="Ag104"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="103" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_104" translation="11.77 12.84 14.44">
+                <Shape DEF="104">
+                    <Appearance DEF="104">
+                        <Material id="104" name="Ag105"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="104" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_105" translation="14.39 12.84 14.44">
+                <Shape DEF="105">
+                    <Appearance DEF="105">
+                        <Material id="105" name="Ag106"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="105" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_106" translation="17.01 12.84 14.44">
+                <Shape DEF="106">
+                    <Appearance DEF="106">
+                        <Material id="106" name="Ag107"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="106" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_107" translation="19.62 12.84 14.44">
+                <Shape DEF="107">
+                    <Appearance DEF="107">
+                        <Material id="107" name="Ag108"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="107" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_108" translation="0.00 -0.00 16.92">
+                <Shape DEF="108">
+                    <Appearance DEF="108">
+                        <Material id="108" name="Ag109"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="108" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_109" translation="2.62 0.00 16.92">
+                <Shape DEF="109">
+                    <Appearance DEF="109">
+                        <Material id="109" name="Ag110"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="109" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_110" translation="5.23 -0.00 16.92">
+                <Shape DEF="110">
+                    <Appearance DEF="110">
+                        <Material id="110" name="Ag111"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="110" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_111" translation="7.85 -0.00 16.92">
+                <Shape DEF="111">
+                    <Appearance DEF="111">
+                        <Material id="111" name="Ag112"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="111" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_112" translation="10.47 -0.00 16.92">
+                <Shape DEF="112">
+                    <Appearance DEF="112">
+                        <Material id="112" name="Ag113"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="112" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_113" translation="13.08 -0.00 16.92">
+                <Shape DEF="113">
+                    <Appearance DEF="113">
+                        <Material id="113" name="Ag114"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="113" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_114" translation="1.31 2.27 16.92">
+                <Shape DEF="114">
+                    <Appearance DEF="114">
+                        <Material id="114" name="Ag115"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="114" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_115" translation="3.92 2.27 16.92">
+                <Shape DEF="115">
+                    <Appearance DEF="115">
+                        <Material id="115" name="Ag116"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="115" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_116" translation="6.54 2.27 16.92">
+                <Shape DEF="116">
+                    <Appearance DEF="116">
+                        <Material id="116" name="Ag117"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="116" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_117" translation="9.16 2.27 16.92">
+                <Shape DEF="117">
+                    <Appearance DEF="117">
+                        <Material id="117" name="Ag118"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="117" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_118" translation="11.77 2.27 16.92">
+                <Shape DEF="118">
+                    <Appearance DEF="118">
+                        <Material id="118" name="Ag119"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="118" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_119" translation="14.39 2.27 16.92">
+                <Shape DEF="119">
+                    <Appearance DEF="119">
+                        <Material id="119" name="Ag120"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="119" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_120" translation="2.62 4.53 16.92">
+                <Shape DEF="120">
+                    <Appearance DEF="120">
+                        <Material id="120" name="Ag121"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="120" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_121" translation="5.23 4.53 16.92">
+                <Shape DEF="121">
+                    <Appearance DEF="121">
+                        <Material id="121" name="Ag122"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="121" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_122" translation="7.85 4.53 16.92">
+                <Shape DEF="122">
+                    <Appearance DEF="122">
+                        <Material id="122" name="Ag123"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="122" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_123" translation="10.47 4.53 16.92">
+                <Shape DEF="123">
+                    <Appearance DEF="123">
+                        <Material id="123" name="Ag124"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="123" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_124" translation="13.08 4.53 16.92">
+                <Shape DEF="124">
+                    <Appearance DEF="124">
+                        <Material id="124" name="Ag125"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="124" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_125" translation="15.70 4.53 16.92">
+                <Shape DEF="125">
+                    <Appearance DEF="125">
+                        <Material id="125" name="Ag126"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="125" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_126" translation="3.92 6.80 16.92">
+                <Shape DEF="126">
+                    <Appearance DEF="126">
+                        <Material id="126" name="Ag127"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="126" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_127" translation="6.54 6.80 16.92">
+                <Shape DEF="127">
+                    <Appearance DEF="127">
+                        <Material id="127" name="Ag128"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="127" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_128" translation="9.16 6.80 16.92">
+                <Shape DEF="128">
+                    <Appearance DEF="128">
+                        <Material id="128" name="Ag129"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="128" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_129" translation="11.77 6.80 16.92">
+                <Shape DEF="129">
+                    <Appearance DEF="129">
+                        <Material id="129" name="Ag130"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="129" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_130" translation="14.39 6.80 16.92">
+                <Shape DEF="130">
+                    <Appearance DEF="130">
+                        <Material id="130" name="Ag131"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="130" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_131" translation="17.01 6.80 16.92">
+                <Shape DEF="131">
+                    <Appearance DEF="131">
+                        <Material id="131" name="Ag132"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="131" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_132" translation="5.23 9.06 16.92">
+                <Shape DEF="132">
+                    <Appearance DEF="132">
+                        <Material id="132" name="Ag133"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="132" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_133" translation="7.85 9.06 16.92">
+                <Shape DEF="133">
+                    <Appearance DEF="133">
+                        <Material id="133" name="Ag134"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="133" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_134" translation="10.47 9.06 16.92">
+                <Shape DEF="134">
+                    <Appearance DEF="134">
+                        <Material id="134" name="Ag135"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="134" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_135" translation="13.08 9.06 16.92">
+                <Shape DEF="135">
+                    <Appearance DEF="135">
+                        <Material id="135" name="Ag136"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="135" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_136" translation="15.70 9.06 16.92">
+                <Shape DEF="136">
+                    <Appearance DEF="136">
+                        <Material id="136" name="Ag137"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="136" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_137" translation="18.31 9.06 16.92">
+                <Shape DEF="137">
+                    <Appearance DEF="137">
+                        <Material id="137" name="Ag138"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="137" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_138" translation="6.54 11.33 16.92">
+                <Shape DEF="138">
+                    <Appearance DEF="138">
+                        <Material id="138" name="Ag139"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="138" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_139" translation="9.16 11.33 16.92">
+                <Shape DEF="139">
+                    <Appearance DEF="139">
+                        <Material id="139" name="Ag140"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="139" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_140" translation="11.77 11.33 16.92">
+                <Shape DEF="140">
+                    <Appearance DEF="140">
+                        <Material id="140" name="Ag141"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="140" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_141" translation="14.39 11.33 16.92">
+                <Shape DEF="141">
+                    <Appearance DEF="141">
+                        <Material id="141" name="Ag142"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="141" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_142" translation="17.01 11.33 16.92">
+                <Shape DEF="142">
+                    <Appearance DEF="142">
+                        <Material id="142" name="Ag143"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="142" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+            <Transform id="transform_143" translation="19.62 11.33 16.92">
+                <Shape DEF="143">
+                    <Appearance DEF="143">
+                        <Material id="143" name="Ag144"diffuseColor="0.753 0.753 0.753" originalColor="0.753 0.753 0.753" transparency=0.0 transparency_original=0.0 specularColor="0.5 0.5 0.5"></Material>
+                    </Appearance>
+                    <Sphere DEF="143" radius="1.45"> </Sphere>
+                </Shape>
+            </Transform>
+<!-- ------------------------------- -->
+
+        </Group>
+
+<!--             Use this object to see where you are clicking, for debugging -->
+<!--         <Transform id="marker" scale=".15 .15 .15" translation="100 0 0">
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor="#FFD966"></Material>
+                </Appearance>
+                <Sphere></Sphere>
+            </Shape>
+        </Transform> -->
+    </Scene>
+</X3D>
+
+<div style="position:absolute;left:600px;top:70px;width:200px">
+    <h3 style="font-family: Arial, Helvetica;">Highlighted Atoms</h3>
+    <table class = "gfg" id="element_atom_table" style="font-size:1.1em;">
+        <tr><td>Yellow</td> <td>Blue</td></tr>
+        <tr><td id="Highlighted_Yellow">-</td> <td id="Highlighted_Blue">-</td></tr>
+    </table>
+
+    <br><br>
+
+    <h3 style="font-family: Arial, Helvetica;">Highlighted Atoms indices (used by ASE)</h3>
+    <table class = "gfg" id="index_atom_table" style="font-size:1.1em;">
+        <tr><td>Yellow</td> <td>Blue</td></tr>
+        <tr><td id="Highlighted_Yellow_index">-</td> <td id="Highlighted_Blue_index">-</td></tr>
+    </table>
+
+    <br><br>
+
+    <!-- <h3>Click coordinates:</h3>
+    <table style="font-size:1em;">
+        <tr><td></td><td>Yellow</td><td>  </td><td id=>Blue</td></tr>
+        <tr><td>X: </td><td id="coordX_Yellow">-</td><td>X: </td><td id="coordX_Blue">-</td></tr>
+        <tr><td>Y: </td><td id="coordY_Yellow">-</td><td>Y: </td><td id="coordY_Blue">-</td></tr>
+        <tr><td>Z: </td><td id="coordZ_Yellow">-</td><td>Z: </td><td id="coordZ_Blue">-</td></tr>
+    </table>
+
+    <br><br> -->
+
+    <h3 style="font-family: Arial, Helvetica;">Distance between highlighted atoms:</h3>
+    <span style="font-family: Arial, Helvetica;" id="distanceBetweenTwoAtoms" style="font-size:1.1em;">-</span>
+
+    <br><br>
+
+    <button style="font-family: Arial, Helvetica;" onclick="take_snapshot();">Take Screenshot</button>
+
+
+    <br><br>
+<button style="font-family: Arial, Helvetica;" onclick="turn_on_off_unit_cell();">Turn On/Off Unit Cell</button>
+
+
+<!--     <a href="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" download="ImageNameHere">click here</a> -->
+
+</div>
+
+<div style="position:absolute;left:850px;top:70px;width:300px">
+    <h3 style="font-family: Arial, Helvetica;">Shortcut Buttons</h3>
+    <span><br></span>
+    <span style="font-family: Arial, Helvetica;">Single click: Select atom<br></span>
+    <span style="font-family: Arial, Helvetica;">Double click: Select atom to rotate about<br></span>
+    <span><br></span>
+    <span style="font-family: Arial, Helvetica;">Left mouse button drag: Rotate<br></span>
+    <span style="font-family: Arial, Helvetica;">Middle mouse button drag: Move<br></span>
+    <span style="font-family: Arial, Helvetica;">Right mouse button drag: Zoom<br></span>
+    <span><br></span>
+    <span style="font-family: Arial, Helvetica;">Middle mouse button scroll: Zoom<br></span>
+</div>
+
+<div id="camera_buttons" style="display: block;">
+    <h3 style="font-family: Arial, Helvetica;">Change View</h3>
+    <button style="font-family: Arial, Helvetica;" onclick="move_view('front');">Front View</button>
+    <button style="font-family: Arial, Helvetica;" onclick="move_view('x_view');">Side View</button>
+    <button style="font-family: Arial, Helvetica;" onclick="move_view('y_view');">Top View</button>
+</div>
+<!-- <div style="position:absolute;left: 550px;border:1px solid #dddddd; width:300px;min-height:200px;padding:10px;">
+    <b>Screenshots: <span id="screenshotCount">0</span></b>
+    <div id="screenshotPreviews">
+    </div>
+</div> -->
+<!-- <div>
+    <a href="#" id="btnTakeScreenshot">Take screenshot</a>
+</div>
+<table id="demo_table" class="gallery">
+  <tr>
+  </tr>
+</table>
+<div style="height:420px">
+    <x3d id="canvas" width="500px" height="400px">
+        <scene id="mainScene">
+            <Inline id="inlineBox" nameSpaceName="dcm"/>
+        </scene>
+    </x3d>
+</div> -->
+</body>
+</html>

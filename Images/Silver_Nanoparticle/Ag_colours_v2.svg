@@ -1,0 +1,2784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="386.98645mm"
+   height="722.87988mm"
+   viewBox="0 0 386.98645 722.87988"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Ag_colours_v2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5"
+     inkscape:cx="804"
+     inkscape:cy="728"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1210"
+       originx="106.96212"
+       originy="199.61283" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1597"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1595" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1333" />
+    </marker>
+    <clipPath
+       id="clip0">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       id="clip1">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5" />
+    </clipPath>
+    <clipPath
+       id="clip2">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8" />
+    </clipPath>
+    <clipPath
+       id="clip0-9">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-3" />
+    </clipPath>
+    <clipPath
+       id="clip1-1">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-8" />
+    </clipPath>
+    <clipPath
+       id="clip2-4">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-5" />
+    </clipPath>
+    <clipPath
+       id="clip0-5">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-0" />
+    </clipPath>
+    <clipPath
+       id="clip1-5">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-1" />
+    </clipPath>
+    <clipPath
+       id="clip2-6">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-59" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-5" />
+    </marker>
+    <clipPath
+       id="clip0-6">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-4" />
+    </clipPath>
+    <clipPath
+       id="clip1-11">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-2" />
+    </clipPath>
+    <clipPath
+       id="clip2-48">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-7" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-2" />
+    </marker>
+    <clipPath
+       id="clip0-57">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-9" />
+    </clipPath>
+    <clipPath
+       id="clip1-0">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-3" />
+    </clipPath>
+    <clipPath
+       id="clip2-9">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-1" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-4" />
+    </marker>
+    <clipPath
+       id="clip0-1">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-09" />
+    </clipPath>
+    <clipPath
+       id="clip1-8">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-32" />
+    </clipPath>
+    <clipPath
+       id="clip2-2">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-2" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-09" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-8-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-4-3" />
+    </marker>
+    <clipPath
+       id="clip0-1-7">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-09-9" />
+    </clipPath>
+    <clipPath
+       id="clip1-8-5">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-32-9" />
+    </clipPath>
+    <clipPath
+       id="clip2-2-9">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-2-3" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-6-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-09-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-8-3-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-4-3-9" />
+    </marker>
+    <clipPath
+       id="clip0-9-9">
+      <path
+         d="M 405,60 H 878 V 625 H 405 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path2-3-6" />
+    </clipPath>
+    <clipPath
+       id="clip1-1-2">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path5-8-0" />
+    </clipPath>
+    <clipPath
+       id="clip2-4-0">
+      <path
+         d="M 406,60 H 877 V 625 H 406 Z"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         id="path8-5-1" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-03" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-4-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-03-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-58" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart-8-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path1351-4-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(106.96212,199.61284)">
+    <path
+       style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,45.84341 c 1.61195,-3.23138 3.22394,-6.42799 4.83587,-8.4439 1.61197,-2.01586 3.22391,-2.80308 4.83588,-2.08544 1.61193,0.71762 3.22391,2.93261 4.83589,5.84333 1.61193,2.91077 3.22391,6.46001 4.83584,9.37201 1.61198,2.912 3.22391,5.12287 4.83588,5.84334 1.61198,0.72046 3.22391,-0.0719 4.83589,-2.08545 1.61193,-2.01362 3.22391,-5.21252 4.83584,-8.44389"
+       title="sin(x)"
+       id="path2204" />
+    <path
+       style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,55.48164 c 1.61195,-3.23137 3.22394,-6.42798 4.83587,-8.44389 1.61197,-2.01587 3.22391,-2.80308 4.83588,-2.08545 1.61193,0.71763 3.22391,2.93262 4.83589,5.84334 1.61193,2.91077 3.22391,6.46 4.83584,9.372 1.61198,2.91201 3.22391,5.12288 4.83588,5.84334 1.61198,0.72047 3.22391,-0.0719 4.83589,-2.08545 1.61193,-2.01362 3.22391,-5.21251 4.83584,-8.44389"
+       title="sin(x)"
+       id="path2204-2" />
+    <path
+       style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,74.75811 c 1.61195,-3.23137 3.22394,-6.42798 4.83587,-8.44389 1.61197,-2.01586 3.22391,-2.80308 4.83588,-2.08545 1.61193,0.71763 3.22391,2.93262 4.83589,5.84334 1.61193,2.91077 3.22391,6.46 4.83584,9.37201 1.61198,2.912 3.22391,5.12287 4.83588,5.84333 1.61198,0.72047 3.22391,-0.0719 4.83589,-2.08544 1.61193,-2.01362 3.22391,-5.21252 4.83584,-8.4439"
+       title="sin(x)"
+       id="path2204-25" />
+    <path
+       style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,84.39635 c 1.61195,-3.23137 3.22394,-6.42798 4.83587,-8.44389 1.61197,-2.01586 3.22391,-2.80308 4.83588,-2.08545 1.61193,0.71763 3.22391,2.93262 4.83589,5.84334 1.61193,2.91077 3.22391,6.46 4.83584,9.37201 1.61198,2.912 3.22391,5.12287 4.83588,5.84333 1.61198,0.72047 3.22391,-0.0719 4.83589,-2.08544 1.61193,-2.01362 3.22391,-5.21252 4.83584,-8.4439"
+       title="sin(x)"
+       id="path2204-25-5" />
+    <path
+       style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,65.11988 c 1.61195,-3.23138 3.22394,-6.42798 4.83587,-8.44389 1.61197,-2.01587 3.22391,-2.80309 4.83588,-2.08545 1.61193,0.71762 3.22391,2.93261 4.83589,5.84334 1.61193,2.91076 3.22391,6.46 4.83584,9.372 1.61198,2.912 3.22391,5.12287 4.83588,5.84334 1.61198,0.72046 3.22391,-0.0719 4.83589,-2.08545 1.61193,-2.01362 3.22391,-5.21252 4.83584,-8.44389"
+       title="sin(x)"
+       id="path2204-1" />
+    <path
+       style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 244.83202,36.20517 c 1.61195,-3.23138 3.22394,-6.42798 4.83587,-8.44389 1.61197,-2.01587 3.22391,-2.80309 4.83588,-2.08545 1.61193,0.71762 3.22391,2.93261 4.83589,5.84334 1.61193,2.91076 3.22391,6.46 4.83584,9.372 1.61198,2.912 3.22391,5.12287 4.83588,5.84334 1.61198,0.72046 3.22391,-0.0719 4.83589,-2.08545 1.61193,-2.01362 3.22391,-5.21252 4.83584,-8.44389"
+       title="sin(x)"
+       id="path2204-6" />
+    <g
+       id="g3913"
+       transform="translate(160.89626,-87.557497)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\lightbulb.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <g
+         id="g1270">
+        <g
+           clip-path="url(#clip0-9-9)"
+           transform="matrix(0,0.13095984,-0.13095984,0,-186.43345,-124.23005)"
+           id="g83-4-8">
+          <g
+             clip-path="url(#clip1-1-2)"
+             id="g81-1-3">
+            <g
+               clip-path="url(#clip2-4-0)"
+               id="g79-9-3">
+              <path
+                 d="m 385.641,593.9 c 0,14.858 -12.045,26.903 -26.903,26.903 -14.858,0 -26.903,-12.045 -26.903,-26.903 0,-14.858 12.045,-26.904 26.903,-26.904 14.858,0 26.903,12.046 26.903,26.904 z"
+                 fill="#e6e6e6"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path13-5-8" />
+              <path
+                 d="m 366.007,166.517 c -2.023,-0.075 -3.972,-0.15 -5.995,-0.15 -1.948,0 -3.897,0.075 -5.92,0.15 -97.497,3.897 -170.414,108.963 -127.398,196.568 l 2.023,4.046 c 22.857,39.344 52.758,28.852 52.758,73.666 v 31.7 h 157.824 v -32.074 c 0,-44.59 26.978,-35.522 49.16,-73.067 l 2.323,-4.796 C 532.974,274.88 463.204,170.414 366.007,166.517 Z"
+                 fill="#fbb03b"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path15-1-6" />
+              <path
+                 d="m 366.007,166.517 c -2.023,-0.075 -3.972,-0.15 -5.995,-0.15 -1.948,0 -3.897,0.075 -5.92,0.15 -42.866,1.723 -80.936,22.931 -106.49,53.657 23.831,-19.934 54.032,-32.899 87.08,-34.248 1.949,-0.075 3.897,-0.15 5.921,-0.15 2.023,0 3.971,0.075 5.995,0.15 97.197,3.972 167.041,108.364 124.85,196.043 l -2.323,4.797 c -1.724,2.922 -3.448,5.545 -5.246,7.868 7.794,-6.145 16.562,-13.639 24.655,-27.278 l 2.323,-4.796 C 532.974,274.88 463.204,170.414 366.007,166.517 Z"
+                 fill="#ffc06c"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path17-0-7" />
+              <path
+                 d="m 374.85,461.181 c -2.848,-25.18 -5.62,-50.435 -4.646,-75.764 0.974,-25.33 6.07,-50.81 18.135,-73.067 3.073,-5.62 6.67,-11.166 11.916,-14.913 8.768,-6.22 21.583,-6.07 30.201,0.45 8.618,6.519 12.215,18.81 8.618,28.927 -3.597,9.967 -12.89,16.711 -22.557,21.133 -19.185,8.843 -100.645,8.843 -119.829,0 -9.593,-4.422 -18.96,-11.166 -22.557,-21.133 -3.672,-10.117 0,-22.408 8.618,-28.927 8.618,-6.52 21.433,-6.67 30.201,-0.45 5.245,3.747 8.843,9.293 11.915,14.913 12.065,22.257 17.161,47.737 18.136,73.067 0.974,25.329 -1.799,50.584 -4.647,75.764"
+                 stroke="#ffffff"
+                 stroke-width="11.1929"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path19-1-2" />
+              <path
+                 d="M 417.341,593.9 H 304.406 c -9.067,0 -23.156,-7.044 -23.156,-15.663 v 0 -113.684 c 0,-6.07 4.871,-10.941 10.941,-10.941 h 137.365 c 6.07,0 10.942,4.871 10.942,10.941 v 113.235 0.449 c 0,8.619 -14.164,15.663 -23.157,15.663 z"
+                 fill="#cccccc"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path21-1-4" />
+              <path
+                 d="m 440.797,472.497 -169.064,20.384 c -7.195,0.899 -13.714,-4.272 -14.614,-11.466 l -0.299,-2.548 c -0.9,-7.194 4.271,-13.714 11.465,-14.613 L 437.35,443.87 c 7.194,-0.899 13.714,4.272 14.613,11.466 l 0.3,2.548 c 0.899,7.194 -4.271,13.714 -11.466,14.613 z"
+                 fill="#e6e6e6"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path23-8-4" />
+              <path
+                 d="m 446.568,520.009 -169.065,20.384 c -7.194,0.899 -13.714,-4.272 -14.613,-11.466 l -0.3,-2.548 c -0.899,-7.194 4.272,-13.714 11.466,-14.613 l 169.065,-20.384 c 7.194,-0.899 13.714,4.272 14.613,11.466 l 0.3,2.548 c 0.824,7.194 -4.272,13.789 -11.466,14.613 z"
+                 fill="#e6e6e6"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path25-6-3" />
+              <path
+                 d="M 452.263,567.596 283.198,587.98 c -7.194,0.899 -13.714,-4.272 -14.613,-11.466 l -0.3,-2.548 c -0.899,-7.194 4.272,-13.714 11.466,-14.613 l 169.065,-20.384 c 7.194,-0.899 13.714,4.271 14.613,11.466 l 0.3,2.548 c 0.899,7.194 -4.272,13.714 -11.466,14.613 z"
+                 fill="#e6e6e6"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path27-9-6" />
+              <path
+                 d="m 281.25,539.943 v 9.068 l 159.248,-19.185 v -9.068 z"
+                 fill="#b3b3b3"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path29-8-6" />
+              <path
+                 d="m 439.523,472.647 -158.273,19.11 v 9.067 l 158.273,-19.109 c 0.3,-0.075 0.6,-0.15 0.9,-0.225 v -9.068 c -0.3,0.075 -0.525,0.15 -0.9,0.225 z"
+                 fill="#b3b3b3"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path31-6-0" />
+              <path
+                 d="m 286.871,587.53 c 4.946,3.822 12.14,6.37 17.535,6.37 h 4.872 l 131.22,-15.812 v -0.3 -8.768 z"
+                 fill="#b3b3b3"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path33-5-7" />
+              <path
+                 d="m 181.505,453.537 41.816,-35.671"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path35-8-7" />
+              <path
+                 d="m 181.505,453.537 41.816,-35.671"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path37-7-1" />
+              <path
+                 d="m 133.318,361.736 53.058,-14.089"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path39-3-9" />
+              <path
+                 d="m 133.318,361.736 53.058,-14.089"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path41-6-2" />
+              <path
+                 d="m 129.571,258.168 53.957,10.117"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path43-1-2" />
+              <path
+                 d="m 129.571,258.168 53.957,10.117"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path45-3-2" />
+              <path
+                 d="m 170.863,162.995 44.215,32.524"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path47-2-5" />
+              <path
+                 d="m 170.863,162.995 44.215,32.524"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path49-9-5" />
+              <path
+                 d="M 249.101,95.0989 275.03,143.435"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path51-1-8" />
+              <path
+                 d="M 249.101,95.0989 275.03,143.435"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path53-6-0" />
+              <path
+                 d="m 349.071,67.5959 2.473,54.8561"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path55-3-4" />
+              <path
+                 d="m 349.071,67.5959 2.473,54.8561"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path57-9-0" />
+              <path
+                 d="M 451.064,85.8813 429.706,136.391"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path59-4-5" />
+              <path
+                 d="M 451.064,85.8813 429.706,136.391"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path61-5-7" />
+              <path
+                 d="M 535.147,146.433 494.08,182.854"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path63-0-8" />
+              <path
+                 d="M 535.147,146.433 494.08,182.854"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path65-1-1" />
+              <path
+                 d="m 584.982,237.41 -52.833,14.988"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path67-2-4" />
+              <path
+                 d="m 584.982,237.41 -52.833,14.988"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path69-5-6" />
+              <path
+                 d="m 589.029,342.626 -53.432,-12.59"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path71-2-2" />
+              <path
+                 d="m 589.029,342.626 -53.432,-12.59"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path73-9-1" />
+              <path
+                 d="M 553.282,434.427 504.946,408.423"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path75-4-3" />
+              <path
+                 d="M 553.282,434.427 504.946,408.423"
+                 stroke="#fbb03b"
+                 stroke-width="18.6548"
+                 stroke-miterlimit="10"
+                 fill="none"
+                 transform="matrix(1,0,0,1.00234,280.525,-0.500689)"
+                 id="path77-0-5" />
+            </g>
+          </g>
+        </g>
+        <g
+           id="g2097-1"
+           transform="translate(-270.32087,-18.857458)">
+          <path
+             style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+             d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+             title="sin(x)"
+             id="path2204-1-2-5-1-1" />
+          <path
+             style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+             d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+             title="sin(x)"
+             id="path2204-1-2-5-2" />
+        </g>
+      </g>
+      <g
+         id="g2097-1-0"
+         transform="rotate(-30.386815,-133.82272,478.1474)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-1-1-7" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-2-6" />
+      </g>
+      <g
+         id="g2097-1-0-8"
+         transform="rotate(-72.010103,-104.65171,158.05718)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-1-1-7-8" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-2-6-6" />
+      </g>
+      <g
+         id="g2097-1-0-0"
+         transform="rotate(36.448149,-55.472206,-442.69115)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-1-1-7-7" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-2-6-3" />
+      </g>
+      <g
+         id="g2097-1-0-8-9"
+         transform="rotate(-112.32067,-42.562007,95.493092)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-1-1-7-8-4" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-2-6-6-3" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 24.233921,63.352742 c 1.95003,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.950056,-1.99433 3.900066,-2.77314 5.850116,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95006,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95001,-1.9921 3.90006,-5.15683 5.85007,-8.35368"
+       title="sin(x)"
+       id="path2204-6-2-4-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.74318;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556"
+       cx="44.709274"
+       cy="99.336487"
+       r="21.85"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 89.673532,67.638273 c 1.5458,-3.23461 3.091615,-6.43441 4.637402,-8.45234 1.54582,-2.01789 3.09161,-2.8059 4.63744,-2.08754 1.545766,0.71834 3.091606,2.93555 4.637416,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.09161,-0.072 4.63744,-2.08754 1.54578,-2.01564 3.0916,-5.21774 4.63739,-8.45235"
+       title="sin(x)"
+       id="path2204-1-7-4-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.40129;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556-8"
+       cx="105.9045"
+       cy="99.336494"
+       r="17.564501"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 146.54557,70.493318 c 1.27748,-3.26261 2.55499,-6.49013 3.83246,-8.525531 1.27751,-2.03535 2.55498,-2.83018 3.83249,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.938911 2.55498,6.522451 3.83245,9.46262 1.27751,2.940151 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83249,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+       title="sin(x)"
+       id="path2204-25-5-8-7-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.17352;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556-9"
+       cx="159.95921"
+       cy="99.336494"
+       r="14.7095"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <g
+       id="g8125">
+      <path
+         d="m -100.24598,256.36597 c -1.95035,0 -3.53145,-1.57741 -3.53145,-3.52321 0,-1.9458 1.5811,-3.52321 3.53145,-3.52321 1.950357,0 3.531591,1.57741 3.531591,3.52321 0,1.9458 -1.581234,3.52321 -3.531591,3.52321 z"
+         fill="#e6e6e6"
+         id="path13"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -44.144997,253.79471 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.511545,-12.76819 -14.303169,-22.31739 -25.802752,-16.68402 l -0.531103,0.26493 c -5.164541,2.99335 -3.787295,6.90918 -9.669863,6.90918 h -4.161141 v 20.66861 h 4.210235 c 5.853164,0 4.662841,3.53303 9.591234,6.43798 l 0.629553,0.30422 c 11.509428,5.52546 25.222292,-3.61161 25.733837,-16.34051 z"
+         fill="#fbb03b"
+         id="path15"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -44.144997,253.79471 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.226172,-5.61372 -3.010067,-10.59936 -7.043355,-13.94591 2.616662,3.1209 4.31853,7.07602 4.495608,11.40398 0.0098,0.25524 0.01969,0.51035 0.01969,0.77541 0,0.26494 -0.0098,0.52005 -0.01969,0.78511 -0.52139,12.7289 -14.22454,21.87566 -25.733838,16.35033 l -0.629684,-0.30422 c -0.38356,-0.22577 -0.727871,-0.45154 -1.032803,-0.68701 0.806631,1.0207 1.790341,2.16896 3.580682,3.22881 l 0.629553,0.30422 c 11.509428,5.51564 25.222292,-3.62143 25.733837,-16.35033 z"
+         fill="#ffc06c"
+         id="path17"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -82.824447,254.95279 c 3.305285,-0.37298 6.620415,-0.736 9.945259,-0.60844 3.324975,0.12755 6.669641,0.79492 9.591234,2.37495 0.737717,0.40244 1.46572,0.87351 1.957575,1.56052 0.816476,1.14826 0.796786,2.82651 -0.05907,3.95512 -0.855725,1.12861 -2.469119,1.59967 -3.79714,1.12861 -1.308331,-0.47106 -2.193591,-1.68807 -2.774051,-2.95406 -1.160788,-2.51246 -1.160788,-13.18045 0,-15.69279 0.58046,-1.25629 1.46572,-2.483 2.774051,-2.95406 1.328021,-0.48088 2.941415,0 3.79714,1.12861 0.855856,1.12862 0.875546,2.80687 0.05907,3.95512 -0.491855,0.68689 -1.219858,1.15808 -1.957575,1.56039 -2.921593,1.58003 -6.266259,2.2474 -9.591234,2.37509 -3.324844,0.12755 -6.639974,-0.2356 -9.945259,-0.60857"
+         stroke="#ffffff"
+         stroke-width="1.46753"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path19"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -100.24598,260.5174 v -14.78995 c 0,-1.18741 0.924642,-3.0325 2.056026,-3.0325 v 0 h 14.922877 c 0.796787,0 1.436185,0.6379 1.436185,1.43283 v 17.9893 c 0,0.79492 -0.639398,1.43296 -1.436185,1.43296 h -14.863938 -0.05894 c -1.131384,0 -2.056025,-1.85492 -2.056025,-3.03264 z"
+         fill="#cccccc"
+         id="path21"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -84.309856,263.58919 -2.675732,-22.14059 c -0.118009,-0.94226 0.560769,-1.79598 1.505099,-1.91385 l 0.334467,-0.0392 c 0.944329,-0.11787 1.800185,0.55933 1.918194,1.50145 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55933 -1.918194,-1.50159 z"
+         fill="#e6e6e6"
+         id="path23"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -90.54658,264.34496 -2.675732,-22.14072 c -0.118009,-0.94213 0.560769,-1.79598 1.505099,-1.91372 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.10791 -1.810031,-0.55946 -1.918194,-1.50159 z"
+         fill="#e6e6e6"
+         id="path25"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -96.793149,265.09078 -2.675732,-22.14073 c -0.118009,-0.94212 0.560769,-1.79598 1.505099,-1.91371 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14072 c 0.118008,0.94213 -0.560638,1.79598 -1.505099,1.91372 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55946 -1.918194,-1.50159 z"
+         fill="#e6e6e6"
+         id="path27"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -93.163242,242.69495 h -1.190323 l 2.518344,20.85509 h 1.190322 z"
+         fill="#b3b3b3"
+         id="path29"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -84.329546,263.42235 -2.508499,-20.7274 h -1.190191 l 2.508367,20.7274 c 0.0098,0.0393 0.01969,0.0786 0.02953,0.11787 h 1.190323 c -0.0098,-0.0393 -0.01969,-0.0688 -0.02953,-0.11787 z"
+         fill="#b3b3b3"
+         id="path31"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -99.409811,243.43107 c -0.5017,0.64773 -0.836169,1.58985 -0.836169,2.29638 v 0.63804 l 2.075585,17.18455 h 0.03938 1.150943 z"
+         fill="#b3b3b3"
+         id="path33"
+         style="stroke-width:0.131113"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -81.821047,229.63236 4.682399,5.47621"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path35"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -81.821047,229.63236 4.682399,5.47621"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path37"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -69.770671,223.32179 1.849411,6.94847"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path39"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -69.770671,223.32179 1.849411,6.94847"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path41"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -56.175684,222.83109 -1.328021,7.0662"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path43"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -56.175684,222.83109 -1.328021,7.0662"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path45"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -43.682677,228.23868 -4.269305,5.79039"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path47"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -43.682677,228.23868 -4.269305,5.79039"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path49"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -34.770208,238.48472 -6.3449,3.39565"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path51"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -34.770208,238.48472 -6.3449,3.39565"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path53"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -31.159991,251.57677 -7.200757,0.32387"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path55"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -31.159991,251.57677 -7.200757,0.32387"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path57"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -33.560248,264.93376 -6.630221,-2.79704"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path59"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -33.560248,264.93376 -6.630221,-2.79704"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path61"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -41.508645,275.94526 -4.780849,-5.37813"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path63"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -41.508645,275.94526 -4.780849,-5.37813"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path65"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -53.450858,282.47164 -1.967419,-6.919"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path67"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -53.450858,282.47164 -1.967419,-6.919"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path69"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -67.262172,283.00163 1.652643,-6.99744"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path71"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -67.262172,283.00163 1.652643,-6.99744"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path73"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -79.312549,278.32021 3.413449,-6.33007"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path75"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         d="m -79.312549,278.32021 3.413449,-6.33007"
+         stroke="#fbb03b"
+         stroke-width="2.44589"
+         stroke-miterlimit="10"
+         fill="none"
+         id="path77"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart)"
+       d="m 39.248642,252.9727 h -63.5"
+       id="path1245"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-8)"
+       d="m 179.6496,252.9727 h -63.5"
+       id="path1245-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <g
+       id="g3036"
+       transform="translate(0,-9.5992873)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 127.75241,199.86286 c 1.68034,-3.22137 3.36071,-6.40808 5.04102,-8.41775 1.68038,-2.00962 3.3607,-2.7944 5.04108,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36068,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.36068,-0.0717 5.04104,-2.07899 1.68032,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+         title="sin(x)"
+         id="path2204-2-6-2-0" />
+      <path
+         style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 130.57516,219.13931 c 1.4115,-3.24827 2.82304,-6.4616 4.23454,-8.48805 1.41152,-2.02641 2.82302,-2.81774 4.23455,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82301,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.23454,-2.09635 1.41149,-2.02415 2.82301,-5.23978 4.23451,-8.48806"
+         title="sin(x)"
+         id="path2204-25-0-4-0" />
+      <path
+         style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 131.98238,228.77754 c 1.27748,-3.26261 2.55499,-6.49013 3.83247,-8.52553 1.27751,-2.03535 2.55498,-2.83018 3.83249,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55498,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83248,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+         title="sin(x)"
+         id="path2204-25-5-8-7-2" />
+      <path
+         style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 129.16507,209.50108 c 1.5458,-3.23461 3.09162,-6.43441 4.63741,-8.45234 1.54583,-2.01789 3.09162,-2.8059 4.63745,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.0916,-0.072 4.63743,-2.08754 1.54578,-2.01564 3.0916,-5.21774 4.63739,-8.45235"
+         title="sin(x)"
+         id="path2204-1-7-4-8" />
+    </g>
+    <g
+       id="g3058"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -19.703322,190.22463 c 1.81509,-3.20888 3.6302,-6.38322 5.44527,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4453001,-2.07091 1.81507,0.71262 3.63019,2.91218 5.44529,5.80263 1.81508,2.8905 3.63019,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.8151199,0.71544 3.6301799,-0.0714 5.4452999,-2.07093 1.81506,-1.99959 3.63017,-5.17622 5.44525,-8.38508"
+         title="sin(x)"
+         id="path2204-3-8" />
+      <path
+         style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -18.288462,199.86286 c 1.68034,-3.22137 3.36071,-6.40808 5.04102,-8.41775 1.68038,-2.00962 3.3606901,-2.7944 5.0410701,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36068,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.3606899,-0.0717 5.0410499,-2.07899 1.68032,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+         title="sin(x)"
+         id="path2204-2-6-2" />
+      <path
+         style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -15.465712,219.13931 c 1.4115,-3.24827 2.82304,-6.4616 4.23453,-8.48805 1.4115201,-2.02641 2.8230201,-2.81774 4.2345501,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82301,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.2345499,-2.09635 1.41149,-2.02415 2.82301,-5.23978 4.23451,-8.48806"
+         title="sin(x)"
+         id="path2204-25-0-4" />
+      <path
+         style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -14.058492,228.77754 c 1.27748,-3.26261 2.55499,-6.49013 3.83246,-8.52553 1.2775101,-2.03535 2.5549801,-2.83018 3.8324901,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55498,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.8324899,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+         title="sin(x)"
+         id="path2204-25-5-8-7" />
+      <path
+         style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -16.875802,209.50108 c 1.5458,-3.23461 3.09162,-6.43441 4.63741,-8.45234 1.54582,-2.01789 3.0916101,-2.8059 4.6374401,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.0916099,-0.072 4.6374399,-2.08754 1.54578,-2.01564 3.0916,-5.21774 4.63739,-8.45235"
+         title="sin(x)"
+         id="path2204-1-7-4" />
+      <path
+         style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -21.120192,180.58639 c 1.95003,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.8501201,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.9500599,0.71277 3.9000699,-0.0711 5.8501199,-2.06317 1.95001,-1.9921 3.90006,-5.15683 5.85007,-8.35368"
+         title="sin(x)"
+         id="path2204-6-2-4" />
+    </g>
+    <g
+       id="g2710"
+       transform="translate(0.14485788,1.5916887)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 60.482344,213.96462 c 1.81509,-3.20888 3.6302,-6.38322 5.44527,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4453,-2.07091 1.81507,0.71262 3.63019,2.91218 5.44529,5.80263 1.81508,2.8905 3.63019,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.81512,0.71544 3.63018,-0.0714 5.4453,-2.07093 1.81506,-1.99959 3.63017,-5.17622 5.44525,-8.38508"
+         title="sin(x)"
+         id="path2204-3-8-1" />
+      <path
+         style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 59.065474,204.32638 c 1.95003,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.85012,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95006,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95001,-1.9921 3.90006,-5.15683 5.850066,-8.35368"
+         title="sin(x)"
+         id="path2204-6-2-4-9" />
+    </g>
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.74318;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556-1"
+       cx="79.685684"
+       cy="252.94388"
+       r="21.85"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <rect
+       style="fill:#045ea8;fill-opacity:1;stroke-width:1.2991;stroke-linecap:square;stroke-dashoffset:5.29134"
+       id="rect1297"
+       width="16.463802"
+       height="52.384823"
+       x="195.57341"
+       y="222.73732"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 195.5734,275.12213 V 218.62136"
+       id="path3691"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 212.03721,275.12214 V 218.62136"
+       id="path3691-5"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 195.5734,275.12213 h 16.46381"
+       id="path3828"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -100.24598,376.35862 c -1.95035,0 -3.53145,-1.57741 -3.53145,-3.52321 0,-1.9458 1.5811,-3.52321 3.53145,-3.52321 1.950358,0 3.531592,1.57741 3.531592,3.52321 0,1.9458 -1.581234,3.52321 -3.531592,3.52321 z"
+       fill="#e6e6e6"
+       id="path13-9"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -44.144996,373.78736 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.511545,-12.76819 -14.303169,-22.31739 -25.802752,-16.68402 l -0.531103,0.26493 c -5.164541,2.99335 -3.787295,6.90918 -9.669863,6.90918 h -4.161141 v 20.66861 h 4.210235 c 5.853164,0 4.662841,3.53303 9.591234,6.43798 l 0.629553,0.30422 c 11.509428,5.52546 25.222292,-3.61161 25.733837,-16.34051 z"
+       fill="#fbb03b"
+       id="path15-19"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -44.144996,373.78736 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.226172,-5.61372 -3.010067,-10.59936 -7.043355,-13.94591 2.616662,3.1209 4.31853,7.07602 4.495608,11.40398 0.0098,0.25524 0.01969,0.51035 0.01969,0.77541 0,0.26494 -0.0098,0.52005 -0.01969,0.78511 -0.52139,12.7289 -14.22454,21.87566 -25.733838,16.35033 l -0.629684,-0.30422 c -0.38356,-0.22577 -0.727871,-0.45154 -1.032803,-0.68701 0.806631,1.0207 1.790341,2.16896 3.580682,3.22881 l 0.629553,0.30422 c 11.509428,5.51564 25.222292,-3.62143 25.733837,-16.35033 z"
+       fill="#ffc06c"
+       id="path17-3"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -82.824446,374.94544 c 3.305285,-0.37298 6.620415,-0.736 9.945259,-0.60844 3.324975,0.12755 6.669641,0.79492 9.591234,2.37495 0.737717,0.40244 1.46572,0.87351 1.957575,1.56052 0.816476,1.14826 0.796786,2.82651 -0.05907,3.95512 -0.855725,1.12861 -2.469119,1.59967 -3.79714,1.12861 -1.308331,-0.47106 -2.193591,-1.68807 -2.774051,-2.95406 -1.160788,-2.51246 -1.160788,-13.18045 0,-15.69279 0.58046,-1.25629 1.46572,-2.483 2.774051,-2.95406 1.328021,-0.48088 2.941415,0 3.79714,1.12861 0.855856,1.12862 0.875546,2.80687 0.05907,3.95512 -0.491855,0.68689 -1.219858,1.15808 -1.957575,1.56039 -2.921593,1.58003 -6.266259,2.2474 -9.591234,2.37509 -3.324844,0.12755 -6.639974,-0.2356 -9.945259,-0.60857"
+       stroke="#ffffff"
+       stroke-width="1.46753"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path19-13"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="M -100.24598,380.51005 V 365.7201 c 0,-1.18741 0.924643,-3.03251 2.056027,-3.03251 v 0 h 14.922877 c 0.796787,0 1.436185,0.63791 1.436185,1.43284 v 17.9893 c 0,0.79492 -0.639398,1.43296 -1.436185,1.43296 h -14.863938 -0.05894 c -1.131384,0 -2.056026,-1.85492 -2.056026,-3.03264 z"
+       fill="#cccccc"
+       id="path21-5"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -84.309855,383.58184 -2.675732,-22.14059 c -0.118009,-0.94226 0.560769,-1.79598 1.505099,-1.91385 l 0.334467,-0.0392 c 0.944329,-0.11787 1.800185,0.55933 1.918194,1.50145 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55933 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path23-6"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -90.546579,384.33761 -2.675732,-22.14072 c -0.118009,-0.94213 0.560769,-1.79598 1.505099,-1.91372 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.10791 -1.810031,-0.55946 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path25-4"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="M -96.793148,385.08343 -99.46888,362.9427 c -0.118009,-0.94212 0.560769,-1.79598 1.505099,-1.91371 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14072 c 0.118008,0.94213 -0.560638,1.79598 -1.505099,1.91372 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55946 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path27-4"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -93.163241,362.68759 h -1.190323 l 2.518344,20.8551 h 1.190322 z"
+       fill="#b3b3b3"
+       id="path29-2"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -84.329545,383.415 -2.508499,-20.72741 h -1.190191 l 2.508367,20.72741 c 0.0098,0.0393 0.01969,0.0786 0.02953,0.11787 h 1.190323 c -0.0098,-0.0393 -0.01969,-0.0688 -0.02953,-0.11787 z"
+       fill="#b3b3b3"
+       id="path31-3"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -99.40981,363.42372 c -0.5017,0.64773 -0.83617,1.58985 -0.83617,2.29638 v 0.63804 l 2.075586,17.18455 h 0.03938 1.150943 z"
+       fill="#b3b3b3"
+       id="path33-2"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -81.821046,349.62501 4.682399,5.47621"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path35-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -81.821046,349.62501 4.682399,5.47621"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path37-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -69.77067,343.31444 1.849411,6.94847"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path39-37"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -69.77067,343.31444 1.849411,6.94847"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path41-5"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -56.175683,342.82374 -1.328021,7.0662"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path43-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -56.175683,342.82374 -1.328021,7.0662"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path45-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -43.682676,348.23133 -4.269305,5.79039"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path47-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -43.682676,348.23133 -4.269305,5.79039"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path49-1"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -34.770207,358.47737 -6.3449,3.39565"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path51-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -34.770207,358.47737 -6.3449,3.39565"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path53-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -31.15999,371.56942 -7.200757,0.32387"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path55-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -31.15999,371.56942 -7.200757,0.32387"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path57-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -33.560247,384.92641 -6.630221,-2.79704"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path59-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -33.560247,384.92641 -6.630221,-2.79704"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path61-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -41.508644,395.93791 -4.780849,-5.37813"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path63-2"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -41.508644,395.93791 -4.780849,-5.37813"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path65-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -53.450857,402.46429 -1.967419,-6.919"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path67-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -53.450857,402.46429 -1.967419,-6.919"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path69-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -67.262171,402.99428 1.652643,-6.99744"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path71-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -67.262171,402.99428 1.652643,-6.99744"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path73-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -79.312548,398.31286 3.413449,-6.33007"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path75-5"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -79.312548,398.31286 3.413449,-6.33007"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path77-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-6)"
+       d="M 39.248642,372.96535 H -24.251357"
+       id="path1245-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-8-3)"
+       d="m 179.6496,372.96535 h -63.5"
+       id="path1245-0-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <g
+       id="g2714"
+       transform="translate(9.7145203,12.229791)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 52.327537,317.3048 c 1.680341,-3.22137 3.36071,-6.40808 5.041021,-8.41775 1.68038,-2.00962 3.360689,-2.7944 5.041069,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36068,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.36069,-0.0717 5.041055,-2.07899 1.68031,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+         title="sin(x)"
+         id="path2204-2-6-2-4-7" />
+      <path
+         style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 53.740198,326.94302 c 1.5458,-3.23461 3.091619,-6.43441 4.637409,-8.45234 1.54582,-2.01789 3.09161,-2.8059 4.63744,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.09161,-0.072 4.637445,-2.08754 1.54577,-2.01564 3.0916,-5.21774 4.63737,-8.45235"
+         title="sin(x)"
+         id="path2204-1-7-4-82-2" />
+    </g>
+    <path
+       style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -19.703318,310.21728 c 1.81509,-3.20888 3.630201,-6.38322 5.445271,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4452995,-2.07091 1.8150695,0.71262 3.6301895,2.91218 5.4452895,5.80263 1.81508,2.8905 3.63019,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.81512,0.71544 3.63018,-0.0714 5.4453,-2.07093 1.81506,-1.99959 3.63016,-5.17622 5.44524,-8.38508"
+       title="sin(x)"
+       id="path2204-3-8-4"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -18.288458,319.85551 c 1.680341,-3.22137 3.360711,-6.40808 5.041021,-8.41775 1.68038,-2.00962 3.3606895,-2.7944 5.041069,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36068,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.36069,-0.0717 5.04105,-2.07899 1.68032,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+       title="sin(x)"
+       id="path2204-2-6-2-4"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -15.465707,339.13196 c 1.4115,-3.24827 2.82304,-6.4616 4.23453,-8.48805 1.4115195,-2.02641 2.823019,-2.81774 4.234549,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82301,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.23455,-2.09635 1.41149,-2.02415 2.82301,-5.23978 4.23451,-8.48806"
+       title="sin(x)"
+       id="path2204-25-0-4-09"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -14.058487,348.77019 c 1.27748,-3.26261 2.55499,-6.49013 3.83246,-8.52553 1.2775095,-2.03535 2.554979,-2.83018 3.832489,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55498,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83249,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+       title="sin(x)"
+       id="path2204-25-5-8-7-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -16.875797,329.49373 c 1.5458,-3.23461 3.09162,-6.43441 4.63741,-8.45234 1.54582,-2.01789 3.0916095,-2.8059 4.637439,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.09161,-0.072 4.63744,-2.08754 1.54578,-2.01564 3.0916,-5.21774 4.63738,-8.45235"
+       title="sin(x)"
+       id="path2204-1-7-4-82"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m -21.120187,300.57904 c 1.950029,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.8501195,-2.06317 1.9500095,0.70995 3.9000695,2.90128 5.8501195,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95006,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95,-1.9921 3.90006,-5.15683 5.85006,-8.35368"
+       title="sin(x)"
+       id="path2204-6-2-4-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.40129;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556-1-6"
+       cx="79.685684"
+       cy="372.93652"
+       r="17.564501"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <rect
+       style="fill:#9f30ee;fill-opacity:1;stroke-width:1.2991;stroke-linecap:square;stroke-dashoffset:5.29134"
+       id="rect1297-5"
+       width="16.463802"
+       height="52.384823"
+       x="195.57341"
+       y="342.72998"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 195.5734,395.11478 V 338.61401"
+       id="path3691-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 212.03721,395.11479 V 338.61401"
+       id="path3691-5-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 195.5734,395.11478 h 16.46381"
+       id="path3828-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 126.87068,310.21728 c 1.81509,-3.20888 3.6302,-6.38322 5.44527,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4453,-2.07091 1.81507,0.71262 3.63019,2.91218 5.44529,5.80263 1.81508,2.8905 3.63019,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.81512,0.71544 3.63018,-0.0714 5.4453,-2.07093 1.81506,-1.99959 3.63016,-5.17622 5.44524,-8.38508"
+       title="sin(x)"
+       id="path2204-3-8-4-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 131.10829,339.13196 c 1.4115,-3.24827 2.82304,-6.4616 4.23453,-8.48805 1.41152,-2.02641 2.82302,-2.81774 4.23455,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82301,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.23455,-2.09635 1.41149,-2.02415 2.82301,-5.23978 4.23451,-8.48806"
+       title="sin(x)"
+       id="path2204-25-0-4-09-1"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 132.51551,348.77019 c 1.27748,-3.26261 2.55499,-6.49013 3.83246,-8.52553 1.27751,-2.03535 2.55498,-2.83018 3.83249,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55498,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83249,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+       title="sin(x)"
+       id="path2204-25-5-8-7-6-4"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+       d="m 125.45381,300.57904 c 1.95003,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.85012,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95006,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95,-1.9921 3.90006,-5.15683 5.85006,-8.35368"
+       title="sin(x)"
+       id="path2204-6-2-4-6-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -100.24597,496.35123 c -1.95036,0 -3.53146,-1.57741 -3.53146,-3.52321 0,-1.9458 1.5811,-3.52321 3.53146,-3.52321 1.95035,0 3.531584,1.57741 3.531584,3.52321 0,1.9458 -1.581234,3.52321 -3.531584,3.52321 z"
+       fill="#e6e6e6"
+       id="path13-9-9"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -44.144994,493.77997 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.511545,-12.76819 -14.303169,-22.31739 -25.802752,-16.68402 l -0.531103,0.26493 c -5.164541,2.99335 -3.787295,6.90918 -9.669863,6.90918 h -4.161141 v 20.66861 h 4.210235 c 5.853164,0 4.662841,3.53303 9.591234,6.43798 l 0.629553,0.30422 c 11.509428,5.52546 25.222292,-3.61161 25.733837,-16.34051 z"
+       fill="#fbb03b"
+       id="path15-19-5"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -44.144994,493.77997 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.226172,-5.61372 -3.010067,-10.59936 -7.043355,-13.94591 2.616662,3.1209 4.31853,7.07602 4.495608,11.40398 0.0098,0.25524 0.01969,0.51035 0.01969,0.77541 0,0.26494 -0.0098,0.52005 -0.01969,0.78511 -0.52139,12.7289 -14.22454,21.87566 -25.733838,16.35033 l -0.629684,-0.30422 c -0.38356,-0.22577 -0.727871,-0.45154 -1.032803,-0.68701 0.806631,1.0207 1.790341,2.16896 3.580682,3.22881 l 0.629553,0.30422 c 11.509428,5.51564 25.222292,-3.62143 25.733837,-16.35033 z"
+       fill="#ffc06c"
+       id="path17-3-2"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -82.824444,494.93805 c 3.305285,-0.37298 6.620415,-0.736 9.945259,-0.60844 3.324975,0.12755 6.669641,0.79492 9.591234,2.37495 0.737717,0.40244 1.46572,0.87351 1.957575,1.56052 0.816476,1.14826 0.796786,2.82651 -0.05907,3.95512 -0.855725,1.12861 -2.469119,1.59967 -3.79714,1.12861 -1.308331,-0.47106 -2.193591,-1.68807 -2.774051,-2.95406 -1.160788,-2.51246 -1.160788,-13.18045 0,-15.69279 0.58046,-1.25629 1.46572,-2.483 2.774051,-2.95406 1.328021,-0.48088 2.941415,0 3.79714,1.12861 0.855856,1.12862 0.875546,2.80687 0.05907,3.95512 -0.491855,0.68689 -1.219858,1.15808 -1.957575,1.56039 -2.921593,1.58003 -6.266259,2.2474 -9.591234,2.37509 -3.324844,0.12755 -6.639974,-0.2356 -9.945259,-0.60857"
+       stroke="#ffffff"
+       stroke-width="1.46753"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path19-13-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -100.24597,500.50266 v -14.78995 c 0,-1.18741 0.924635,-3.03251 2.056019,-3.03251 v 0 h 14.922877 c 0.796787,0 1.436185,0.63791 1.436185,1.43284 v 17.9893 c 0,0.79492 -0.639398,1.43296 -1.436185,1.43296 h -14.863938 -0.05894 c -1.131384,0 -2.056018,-1.85492 -2.056018,-3.03264 z"
+       fill="#cccccc"
+       id="path21-5-6"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -84.309853,503.57445 -2.675732,-22.14059 c -0.118009,-0.94226 0.560769,-1.79598 1.505099,-1.91385 l 0.334467,-0.0392 c 0.944329,-0.11787 1.800185,0.55933 1.918194,1.50145 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55933 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path23-6-5"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -90.546577,504.33022 -2.675732,-22.14072 c -0.118009,-0.94213 0.560769,-1.79598 1.505099,-1.91372 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.10791 -1.810031,-0.55946 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path25-4-1"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -96.793146,505.07604 -2.675732,-22.14073 c -0.118009,-0.94212 0.560769,-1.79598 1.505099,-1.91371 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14072 c 0.118008,0.94213 -0.560638,1.79598 -1.505099,1.91372 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55946 -1.918194,-1.50159 z"
+       fill="#e6e6e6"
+       id="path27-4-3"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -93.163239,482.6802 h -1.190323 l 2.518344,20.8551 h 1.190322 z"
+       fill="#b3b3b3"
+       id="path29-2-7"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -84.329543,503.40761 -2.508499,-20.72741 h -1.190191 l 2.508367,20.72741 c 0.0098,0.0393 0.01969,0.0786 0.02953,0.11787 h 1.190323 c -0.0098,-0.0393 -0.01969,-0.0688 -0.02953,-0.11787 z"
+       fill="#b3b3b3"
+       id="path31-3-7"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -99.409808,483.41633 c -0.5017,0.64773 -0.836162,1.58985 -0.836162,2.29638 v 0.63804 l 2.075578,17.18455 h 0.03938 1.150943 z"
+       fill="#b3b3b3"
+       id="path33-2-7"
+       style="stroke-width:0.131113"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -81.821044,469.61762 4.682399,5.47621"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path35-6-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -81.821044,469.61762 4.682399,5.47621"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path37-9-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -69.770668,463.30705 1.849411,6.94847"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path39-37-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -69.770668,463.30705 1.849411,6.94847"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path41-5-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -56.175681,462.81635 -1.328021,7.0662"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path43-6-2"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -56.175681,462.81635 -1.328021,7.0662"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path45-9-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -43.682674,468.22394 -4.269305,5.79039"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path47-3-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -43.682674,468.22394 -4.269305,5.79039"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path49-1-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -34.770205,478.46998 -6.3449,3.39565"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path51-6-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -34.770205,478.46998 -6.3449,3.39565"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path53-7-4"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -31.159988,491.56203 -7.200757,0.32387"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path55-9-2"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -31.159988,491.56203 -7.200757,0.32387"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path57-6-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -33.560245,504.91902 -6.630221,-2.79704"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path59-6-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -33.560245,504.91902 -6.630221,-2.79704"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path61-9-4"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -41.508642,515.93052 -4.780849,-5.37813"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path63-2-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -41.508642,515.93052 -4.780849,-5.37813"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path65-3-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -53.450855,522.4569 -1.967419,-6.919"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path67-7-1"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -53.450855,522.4569 -1.967419,-6.919"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path69-9-5"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -67.262169,522.98689 1.652643,-6.99744"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path71-9-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -67.262169,522.98689 1.652643,-6.99744"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path73-0-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -79.312546,518.30547 3.413449,-6.33007"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path75-5-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       d="m -79.312546,518.30547 3.413449,-6.33007"
+       stroke="#fbb03b"
+       stroke-width="2.44589"
+       stroke-miterlimit="10"
+       fill="none"
+       id="path77-7-3"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-6-8)"
+       d="m 39.248645,492.95796 h -63.5"
+       id="path1245-7-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-8-3-2)"
+       d="m 179.6496,492.95796 h -63.5"
+       id="path1245-0-0-2"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <g
+       id="g3050"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -19.703315,430.20989 c 1.81509,-3.20888 3.630201,-6.38322 5.445271,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4452996,-2.07091 1.815069,0.71262 3.630189,2.91218 5.445289,5.80263 1.81508,2.8905 3.63018998,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.81512,0.71544 3.6301804,-0.0714 5.4453004,-2.07093 1.81506,-1.99959 3.63016,-5.17622 5.44524,-8.38508"
+         title="sin(x)"
+         id="path2204-3-8-4-8" />
+      <path
+         style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -18.288455,439.84812 c 1.680341,-3.22137 3.360711,-6.40808 5.041021,-8.41775 1.68038,-2.00962 3.3606896,-2.7944 5.0410686,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36067998,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.3606904,-0.0717 5.0410504,-2.07899 1.68032,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+         title="sin(x)"
+         id="path2204-2-6-2-4-3" />
+      <path
+         style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -15.465704,459.12457 c 1.4115,-3.24827 2.823039,-6.4616 4.234529,-8.48805 1.4115206,-2.02641 2.8230196,-2.81774 4.2345496,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82300998,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.23455,-2.09635 1.4114904,-2.02415 2.8230104,-5.23978 4.2345104,-8.48806"
+         title="sin(x)"
+         id="path2204-25-0-4-09-0" />
+      <path
+         style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -14.058484,468.7628 c 1.277479,-3.26261 2.55499,-6.49013 3.832459,-8.52553 1.2775106,-2.03535 2.5549796,-2.83018 3.8324896,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55497998,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83249,-2.10561 1.2774704,-2.03309 2.5549804,-5.26291 3.8324504,-8.52554"
+         title="sin(x)"
+         id="path2204-25-5-8-7-6-7" />
+      <path
+         style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -16.875794,449.48634 c 1.5458,-3.23461 3.09162,-6.43441 4.637409,-8.45234 1.545821,-2.01789 3.0916106,-2.8059 4.6374396,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09161998,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.09161,-0.072 4.6374404,-2.08754 1.54578,-2.01564 3.0916,-5.21774 4.63738,-8.45235"
+         title="sin(x)"
+         id="path2204-1-7-4-82-22" />
+      <path
+         style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m -21.120185,420.57165 c 1.95003,-3.19686 3.900081,-6.35931 5.850091,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.8501186,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90005998,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.9500604,0.71277 3.9000704,-0.0711 5.8501204,-2.06317 1.95,-1.9921 3.90006,-5.15683 5.85006,-8.35368"
+         title="sin(x)"
+         id="path2204-6-2-4-6-0" />
+    </g>
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1.17352;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+       id="path1556-1-6-4"
+       cx="79.685684"
+       cy="492.92914"
+       r="14.7095"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <rect
+       style="fill:#e2100d;fill-opacity:1;stroke-width:1.2991;stroke-linecap:square;stroke-dashoffset:5.29134"
+       id="rect1297-5-4"
+       width="16.463802"
+       height="52.384823"
+       x="195.57339"
+       y="462.72253"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 195.5734,515.10739 V 458.60662"
+       id="path3691-7-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 212.03721,515.1074 V 458.60662"
+       id="path3691-5-8-6"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 195.5734,515.10739 h 16.46381"
+       id="path3828-7-0"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999" />
+    <g
+       id="g2718"
+       transform="translate(5.598571,2.7935923)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 59.266239,446.65187 c 1.4115,-3.24827 2.823039,-6.4616 4.234529,-8.48805 1.411521,-2.02641 2.82302,-2.81774 4.23455,-2.09636 1.41149,0.72138 2.82302,2.94796 4.23455,5.8739 1.41149,2.926 2.82301,6.49379 4.23451,9.42103 1.41153,2.92723 2.82301,5.14966 4.23455,5.87389 1.41153,0.72423 2.82302,-0.0723 4.23455,-2.09635 1.41149,-2.02415 2.82301,-5.23978 4.23451,-8.48806"
+         title="sin(x)"
+         id="path2204-25-0-4-09-0-7" />
+      <path
+         style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 60.673459,456.2901 c 1.277479,-3.26261 2.55499,-6.49013 3.832459,-8.52553 1.277511,-2.03535 2.55498,-2.83018 3.83249,-2.10561 1.27747,0.72457 2.55498,2.96097 3.83248,5.89984 1.27748,2.93891 2.55498,6.52245 3.83245,9.46262 1.27751,2.94015 2.55498,5.1724 3.83249,5.89983 1.27751,0.72743 2.55498,-0.0726 3.83249,-2.10561 1.27747,-2.03309 2.55498,-5.26291 3.83245,-8.52554"
+         title="sin(x)"
+         id="path2204-25-5-8-7-6-7-0" />
+    </g>
+    <g
+       id="g3042"
+       transform="translate(0,9.6790941)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <path
+         style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 122.38055,430.20989 c 1.81509,-3.20888 3.63021,-6.38322 5.44528,-8.3851 1.81512,-2.00182 3.63018,-2.78355 5.4453,-2.07091 1.81506,0.71262 3.63018,2.91218 5.44528,5.80263 1.81508,2.8905 3.63019,6.41502 5.44525,9.30674 1.81512,2.89173 3.63018,5.0872 5.44531,5.80265 1.81512,0.71544 3.63019,-0.0714 5.4453,-2.07093 1.81506,-1.99959 3.63016,-5.17622 5.44524,-8.38508"
+         title="sin(x)"
+         id="path2204-3-8-4-8-2" />
+      <path
+         style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 123.79541,439.84812 c 1.68035,-3.22137 3.36072,-6.40808 5.04103,-8.41775 1.68038,-2.00962 3.36069,-2.7944 5.04106,-2.07899 1.68031,0.71541 3.36068,2.92354 5.04104,5.82525 1.68033,2.90175 3.36068,6.43999 5.04101,9.34297 1.68036,2.903 3.36068,5.10702 5.04105,5.82525 1.68036,0.71824 3.36069,-0.0717 5.04105,-2.07899 1.68032,-2.00739 3.36068,-5.19637 5.04101,-8.41774"
+         title="sin(x)"
+         id="path2204-2-6-2-4-3-2" />
+      <path
+         style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 125.20808,449.48634 c 1.5458,-3.23461 3.09162,-6.43441 4.6374,-8.45234 1.54583,-2.01789 3.09162,-2.8059 4.63744,-2.08754 1.54577,0.71834 3.09161,2.93555 4.63742,5.84919 1.5458,2.91368 3.09162,6.46647 4.63739,9.38139 1.54584,2.91491 3.09161,5.12799 4.63744,5.84919 1.54583,0.72118 3.09161,-0.072 4.63744,-2.08754 1.54579,-2.01564 3.0916,-5.21774 4.63739,-8.45235"
+         title="sin(x)"
+         id="path2204-1-7-4-82-22-5" />
+      <path
+         style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 120.96368,420.57165 c 1.95003,-3.19686 3.90009,-6.35931 5.8501,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.85011,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95007,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95,-1.9921 3.90006,-5.15683 5.85006,-8.35368"
+         title="sin(x)"
+         id="path2204-6-2-4-6-0-0" />
+    </g>
+    <g
+       id="g3927"
+       transform="translate(-41.159507,-3.7417734)"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\whitelight.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <g
+         id="g3779"
+         transform="translate(0,-6.2918886)">
+        <path
+           style="fill:none;stroke:#f8961e;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 160.56178,-32.66636 c 1.81509,-3.208877 3.6302,-6.383225 5.44527,-8.385096 1.81512,-2.001821 3.63018,-2.783558 5.4453,-2.070916 1.81507,0.712622 3.63019,2.912186 5.44529,5.802636 1.81508,2.890499 3.63019,6.415021 5.44525,9.306741 1.81512,2.891721 3.63018,5.087194 5.44531,5.802647 1.81512,0.715442 3.63018,-0.0714 5.4453,-2.070928 1.81506,-1.999596 3.63017,-5.176219 5.44525,-8.385084"
+           title="sin(x)"
+           id="path2204-3" />
+        <path
+           style="fill:none;stroke:#f9c74f;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 161.97664,-23.028134 c 1.68034,-3.221364 3.36071,-6.408075 5.04102,-8.417742 1.68038,-2.009628 3.36069,-2.794401 5.04107,-2.078993 1.68031,0.715408 3.36068,2.923539 5.04104,5.825245 1.68033,2.901757 3.36068,6.439996 5.04101,9.342979 1.68036,2.902993 3.36068,5.107017 5.04105,5.825246 1.68036,0.718239 3.36069,-0.07168 5.04105,-2.078992 1.68032,-2.007385 3.36068,-5.196369 5.04101,-8.417743"
+           title="sin(x)"
+           id="path2204-2-6" />
+        <path
+           style="fill:none;stroke:#048ba8;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 164.79939,-3.7516796 c 1.4115,-3.248271 2.82304,-6.4615994 4.23453,-8.4880524 1.41152,-2.026403 2.82302,-2.81774 4.23455,-2.096357 1.41149,0.721383 2.82302,2.947958 4.23455,5.8739004 1.41149,2.925994 2.82301,6.493787 4.23451,9.421026 1.41153,2.92723 2.82301,5.1496626 4.23455,5.8738906 1.41153,0.724237 2.82302,-0.07228 4.23455,-2.0963466 1.41149,-2.024151 2.82301,-5.239782 4.23451,-8.488061"
+           title="sin(x)"
+           id="path2204-25-0" />
+        <path
+           style="fill:none;stroke:#616794;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 166.20661,5.8865534 c 1.27748,-3.262612 2.55499,-6.490129 3.83246,-8.525529 1.27751,-2.035351 2.55498,-2.830182 3.83249,-2.105614 1.27747,0.724569 2.55498,2.960974 3.83248,5.899837 1.27748,2.938912 2.55498,6.5224576 3.83245,9.4626226 1.27751,2.940154 2.55498,5.1724 3.83249,5.899826 1.27751,0.727436 2.55498,-0.07259 3.83249,-2.105603 1.27747,-2.033089 2.55498,-5.262917 3.83245,-8.5255396"
+           title="sin(x)"
+           id="path2204-25-5-8" />
+        <path
+           style="fill:none;stroke:#90be6d;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 163.3893,-13.389905 c 1.5458,-3.234616 3.09162,-6.434415 4.63741,-8.452344 1.54582,-2.017888 3.09161,-2.805896 4.63744,-2.087537 1.54577,0.718338 3.09161,2.935545 4.63742,5.84919 1.5458,2.913674 3.09162,6.466466 4.63739,9.3813824 1.54584,2.914915 3.09161,5.127998 4.63744,5.849189 1.54583,0.721182 3.09161,-0.07197 4.63744,-2.087537 1.54578,-2.015636 3.0916,-5.2177394 4.63739,-8.4523434"
+           title="sin(x)"
+           id="path2204-1-7" />
+        <path
+           style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 159.14491,-42.304598 c 1.95003,-3.196857 3.90008,-6.359307 5.85009,-8.353681 1.95006,-1.994334 3.90007,-2.773143 5.85012,-2.06317 1.95001,0.709953 3.90007,2.90128 5.85012,5.780914 1.95001,2.879663 3.90006,6.390985 5.85006,9.271876 1.95007,2.880891 3.90007,5.068141 5.85013,5.780914 1.95006,0.712763 3.90007,-0.07113 5.85012,-2.063171 1.95001,-1.992107 3.90006,-5.156833 5.85007,-8.353682"
+           title="sin(x)"
+           id="path2204-6-2" />
+      </g>
+      <g
+         id="g2097"
+         transform="translate(0,-2.8465677)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.553999 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5-1" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+           d="m 83.452712,-21.554052 c 1.61196,-3.231375 3.22394,-6.427982 4.83587,-8.443892 1.61198,-2.015865 3.22391,-2.803082 4.83589,-2.085447 1.61193,0.717625 3.22391,2.932616 4.83588,5.843337 1.61193,2.910766 3.223908,6.460002 4.835838,9.372005 1.61198,2.912003 3.22391,5.122872 4.8359,5.843337 1.61197,0.720465 3.2239,-0.07187 4.83589,-2.085447 1.61193,-2.01362 3.22389,-5.212517 4.83583,-8.443893"
+           title="sin(x)"
+           id="path2204-1-2-5" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:31.75px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="129.42653"
+         y="-14.780011"
+         id="text2767"><tspan
+           sodipodi:role="line"
+           id="tspan2765"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.75px;font-family:Avenir;-inkscape-font-specification:Avenir;stroke-width:0.264583"
+           x="129.42653"
+           y="-14.780011">=</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.6417px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="44.936283"
+       y="95.455132"
+       id="text4258"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="44.936283"
+         y="95.455132">Big</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="44.936283"
+         y="108.66616"
+         id="tspan4260">Ag NP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.6417px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.912697"
+       y="249.06252"
+       id="text4258-2"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.912697"
+         y="249.06252">Big</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.912697"
+         y="262.27356"
+         id="tspan4260-5">Ag NP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.2306px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="106.104"
+       y="96.171135"
+       id="text4258-9"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.2306px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="106.104"
+         y="96.171135">Med.</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.2306px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="106.104"
+         y="107.78085"
+         id="tspan4260-8">Ag NP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.2306px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.885178"
+       y="369.77115"
+       id="text4258-9-1"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256-5-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.2306px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.885178"
+         y="369.77115">med.</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.2306px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.885178"
+         y="381.38086"
+         id="tspan4260-8-2">Ag NP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.81944px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="160.1312"
+       y="96.60775"
+       id="text4258-7"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="160.1312"
+         y="96.60775">Small</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="160.1312"
+         y="106.61607"
+         id="tspan4260-4">Ag NP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.81944px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.857658"
+       y="490.20038"
+       id="text4258-7-8"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999"><tspan
+         sodipodi:role="line"
+         id="tspan4256-7-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.857658"
+         y="490.20038">Small</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="79.857658"
+         y="500.20871"
+         id="tspan4260-4-2">Ag NP</tspan></text>
+    <g
+       id="g15045"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_red_light.png"
+       inkscape:export-xdpi="399.95999"
+       inkscape:export-ydpi="399.95999">
+      <circle
+         style="fill:#000000;stroke:none;stroke-width:1.74318;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134"
+         id="path1556-1-64"
+         cx="289.70694"
+         cy="-186.90939"
+         r="21.85"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:11.6417px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="289.93396"
+         y="-190.79076"
+         id="text4258-20"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\NP_size_colour.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999"><tspan
+           sodipodi:role="line"
+           id="tspan4256-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="289.93396"
+           y="-190.79076">Big</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6417px;font-family:Avenir;-inkscape-font-specification:Avenir;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="289.93396"
+           y="-177.57973"
+           id="tspan4260-9">Ag NP</tspan></text>
+      <g
+         id="g8125-7"
+         transform="translate(210.02124,-439.85328)">
+        <path
+           d="m -100.24598,256.36597 c -1.95035,0 -3.53145,-1.57741 -3.53145,-3.52321 0,-1.9458 1.5811,-3.52321 3.53145,-3.52321 1.950357,0 3.531591,1.57741 3.531591,3.52321 0,1.9458 -1.581234,3.52321 -3.531591,3.52321 z"
+           fill="#e6e6e6"
+           id="path13-5"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -44.144997,253.79471 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.511545,-12.76819 -14.303169,-22.31739 -25.802752,-16.68402 l -0.531103,0.26493 c -5.164541,2.99335 -3.787295,6.90918 -9.669863,6.90918 h -4.161141 v 20.66861 h 4.210235 c 5.853164,0 4.662841,3.53303 9.591234,6.43798 l 0.629553,0.30422 c 11.509428,5.52546 25.222292,-3.61161 25.733837,-16.34051 z"
+           fill="#fbb03b"
+           id="path15-1"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -44.144997,253.79471 c 0.0098,-0.26493 0.01969,-0.52017 0.01969,-0.78511 0,-0.25511 -0.0098,-0.51035 -0.01969,-0.77528 -0.226172,-5.61372 -3.010067,-10.59936 -7.043355,-13.94591 2.616662,3.1209 4.31853,7.07602 4.495608,11.40398 0.0098,0.25524 0.01969,0.51035 0.01969,0.77541 0,0.26494 -0.0098,0.52005 -0.01969,0.78511 -0.52139,12.7289 -14.22454,21.87566 -25.733838,16.35033 l -0.629684,-0.30422 c -0.38356,-0.22577 -0.727871,-0.45154 -1.032803,-0.68701 0.806631,1.0207 1.790341,2.16896 3.580682,3.22881 l 0.629553,0.30422 c 11.509428,5.51564 25.222292,-3.62143 25.733837,-16.35033 z"
+           fill="#ffc06c"
+           id="path17-0"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -82.824447,254.95279 c 3.305285,-0.37298 6.620415,-0.736 9.945259,-0.60844 3.324975,0.12755 6.669641,0.79492 9.591234,2.37495 0.737717,0.40244 1.46572,0.87351 1.957575,1.56052 0.816476,1.14826 0.796786,2.82651 -0.05907,3.95512 -0.855725,1.12861 -2.469119,1.59967 -3.79714,1.12861 -1.308331,-0.47106 -2.193591,-1.68807 -2.774051,-2.95406 -1.160788,-2.51246 -1.160788,-13.18045 0,-15.69279 0.58046,-1.25629 1.46572,-2.483 2.774051,-2.95406 1.328021,-0.48088 2.941415,0 3.79714,1.12861 0.855856,1.12862 0.875546,2.80687 0.05907,3.95512 -0.491855,0.68689 -1.219858,1.15808 -1.957575,1.56039 -2.921593,1.58003 -6.266259,2.2474 -9.591234,2.37509 -3.324844,0.12755 -6.639974,-0.2356 -9.945259,-0.60857"
+           stroke="#ffffff"
+           stroke-width="1.46753"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path19-6"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -100.24598,260.5174 v -14.78995 c 0,-1.18741 0.924642,-3.0325 2.056026,-3.0325 v 0 h 14.922877 c 0.796787,0 1.436185,0.6379 1.436185,1.43283 v 17.9893 c 0,0.79492 -0.639398,1.43296 -1.436185,1.43296 h -14.863938 -0.05894 c -1.131384,0 -2.056025,-1.85492 -2.056025,-3.03264 z"
+           fill="#cccccc"
+           id="path21-0"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -84.309856,263.58919 -2.675732,-22.14059 c -0.118009,-0.94226 0.560769,-1.79598 1.505099,-1.91385 l 0.334467,-0.0392 c 0.944329,-0.11787 1.800185,0.55933 1.918194,1.50145 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55933 -1.918194,-1.50159 z"
+           fill="#e6e6e6"
+           id="path23-2"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -90.54658,264.34496 -2.675732,-22.14072 c -0.118009,-0.94213 0.560769,-1.79598 1.505099,-1.91372 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14073 c 0.118008,0.94212 -0.56077,1.79598 -1.505099,1.91371 l -0.334467,0.0393 c -0.94433,0.10791 -1.810031,-0.55946 -1.918194,-1.50159 z"
+           fill="#e6e6e6"
+           id="path25-2"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -96.793149,265.09078 -2.675732,-22.14073 c -0.118009,-0.94212 0.560769,-1.79598 1.505099,-1.91371 l 0.334467,-0.0393 c 0.944329,-0.11773 1.800185,0.55946 1.918194,1.50159 l 2.675732,22.14072 c 0.118008,0.94213 -0.560638,1.79598 -1.505099,1.91372 l -0.334467,0.0393 c -0.94433,0.11773 -1.800186,-0.55946 -1.918194,-1.50159 z"
+           fill="#e6e6e6"
+           id="path27-6"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -93.163242,242.69495 h -1.190323 l 2.518344,20.85509 h 1.190322 z"
+           fill="#b3b3b3"
+           id="path29-6"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -84.329546,263.42235 -2.508499,-20.7274 h -1.190191 l 2.508367,20.7274 c 0.0098,0.0393 0.01969,0.0786 0.02953,0.11787 h 1.190323 c -0.0098,-0.0393 -0.01969,-0.0688 -0.02953,-0.11787 z"
+           fill="#b3b3b3"
+           id="path31-8"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -99.409811,243.43107 c -0.5017,0.64773 -0.836169,1.58985 -0.836169,2.29638 v 0.63804 l 2.075585,17.18455 h 0.03938 1.150943 z"
+           fill="#b3b3b3"
+           id="path33-8"
+           style="stroke-width:0.131113"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -81.821047,229.63236 4.682399,5.47621"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path35-8"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -81.821047,229.63236 4.682399,5.47621"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path37-97"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -69.770671,223.32179 1.849411,6.94847"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path39-3"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -69.770671,223.32179 1.849411,6.94847"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path41-3"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -56.175684,222.83109 -1.328021,7.0662"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path43-4"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -56.175684,222.83109 -1.328021,7.0662"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path45-5"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -43.682677,228.23868 -4.269305,5.79039"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path47-2"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -43.682677,228.23868 -4.269305,5.79039"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path49-9"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -34.770208,238.48472 -6.3449,3.39565"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path51-7"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -34.770208,238.48472 -6.3449,3.39565"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path53-74"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -31.159991,251.57677 -7.200757,0.32387"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path55-4"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -31.159991,251.57677 -7.200757,0.32387"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path57-7"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -33.560248,264.93376 -6.630221,-2.79704"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path59-2"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -33.560248,264.93376 -6.630221,-2.79704"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path61-92"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -41.508645,275.94526 -4.780849,-5.37813"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path63-1"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -41.508645,275.94526 -4.780849,-5.37813"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path65-1"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -53.450858,282.47164 -1.967419,-6.919"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path67-9"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -53.450858,282.47164 -1.967419,-6.919"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path69-2"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -67.262172,283.00163 1.652643,-6.99744"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path71-3"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -67.262172,283.00163 1.652643,-6.99744"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path73-9"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -79.312549,278.32021 3.413449,-6.33007"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path75-4"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+        <path
+           d="m -79.312549,278.32021 3.413449,-6.33007"
+           stroke="#fbb03b"
+           stroke-width="2.44589"
+           stroke-miterlimit="10"
+           fill="none"
+           id="path77-79"
+           inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+           inkscape:export-xdpi="399.95999"
+           inkscape:export-ydpi="399.95999" />
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-2)"
+         d="m 249.26988,-186.88058 h -63.5"
+         id="path1245-2"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart-8-9)"
+         d="m 389.67084,-186.88058 h -63.5"
+         id="path1245-0-7"
+         inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.6\Computational_Silver_Nanoparticle_Exercise_Data\Images\Silver_Nanoparticle\AG_colour_process.png"
+         inkscape:export-xdpi="399.95999"
+         inkscape:export-ydpi="399.95999" />
+      <path
+         style="fill:none;stroke:#f94144;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.29134;stroke-opacity:1"
+         d="m 269.23157,-225.46849 c 1.95003,-3.19686 3.90008,-6.35931 5.85009,-8.35368 1.95006,-1.99433 3.90007,-2.77314 5.85012,-2.06317 1.95001,0.70995 3.90007,2.90128 5.85012,5.78091 1.95001,2.87967 3.90006,6.39099 5.85006,9.27188 1.95007,2.88089 3.90007,5.06814 5.85013,5.78091 1.95006,0.71277 3.90007,-0.0711 5.85012,-2.06317 1.95001,-1.9921 3.90006,-5.15683 5.85007,-8.35368"
+         title="sin(x)"
+         id="path2204-6-2-4-9-7" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="401.91907"
+         y="-196.18887"
+         id="text9514"><tspan
+           sodipodi:role="line"
+           id="tspan9512"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Avenir;-inkscape-font-specification:Avenir;stroke-width:0.264583"
+           x="401.91907"
+           y="-196.18887">No light passes </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Avenir;-inkscape-font-specification:Avenir;stroke-width:0.264583"
+           x="401.91907"
+           y="-181.77689"
+           id="tspan9516">through solution</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Avenir;-inkscape-font-specification:Avenir;stroke-width:0.264583"
+           x="401.91907"
+           y="-167.36488"
+           id="tspan9518">of Big Ag NP</tspan></text>
+    </g>
+  </g>
+</svg>
