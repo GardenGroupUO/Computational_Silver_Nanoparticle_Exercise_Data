@@ -34,7 +34,6 @@ def silver_nanoprism_growing_model(path_to_input):
 	#dyn.run(fmax=0.001,steps=5000)
 
 	traj_path = '.'.join(path_to_input.split('.')[:-1:])+'_animation.traj'
-	import pdb; pdb.set_trace()
 
 	symbol = system[0].symbol
 
