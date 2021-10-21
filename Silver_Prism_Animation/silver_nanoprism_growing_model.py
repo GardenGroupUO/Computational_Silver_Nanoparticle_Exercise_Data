@@ -99,7 +99,6 @@ def silver_nanoprism_growing_model(path_to_input):
 			print('finishing')
 			break
 
-		counter_2 = 0
 		while True:
 			random_number = randrange(0, len(positions_to_add), 1)
 			random_position = positions_to_add[random_number]
