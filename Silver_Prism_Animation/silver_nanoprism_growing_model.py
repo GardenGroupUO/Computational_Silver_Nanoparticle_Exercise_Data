@@ -88,7 +88,7 @@ def silver_nanoprism_growing_model(path_to_input):
 		counter += 1
 		print('----------------------------------')
 		print('Adding atom '+str(counter))
-		print()
+		#print()
 		square_or_triangle = randrange(0, 100, 1)
 		positions_to_add = tri_pos_new_atoms if (square_or_triangle == 0) else squ_pos_new_atoms # nearly_squ_pos_new_atoms
 		positions_to_add_index = tri_pos_new_atoms_indices if (square_or_triangle == 0) else squ_pos_new_atoms_indices
