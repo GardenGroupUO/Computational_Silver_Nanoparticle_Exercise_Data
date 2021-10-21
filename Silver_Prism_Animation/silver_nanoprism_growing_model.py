@@ -181,7 +181,7 @@ def silver_nanoprism_growing_model(path_to_input):
 				tags[index] = 1 #'Fe'
 		system.set_tags(tags) #set_chemical_symbols(tags)
 
-		with Trajectory(traj_name,'a') as traj_file:
+		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
-		return traj_name
+		return traj_path
