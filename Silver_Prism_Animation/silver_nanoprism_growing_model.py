@@ -132,7 +132,7 @@ def silver_nanoprism_growing_model(path_to_input):
 
 		cluster_positions = system.get_positions()
 
-		print('making initial full neighbours matrix')
+		#print('making initial full neighbours matrix')
 		end_of_system = len(cluster_positions)-1
 		for index in range(end_of_system):
 			distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
@@ -152,7 +152,7 @@ def silver_nanoprism_growing_model(path_to_input):
 			print(min(dists))
 			import pdb; pdb.set_trace()
 
-		print('Getting surface neighbour lists')
+		#print('Getting surface neighbour lists')
 		surface_atoms_turned_bulk = []
 		for index in full_neighbourlist.get(end_of_system):
 			if len(full_neighbourlist.get(index)) == 12:
@@ -163,12 +163,12 @@ def silver_nanoprism_growing_model(path_to_input):
 		surface_data.append(surface_neighbourlist.copy())
 
 		indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
-		print('getting triangle surfaces')
+		#print('getting triangle surfaces')
 		triangles = get_applied_three_fold_sites(surface_neighbourlist,triangles,surface_atoms_turned_bulk,indices_to_explore)
-		print('getting square surfaces')
+		#print('getting square surfaces')
 		squares, nearly_squares = get_applied_four_fold_sites(surface_neighbourlist,system,cutoff,   squares,nearly_squares,   surface_atoms_turned_bulk,indices_to_explore)
 		all_squares.append(list(squares))
-		print('getting new possible positions')
+		#print('getting new possible positions')
 		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore)
 		all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices))
 
@@ -180,8 +180,9 @@ def silver_nanoprism_growing_model(path_to_input):
 				tags[index] = 1 #'Fe'
 		system.set_tags(tags) #set_chemical_symbols(tags)
 
-		print('Adding image to Traj')
+		#print('Adding image to Traj')
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
+	print('----------------------------------')
 	return traj_path
