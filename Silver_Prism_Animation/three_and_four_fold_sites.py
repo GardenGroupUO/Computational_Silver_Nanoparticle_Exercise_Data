@@ -29,6 +29,7 @@ def total_outer_bond_angles(cluster,index1,index2,index3,index4):
 	try:
 		bond_angles = cluster.get_angles(indices)
 	except Exception as ee:
+		return False
 		print(indices)
 		import pdb; pdb.set_trace()
 		exit()
@@ -96,8 +97,8 @@ def get_four_fold_sites(surface_neighbour_list,cluster,cutoff):
 						#are_2_and_3_neighbours = (index2 in indices_3) and (index3 in indices_2)
 						distance23 = get_distance(cluster,first_neighbour_to_index1,second_neighbour_to_index1)
 						angles_of_a_square = total_outer_bond_angles(cluster,index1,first_neighbour_to_index1,index4,second_neighbour_to_index1)
-						#if square == tuple(sorted([1,5,14,15])):
-						#	import pdb; pdb.set_trace()
+						if angles_of_a_square == False:
+							continue
 						if (distance14 <= extended_distance_across_square) and (distance23 <= extended_distance_across_square) and angles_of_a_square:	
 							#if are_1_and_4_neighbours and are_2_and_3_neighbours:
 							squares.append(square)
@@ -157,8 +158,8 @@ def get_applied_four_fold_sites(surface_neighbour_list,cluster,cutoff, squares,n
 						#are_2_and_3_neighbours = (index2 in indices_3) and (index3 in indices_2)
 						distance23 = get_distance(cluster,first_neighbour_to_index1,second_neighbour_to_index1)
 						angles_of_a_square = total_outer_bond_angles(cluster,index1,first_neighbour_to_index1,index4,second_neighbour_to_index1)
-						#if square == tuple(sorted([1,5,14,15])):
-						#	import pdb; pdb.set_trace()
+						if angles_of_a_square == False:
+							continue
 						if (distance14 <= extended_distance_across_square) and (distance23 <= extended_distance_across_square) and angles_of_a_square:	
 							#if are_1_and_4_neighbours and are_2_and_3_neighbours:
 							squares.append(square)

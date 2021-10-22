@@ -105,17 +105,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 		if len(squ_pos_new_atoms) == 0:
 			print('finishing')
 			break
-		'''
-		while True:
-			random_number = randrange(0, len(positions_to_add), 1)
-			random_position = positions_to_add[random_number].copy()
-			if any([same_position(random_position,atom.position) for atom in system]):
-				print('huh')
-				import pdb; pdb.set_trace()
-				exit()	
-			else:
-				break
-		'''
+
 		random_number = randrange(0, len(positions_to_add), 1)
 		random_position = positions_to_add[random_number].copy()
 		if any([same_position(random_position,atom.position) for atom in system]):
