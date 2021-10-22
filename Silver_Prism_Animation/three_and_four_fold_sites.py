@@ -219,12 +219,14 @@ def get_position_of_atom_above_square(index1, index2, index3, index4, cluster_po
 	norm_direction_length = get_norm_direction_length(adjacent_distance,distance_1_to_centre)
 	place_atom_position1 = centre_of_square + norm_direction_length*normal_vector
 	place_atom_position2 = centre_of_square - norm_direction_length*normal_vector
+	'''
 	if get_length(place_atom_position1-centre_of_mass) > get_length(place_atom_position2-centre_of_mass):
 		add_position = place_atom_position1
 	else:
 		add_position = place_atom_position2
-	#return place_atom_position1, place_atom_position2
 	return [add_position]
+	'''
+	return place_atom_position1, place_atom_position2
 
 def get_position_of_atom_above_triangle(index1, index2, index3, cluster_positions, centre_of_mass):
 	atom1_position = cluster_positions[index1]
@@ -240,12 +242,14 @@ def get_position_of_atom_above_triangle(index1, index2, index3, cluster_position
 	norm_direction_length = get_norm_direction_length(adjacent_distance,distance_1_to_centre)
 	place_atom_position1 = centre_of_triangle + norm_direction_length*normal_vector
 	place_atom_position2 = centre_of_triangle - norm_direction_length*normal_vector
+	'''
 	if get_length(place_atom_position1-centre_of_mass) > get_length(place_atom_position2-centre_of_mass):
 		add_position = place_atom_position1
 	else:
 		add_position = place_atom_position2
-	#return place_atom_position1, place_atom_position2
 	return [add_position]
+	'''
+	return place_atom_position1, place_atom_position2
 
 def get_positions_for_new_atoms(system,triangles,squares,nearly_squares):
 
