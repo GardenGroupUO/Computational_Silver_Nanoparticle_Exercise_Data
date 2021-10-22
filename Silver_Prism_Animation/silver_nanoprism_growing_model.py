@@ -24,7 +24,10 @@ from ase.optimize import FIRE
 
 from random import uniform, randrange
 
-def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808):
+def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface):
+
+	if not (0.0 <= change_of_creating_new_100_surface <= 1.0):
+		raise Exception('change_of_creating_new_100_surface must be between 0.0 and 1.0. You gave change_of_creating_new_100_surface='+str(change_of_creating_new_100_surface))
 
 	system = read(path_to_input)
 	system.set_tags(0)
@@ -55,13 +58,13 @@ def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808
 
 	print('Getting surface neighbour lists')
 	surface_neighbourlist = get_surface_atoms(system,distances_between_atoms,full_neighbourlist,cutoff,last_index=True)
-
 	print('getting triangle surfaces')
 	triangles = get_three_fold_sites(surface_neighbourlist)
 	print('getting square surfaces')
 	squares, nearly_squares = get_four_fold_sites(surface_neighbourlist,system,cutoff)
 	print('getting new possible positions')
 	tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = get_positions_for_new_atoms(system,triangles,squares,nearly_squares)
+	#import pdb; pdb.set_trace()
 
 	tags = system.get_tags() #get_chemical_symbols()
 	for index in range(len(tags)):
@@ -81,9 +84,7 @@ def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808
 	all_squares = []
 	all_squares.append(list(squares))
 	all_squ_pos_new_atoms_indices = []
-	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices))
-
-	square_or_triangle_threshold = square_to_triangle_ratio/(square_to_triangle_ratio+1.0)
+	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
 	counter = 0
 	while True:
@@ -92,7 +93,7 @@ def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808
 		print('Adding atom '+str(counter))
 		#print()
 		square_or_triangle = uniform(0, 1)
-		if square_or_triangle <= square_or_triangle_threshold:
+		if square_or_triangle <= change_of_creating_new_100_surface:
 			positions_to_add = squ_pos_new_atoms
 			positions_to_add_index = squ_pos_new_atoms_indices
 		else:
@@ -107,17 +108,37 @@ def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808
 
 		while True:
 			random_number = randrange(0, len(positions_to_add), 1)
-			random_position = positions_to_add[random_number]
+			random_position = positions_to_add[random_number].copy()
 			if any([same_position(random_position,atom.position) for atom in system]):
 				print('huh')
 				import pdb; pdb.set_trace()
 				exit()	
 			else:
 				break
+		index_set_to_check = tuple(positions_to_add_index[random_number])
+		#import pdb; pdb.set_trace()
+
+		del positions_to_add[random_number]
+		del positions_to_add_index[random_number]
+
+		'''
+		for index in range(len(squ_pos_new_atoms)-1,-1,-1):
+			check_position = squ_pos_new_atoms[index]
+			if same_position(random_position,check_position):
+				import pdb; pdb.set_trace()
+				del squ_pos_new_atoms[index]
+				del squ_pos_new_atoms_indices[index]
+
+		for index in range(len(tri_pos_new_atoms)-1,-1,-1):
+			check_position = tri_pos_new_atoms[index]
+			if same_position(random_position,check_position):
+				import pdb; pdb.set_trace()
+				del tri_pos_new_atoms[index]
+				del tri_pos_new_atoms_indices[index]
+		'''
 
 		atom = Atom(symbol=symbol,position=random_position,tag=counter)
 
-		index_set_to_check = positions_to_add_index[random_number]
 		if len(index_set_to_check) == 3:
 			if index_set_to_check in triangles:
 				triangles.remove(index_set_to_check)
@@ -126,9 +147,6 @@ def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808
 		elif len(index_set_to_check) == 4:
 			if index_set_to_check in squares:
 				squares.remove(index_set_to_check)
-
-		del positions_to_add[random_number]
-		del positions_to_add_index[random_number]
 		
 		system.append(atom)
 		#print('locally optimising')

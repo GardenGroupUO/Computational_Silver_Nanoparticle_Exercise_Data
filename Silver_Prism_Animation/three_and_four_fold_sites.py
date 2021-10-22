@@ -1,5 +1,6 @@
 import numpy as np
 from ase.visualize import view
+from itertools import compress
 
 def get_length(vector):
 	return np.linalg.norm(vector)
@@ -177,11 +178,7 @@ def get_applied_four_fold_sites(surface_neighbour_list,cluster,cutoff, squares,n
 	squares = sorted(list(set(squares)),key=lambda x:sorted(x,reverse=True))
 	nearly_squares = sorted(list(set(nearly_squares)),key=lambda x:sorted(x,reverse=True))
 
-	#view(cluster)
-	#import pdb; pdb.set_trace()
-
 	return squares, nearly_squares
-
 
 
 def get_norm_direction_length(cutoff,distance_1_to_centre):
@@ -195,10 +192,6 @@ def same_position(add_position,pos_new_atom):
 	#return (same_x and same_y and same_z)
 	distance = get_distance_from_numpy(add_position,pos_new_atom)
 	return (distance <= 2.0)
-
-
-
-
 
 
 def get_position_of_atom_above_square(index1, index2, index3, index4, cluster_positions, centre_of_mass):
@@ -296,7 +289,7 @@ def get_positions_for_new_atoms(system,triangles,squares,nearly_squares):
 	tri_pos_new_atoms = []
 	tri_pos_new_atoms_indices = []
 	for index1, index2, index3 in triangles:
-		add_position = get_position_of_atom_above_triangle(index1, index2, index3, cluster_positions, centre_of_mass)
+		add_positions = get_position_of_atom_above_triangle(index1, index2, index3, cluster_positions, centre_of_mass)
 		for add_position in add_positions:
 			if any([same_position(add_position,pos_new_atom) for pos_new_atom in tri_pos_new_atoms]):
 				continue
@@ -335,33 +328,28 @@ def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,     
 		#	continue
 		for index in indices_to_explore:
 			if index in (index1, index2, index3, index4):
-				break	
+				break
 		else:
 			continue
 		add_positions = get_position_of_atom_above_square(index1, index2, index3, index4, cluster_positions, centre_of_mass)
 		for add_position in add_positions:
-			'''
-			if index1 > 1721 and index2 > 1721 and index3 > 1721 and index4 > 1721:
-				symbols = system.get_chemical_symbols()
-				for index in range(len(system)):
-					if index in (index1, index2, index3, index4):
-						system[index].symbol = 'Cu'
-					else:
-						system[index].symbol = 'Ag'
-				check1 = any([same_position(add_position,pos_new_atom) for pos_new_atom in squ_pos_new_atoms])
-				check2 = any([same_position(add_position,pos_new_atom) for pos_new_atom in nearly_squ_pos_new_atoms])
-				check3 = any([same_position(add_position,atom_position) for atom_position in system.get_positions()])
-				if check1 or check2 or check3:
-					view(system)
-					print('check this out here')
+			pos_in_triangle = [same_position(add_position,pos_new_atom) for pos_new_atom in tri_pos_new_atoms]
+			if any(pos_in_triangle):
+				indices_to_remove = list(compress(range(len(pos_in_triangle)), pos_in_triangle))
+				if len(indices_to_remove) > 1:
+					print('check this out')
 					import pdb; pdb.set_trace()
-			'''
-
-			if any([same_position(add_position,pos_new_atom) for pos_new_atom in squ_pos_new_atoms]):
+				for index_to_remove in indices_to_remove:
+					del tri_pos_new_atoms[index_to_remove]
+					del tri_pos_new_atoms_indices[index_to_remove]
+				squ_pos_new_atoms.append(add_position)
+				squ_pos_new_atoms_indices.append((index1, index2, index3, index4))	
+				continue
+			elif any([same_position(add_position,pos_new_atom) for pos_new_atom in squ_pos_new_atoms]):
 				continue
 			elif any([same_position(add_position,pos_new_atom) for pos_new_atom in nearly_squ_pos_new_atoms]):
 				continue
-			elif any([same_position(add_position,atom_position) for atom_position in system.get_positions()]):
+			elif any([same_position(add_position,atom_position) for atom_position in cluster_positions]):
 				continue
 			else:
 				squ_pos_new_atoms.append(add_position)
@@ -371,8 +359,8 @@ def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,     
 		#if (index1, index2, index3) in tri_pos_new_atoms_indices:
 		#	continue
 		for index in indices_to_explore:
-			if index in (index1, index2, index3, index4):
-				break	
+			if index in (index1, index2, index3):
+				break
 		else:
 			continue
 		add_positions = get_position_of_atom_above_triangle(index1, index2, index3, cluster_positions, centre_of_mass)
@@ -383,20 +371,12 @@ def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,     
 				continue
 			elif any([same_position(add_position,pos_new_atom) for pos_new_atom in nearly_squ_pos_new_atoms]):
 				continue
-			elif any([same_position(add_position,atom_position) for atom_position in system.get_positions()]):
+			elif any([same_position(add_position,atom_position) for atom_position in cluster_positions]):
 				continue
 			else:
 				tri_pos_new_atoms.append(add_position)
 				tri_pos_new_atoms_indices.append((index1, index2, index3))
 
-	#import pdb; pdb.set_trace()
-	'''
-	print('me')
-	print(len(squares))
-	print(len(squ_pos_new_atoms_indices))
-	print(len(squ_pos_new_atoms))
-	print('ow')
-	'''
 	return tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices
 
 def get_distance_numpy(positions_1,positions_2):
