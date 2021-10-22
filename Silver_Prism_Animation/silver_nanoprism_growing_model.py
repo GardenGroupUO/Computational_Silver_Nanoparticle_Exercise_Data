@@ -24,7 +24,7 @@ from ase.optimize import FIRE
 
 from random import uniform, randrange
 
-def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface):
+def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface,max_no_of_atoms_added_in_simulation=1000):
 
 	if not (0.0 <= change_of_creating_new_100_surface <= 1.0):
 		raise Exception('change_of_creating_new_100_surface must be between 0.0 and 1.0. You gave change_of_creating_new_100_surface='+str(change_of_creating_new_100_surface))
@@ -87,7 +87,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
 	counter = 0
-	while True:
+	while counter < max_no_of_atoms_added_in_simulation:
 		counter += 1
 		print('----------------------------------')
 		print('Adding atom '+str(counter))
