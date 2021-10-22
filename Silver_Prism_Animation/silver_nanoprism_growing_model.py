@@ -22,9 +22,9 @@ except Exception as ee:
 from ase.calculators.emt import EMT
 from ase.optimize import FIRE
 
-from random import randrange
+from random import uniform
 
-def silver_nanoprism_growing_model(path_to_input):
+def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808):
 
 	system = read(path_to_input)
 	system.set_tags(0)
@@ -83,15 +83,21 @@ def silver_nanoprism_growing_model(path_to_input):
 	all_squ_pos_new_atoms_indices = []
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices))
 
+	square_or_triangle_threshold = square_to_triangle_ratio/(square_to_triangle_ratio+1.0)
+
 	counter = 0
 	while True:
 		counter += 1
 		print('----------------------------------')
 		print('Adding atom '+str(counter))
 		#print()
-		square_or_triangle = randrange(0, 100, 1)
-		positions_to_add = tri_pos_new_atoms if (square_or_triangle == 0) else squ_pos_new_atoms # nearly_squ_pos_new_atoms
-		positions_to_add_index = tri_pos_new_atoms_indices if (square_or_triangle == 0) else squ_pos_new_atoms_indices
+		square_or_triangle = uniform(0, 1)
+		if square_or_triangle <= square_or_triangle_threshold:
+			positions_to_add = squ_pos_new_atoms
+			positions_to_add_index = squ_pos_new_atoms_indices
+		else:
+			positions_to_add = tri_pos_new_atoms
+			positions_to_add_index = tri_pos_new_atoms_indices
 
 		print('squares: '+str(len(squ_pos_new_atoms)))
 		print('triangles: '+str(len(tri_pos_new_atoms)))
