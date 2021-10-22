@@ -22,7 +22,7 @@ except Exception as ee:
 from ase.calculators.emt import EMT
 from ase.optimize import FIRE
 
-from random import uniform
+from random import uniform, randrange
 
 def silver_nanoprism_growing_model(path_to_input,square_to_triangle_ratio=1.1808):
 
