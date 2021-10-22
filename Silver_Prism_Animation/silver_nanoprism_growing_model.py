@@ -121,7 +121,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 		del positions_to_add[random_number]
 		del positions_to_add_index[random_number]
 
-		'''
+
 		for index in range(len(squ_pos_new_atoms)-1,-1,-1):
 			check_position = squ_pos_new_atoms[index]
 			if same_position(random_position,check_position):
@@ -135,7 +135,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 				import pdb; pdb.set_trace()
 				del tri_pos_new_atoms[index]
 				del tri_pos_new_atoms_indices[index]
-		'''
+
 
 		atom = Atom(symbol=symbol,position=random_position,tag=counter)
 
