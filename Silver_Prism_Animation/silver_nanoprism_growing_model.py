@@ -108,6 +108,10 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 
 		random_number = randrange(0, len(positions_to_add), 1)
 		random_position = positions_to_add[random_number].copy()
+		index_set_to_check = tuple(positions_to_add_index[random_number])
+
+		del positions_to_add[random_number]
+		del positions_to_add_index[random_number]
 		if any([same_position(random_position,atom.position) for atom in system]):
 			for index in range(len(squ_pos_new_atoms)-1,-1,-1):
 				check_position = squ_pos_new_atoms[index]
@@ -119,10 +123,6 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 				if same_position(random_position,check_position):
 					del tri_pos_new_atoms[index]
 					del tri_pos_new_atoms_indices[index]
-		index_set_to_check = tuple(positions_to_add_index[random_number])
-
-		del positions_to_add[random_number]
-		del positions_to_add_index[random_number]
 
 		atom = Atom(symbol=symbol,position=random_position,tag=counter)
 
@@ -161,6 +161,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 				distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
 				dists.append(distance)
 			print(min(dists))
+			return traj_path
 			import pdb; pdb.set_trace()
 
 		#print('Getting surface neighbour lists')
