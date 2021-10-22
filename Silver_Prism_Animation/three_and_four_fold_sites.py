@@ -336,9 +336,9 @@ def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,     
 			pos_in_triangle = [same_position(add_position,pos_new_atom) for pos_new_atom in tri_pos_new_atoms]
 			if any(pos_in_triangle):
 				indices_to_remove = list(compress(range(len(pos_in_triangle)), pos_in_triangle))
-				if len(indices_to_remove) > 1:
-					print('check this out')
-					import pdb; pdb.set_trace()
+				#if len(indices_to_remove) > 1:
+				#	print('check this out')
+				#	import pdb; pdb.set_trace()
 				for index_to_remove in indices_to_remove:
 					del tri_pos_new_atoms[index_to_remove]
 					del tri_pos_new_atoms_indices[index_to_remove]
