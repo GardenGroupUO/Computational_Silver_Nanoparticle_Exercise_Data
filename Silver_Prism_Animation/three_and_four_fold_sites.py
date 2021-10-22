@@ -6,7 +6,10 @@ def get_length(vector):
 	return np.linalg.norm(vector)
 
 def get_unit_vector(vector):
-	unit_vector = vector / get_length(vector)
+	try:
+		unit_vector = vector / get_length(vector)
+	except Exception as ee:
+		import pdb; pdb.set_trace()
 	return unit_vector
 
 def get_distance(cluster,index1,index2):
