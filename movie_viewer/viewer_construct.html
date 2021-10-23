@@ -43,14 +43,14 @@
 
         function take_snapshot()
         {
-            document.getElementById('background').setAttribute('skyColor','0 0 0');
-            var bg_value = $("#background").val()
-            $("#background").val(bg_value);  
-            $("#background").trigger('change');
+            //document.getElementById('background').setAttribute('skyColor','0 0 0');
+            //var bg_value = $("#background").val()
+            //$("#background").val(bg_value);  
+            //$("#background").trigger('change');
             var imgUrl = document.getElementById("boxes").runtime.getScreenshot();
-            document.getElementById('background').setAttribute('skyColor','1 1 1');
-            $("#background").val($("#background").val());  
-            $("#background").trigger('change');
+            //document.getElementById('background').setAttribute('skyColor','1 1 1');
+            //$("#background").val($("#background").val());  
+            //$("#background").trigger('change');
             var newScreenshotDownloadLink = document.createElement("a");
             newScreenshotDownloadLink.href = imgUrl;
             // newScreenshotDownloadLink.download = "screenshot.png";
@@ -225,7 +225,7 @@
                     addFrame_to_gif();
                 }
                 if(current_image_no == final_image_no){
-                    clearInterval(interval);
+                    stop_animation();
                 }else if(current_image_no > final_image_no){
                     throw ('Werid');
                 }
