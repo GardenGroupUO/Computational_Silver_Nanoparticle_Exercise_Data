@@ -103,7 +103,6 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 		print('squares: '+str(len(squ_pos_new_atoms)))
 		print('triangles: '+str(len(tri_pos_new_atoms)))
 		if len(squ_pos_new_atoms) == 0:
-			print('finishing')
 			break
 
 		random_number = randrange(0, len(positions_to_add), 1)
@@ -196,5 +195,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
+	print('----------------------------------')
+	print('The simulation has now finished')
 	print('----------------------------------')
 	return traj_path

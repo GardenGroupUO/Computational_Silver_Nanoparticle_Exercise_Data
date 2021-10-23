@@ -68,6 +68,11 @@
             }
         }
 
+        var time_diff = 100;
+        function change_speed(value){
+            time_diff = value
+        }
+
         var add_to_gif = "False"
         var images_for_gif;
         function take_gif()
@@ -158,6 +163,7 @@
 
         var imgUrl_for_gif;
         var newScreenshotDownloadLink_for_gif;
+        var time_diff_gif = time_diff/1000;
         function stop_gif(){
             //var was_currently_playing = currently_playing
             stop_animation()
@@ -169,7 +175,7 @@
                     gifWidth: 600,
                     gifHeight: 600,
                     images: images_for_gif,
-                    interval: 0.1,
+                    interval: time_diff_gif,
                     numFrames: 10,
                     frameDuration: 1,
                     fontWeight: 'normal',
@@ -212,8 +218,6 @@
             //document.getElementById("Chemical_Group").setAttribute("run_animation", "True");
             var current_image_no = parseInt(document.getElementById("Chemical_Group").getAttribute("current_image_no"));
             var final_image_no = parseInt(document.getElementById("Chemical_Group").getAttribute("final_image_no"));
-
-            var time_diff = 100;
 
             if(add_to_gif == "True"){
                 addFrame_to_gif();
@@ -558,6 +562,10 @@ Click on any shape to get the id and the coordinates of the hitting point.
     <br><br>
 
     <button style="font-family: Arial, Helvetica;" onclick="take_snapshot();">Take Screenshot</button>
+
+    <br><br>
+    <span style="font-family: Arial, Helvetica;" style="font-size:1.1em;">Microseconds per frame</span>
+    <input id="speed_in_microseonds" type="number" name="speed_in_microseonds" value="100" onclick="change_speed(this.value);">
 
     <br><br>
 
