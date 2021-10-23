@@ -5,7 +5,7 @@
     <title>Chemistry Outreach Chemistry Viewer</title>
     <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"> </script>
     <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"> </script>
 
     <!-- ################### External JS scripts Go In Here ################### -->
     <!--
@@ -69,8 +69,13 @@
         }
 
         var time_diff = 100;
-        function change_speed(value){
-            time_diff = value
+        function change_speed(){
+            value = document.getElementById("speed_in_microseonds").value;
+            if(!isNaN(value)){
+                time_diff = parseInt(value);
+            }else{
+                time_diff = 100;
+            }
         }
 
         var add_to_gif = "False"
@@ -163,10 +168,10 @@
 
         var imgUrl_for_gif;
         var newScreenshotDownloadLink_for_gif;
-        var time_diff_gif = time_diff/1000;
         function stop_gif(){
             //var was_currently_playing = currently_playing
             stop_animation()
+            var time_diff_gif = time_diff/1000;
             if(add_to_gif=="True"){
                 remove_all_children()
                 //var original_message = document.getElementById("visNode").innerHTML
@@ -303,6 +308,7 @@
             }else{
                 document.getElementById("visNode").innerHTML = "Showing image # "+(change_up_to_this_image_no_number).toString();
             }
+            //document.getElementById("visNode").innerHTML = time_diff.toString();
         }
 
         //Round a float value to x.xx format
@@ -546,7 +552,8 @@ Click on any shape to get the id and the coordinates of the hitting point.
 
     <br><br>
     
-    <!-- <h3>Click coordinates:</h3>
+    <!-- 
+    <h3>Click coordinates:</h3>
     <table style="font-size:1em;">
         <tr><td></td><td>Yellow</td><td>  </td><td id=>Blue</td></tr>
         <tr><td>X: </td><td id="coordX_Yellow">-</td><td>X: </td><td id="coordX_Blue">-</td></tr>
@@ -554,7 +561,8 @@ Click on any shape to get the id and the coordinates of the hitting point.
         <tr><td>Z: </td><td id="coordZ_Yellow">-</td><td>Z: </td><td id="coordZ_Blue">-</td></tr>
     </table>
 
-    <br><br> -->
+    <br><br> 
+    -->
     
     <h3 style="font-family: Arial, Helvetica;">Distance between highlighted atoms:</h3>
     <span style="font-family: Arial, Helvetica;" id="distanceBetweenTwoAtoms" style="font-size:1.1em;">-</span>
@@ -565,13 +573,13 @@ Click on any shape to get the id and the coordinates of the hitting point.
 
     <br><br>
     <span style="font-family: Arial, Helvetica;" style="font-size:1.1em;">Microseconds per frame</span>
-    <input id="speed_in_microseonds" type="number" name="speed_in_microseonds" value="100" oninput="change_speed(this.value);">
+    <input id="speed_in_microseonds" type="number" name="speed_in_microseonds" value="100" oninput="change_speed();" onchange="change_speed();">
 
     <br><br>
 
     <button id="start" style="font-family: Arial, Helvetica;" onclick="play_animation();">Play</button>
     <button id="stop"  style="font-family: Arial, Helvetica;" onclick="stop_animation();">Pause</button>
-    <button id="reset" style="font-family: Arial, Helvetica;"  onclick="reset_animation();">Reset</button>
+    <button id="reset" style="font-family: Arial, Helvetica;" onclick="reset_animation();">Reset</button>
 
     <br><br>
 
