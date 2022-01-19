@@ -28,9 +28,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.18796998"
-     inkscape:cx="877.79975"
-     inkscape:cy="1063.9997"
+     inkscape:zoom="0.53165938"
+     inkscape:cx="1613.8152"
+     inkscape:cy="637.62629"
      inkscape:window-width="1920"
      inkscape:window-height="1007"
      inkscape:window-x="1911"
@@ -13967,15 +13967,18 @@ wAAAAAAAAAD7hAIYAAAAAAAAYJ9QAAMAAAAAAADsCxH/H2aRK3n90UnIAAAAAElFTkSuQmCC
 "
        id="image9433"
        x="-75.636002"
-       y="129.01965" />
+       y="129.01965"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signedin_modified.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <ellipse
-       style="fill:none;stroke:#ff0000;stroke-width:5;stroke-linecap:square;stroke-dashoffset:5.29134;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#ff0000;stroke-width:4.36535;stroke-linecap:square;stroke-dashoffset:5.29134"
        id="path858"
        cx="353.50085"
        cy="161.57001"
        rx="23.718348"
        ry="18.088015"
-       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signin_modified.png"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signedin_modified.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -13983,7 +13986,7 @@ wAAAAAAAAAD7hAIYAAAAAAAAYJ9QAAMAAAAAAADsCxH/H2aRK3n90UnIAAAAAElFTkSuQmCC
        d="M 386.05667,178.01029 421.95004,202.643"
        id="path937"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signin_modified.png"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signedin_modified.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <text
@@ -13993,20 +13996,23 @@ wAAAAAAAAAD7hAIYAAAAAAAAYJ9QAAMAAAAAAADsCxH/H2aRK3n90UnIAAAAAElFTkSuQmCC
        y="117.75899"
        id="text2277"
        transform="translate(-24.591266,96.903694)"
-       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signin_modified.png"
+       inkscape:export-filename="D:\GoogleDrive\Outreach\Silver_Nanoparticles\Computational_Silver_Nanoparticle_Exercise\Version_2.9\Computational_Silver_Nanoparticle_Exercise_Data\Images\Part_1.0\signedin_modified.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          x="397.31186"
          y="117.75899"
-         id="tspan9532">Press this button </tspan><tspan
+         id="tspan11443">The blue &quot;Sign in&quot; </tspan><tspan
          x="397.31186"
          y="130.98811"
-         id="tspan9534">to login to Google </tspan><tspan
+         id="tspan11445">button has </tspan><tspan
          x="397.31186"
          y="144.21723"
-         id="tspan9536">Colab with your </tspan><tspan
+         id="tspan11447">changed to a </tspan><tspan
          x="397.31186"
          y="157.44636"
-         id="tspan9538">Google Account</tspan></text>
+         id="tspan11449">coloured circle </tspan><tspan
+         x="397.31186"
+         y="170.67548"
+         id="tspan11451">with a letter in it</tspan></text>
   </g>
 </svg>
