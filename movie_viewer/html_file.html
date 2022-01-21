@@ -15803,7 +15803,7 @@ Click on any shape to get the id and the coordinates of the hitting point.
     <span style="font-family: Arial, Helvetica;">3. Click the "Make GIF" button.<br></span>
     <span style="font-family: Arial, Helvetica;">4. Press the "Play" button.<br></span>
     <span style="font-family: Arial, Helvetica;">5. Allow your animation to run until it finishes, or press the pause button to finish it earlier<br></span>
-    <span style="font-family: Arial, Helvetica;">6. Click the "Stop GIF" button to see your GIF. This may take a few seconds. <br></span>
+    <span style="font-family: Arial, Helvetica;">6. Click the "Stop GIF" button to see your GIF. This may take a few seconds. This may take longer if you are saving a gif with lots of frames. <br></span>
     <span><br></span>
     <button style="font-family: Arial, Helvetica;" onclick="take_gif();">Make GIF</button>
     <button style="font-family: Arial, Helvetica;" onclick="stop_gif();" download="gifshot-demo.gif">Stop GIF</button>
@@ -15818,9 +15818,11 @@ Click on any shape to get the id and the coordinates of the hitting point.
 </div>
 <div id="camera_buttons" style="display: block;">
     <h3 style="font-family: Arial, Helvetica;">Change View</h3>
+    <button style="font-family: Arial, Helvetica;" onclick="move_view('front');">Reset View</button>
     <button style="font-family: Arial, Helvetica;" onclick="move_view('front');">Front View</button>
     <button style="font-family: Arial, Helvetica;" onclick="move_view('x_view');">Side View</button>
     <button style="font-family: Arial, Helvetica;" onclick="move_view('y_view');">Top View</button>
+    <span style="font-family: Arial, Helvetica;"><br><br>Click the "Reset View" button if you have any issues<br>and want to revert back to the original view.<br></span>
 </div>
 
 </body>
