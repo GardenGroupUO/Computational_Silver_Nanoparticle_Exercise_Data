@@ -8,7 +8,7 @@ from ase.calculators.emt import EMT
 from ase.optimize import FIRE
 
 def get_energy_of_bulk_model(element):
-    #'''
+    '''
     energies = []
     lattice_params = np.arange(3.2,4.5,0.05)
     print('Getting Bulk Energy. This may take a minute.')
@@ -25,7 +25,7 @@ def get_energy_of_bulk_model(element):
     print()
     E_BM = lowest_energy/len(bulk)
     return E_BM, lattice_constant
-    #'''
+    '''
     EMT_data = {'Al': (-4.218638796183743, 3.9943), 'Cu': (-6.079527211932282, 3.5898), 'Ag': (-0.31696368735072156, 4.0636), 'Au': (-0.11675697957541331, 4.0562), 'Ni': (-11.497147666585278, 3.4871), 'Pd': (-0.2332085339018164, 3.8787), 'Pt': (-0.1291913694828537, 3.9218)}
     if element not in EMT_data:
         raise Exception('Error, you need to enter one of the following elements and try again: '+str(list(EMT_data.keys())))
