@@ -256,6 +256,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 		# remove all 
 		if cap:
+			print('CAPPING')
 			for index in range(len(triangles)-1,-1,-1):
 				if end_of_system in triangles[index]:
 					del triangles[index]
