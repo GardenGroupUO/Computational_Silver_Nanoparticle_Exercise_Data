@@ -92,7 +92,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
 		# Determine when the simulation is over
-		any_sites_available = len(squ_pos_new_atoms+tri_pos_new_atoms)
+		any_sites_available = len(surface_neighbourlist)
 		if any_sites_available == 0:
 			break
 		any_square_sites_available = len(squ_pos_new_atoms)
@@ -123,19 +123,16 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 		# Set up system based on if we are adding an atom to a 100 (square) or 111 (triangle) surface, or capping.
 		if add_atom_to_square_surface:
-			print(1)
 			positions_to_add = squ_pos_new_atoms
 			positions_to_add_index = squ_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
 		elif add_atom_to_triangle_surface:
-			print(2)
 			positions_to_add = tri_pos_new_atoms
 			positions_to_add_index = tri_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
 		elif perform_capping:
-			print(3)
 			if any_square_sites_available == 0:
 				positions_to_add = tri_pos_new_atoms
 				positions_to_add_index = tri_pos_new_atoms_indices
