@@ -159,8 +159,9 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 				distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
 				dists.append(distance)
 			print(min(dists))
-			return traj_path
 			import pdb; pdb.set_trace()
+			return traj_path
+			
 
 		#print('Getting surface neighbour lists')
 		surface_atoms_turned_bulk = []
