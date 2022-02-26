@@ -23,7 +23,7 @@ except Exception as ee:
 
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.other_methods import determine_where_to_place_capping_Br
 
-from random import uniform, randrange
+from random import uniform, randrange, shuffle
 
 def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface,max_no_of_atoms_added_in_simulation=1000):
 

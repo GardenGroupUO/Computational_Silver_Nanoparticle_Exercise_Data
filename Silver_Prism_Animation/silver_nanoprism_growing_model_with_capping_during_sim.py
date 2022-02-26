@@ -25,9 +25,6 @@ except Exception as ee:
 
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.other_methods import determine_where_to_place_capping_Br
 
-from ase.calculators.emt import EMT
-from ase.optimize import FIRE
-
 from random import uniform, randrange, choice, shuffle
 
 def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surface_111_surface_bromine_capping,max_no_of_atoms_added_in_simulation=1000):
@@ -73,7 +70,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	print('getting new possible positions')
 	tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = get_positions_for_new_atoms(system,triangles,squares,nearly_squares)
 
-	#Tag which atoms are squares for my interest
+	#Tag which atoms are squares for my interest. For debugging
 	tags = system.get_tags() #get_chemical_symbols()
 	for index in range(len(tags)):
 		tags[index] = 0 # 'Ag'
@@ -88,7 +85,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	with Trajectory(traj_path,'a') as traj_file:
 		traj_file.write(system.copy())
 
-	# Make a note of history of surface data, including 100 surfaces. 
+	# Make a note of history of surface data, including 100 surfaces. For debugging
 	surface_data = []
 	surface_data.append(surface_neighbourlist_excluding_capping.copy())
 	all_squares = []
@@ -96,6 +93,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	all_squ_pos_new_atoms_indices = []
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
+	# This list records which atoms have been capped
 	atoms_to_not_add_new_atoms_to = []
 
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
