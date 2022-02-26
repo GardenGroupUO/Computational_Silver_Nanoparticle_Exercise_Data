@@ -257,28 +257,44 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		# remove all 
 		if cap:
 			print('CAPPING')
+			print('##########')
 			for index in range(len(triangles)-1,-1,-1):
 				if end_of_system in triangles[index]:
+					print('Removing '+str(triangles[index]))
 					del triangles[index]
+			print('##########')
 			for index in range(len(squares)-1,-1,-1):
 				if end_of_system in squares[index]:
+					print('Removing '+str(squares[index]))
 					del squares[index]
+			print('##########')
 			for index in range(len(nearly_squares)-1,-1,-1):
 				if end_of_system in nearly_squares[index]:
+					print('Removing '+str(nearly_squares[index]))
 					del nearly_squares[index]
 
+			print('##########')
 			for index in range(len(tri_pos_new_atoms_indices)-1,-1,-1):
 				if end_of_system in tri_pos_new_atoms_indices[index]:
+					print('Removing '+str(tri_pos_new_atoms[index]))
+					print('Removing '+str(tri_pos_new_atoms_indices[index]))
 					del tri_pos_new_atoms[index]
 					del tri_pos_new_atoms_indices[index]
+			print('##########')
 			for index in range(len(squ_pos_new_atoms_indices)-1,-1,-1):
 				if end_of_system in squ_pos_new_atoms_indices[index]:
+					print('Removing '+str(squ_pos_new_atoms[index]))
+					print('Removing '+str(squ_pos_new_atoms_indices[index]))
 					del squ_pos_new_atoms[index]
 					del squ_pos_new_atoms_indices[index]
+			print('##########')
 			for index in range(len(nearly_squ_pos_new_atoms_indices)-1,-1,-1):
 				if end_of_system in nearly_squ_pos_new_atoms_indices[index]:
+					print('Removing '+str(nearly_squ_pos_new_atoms[index]))
+					print('Removing '+str(nearly_squ_pos_new_atoms_indices[index]))
 					del nearly_squ_pos_new_atoms[index]
 					del nearly_squ_pos_new_atoms_indices[index]
+			print('##########')
 
 		# Tag all the square surfaces. 
 		tags = system.get_tags() #get_chemical_symbols()
