@@ -95,27 +95,60 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		print('Adding atom '+str(counter))
 		print('squares: '+str(len(squ_pos_new_atoms)))
 		print('triangles: '+str(len(tri_pos_new_atoms)))
+
+		# Determine when the simulation is over
+		any_sites_available = len(squ_pos_new_atoms+tri_pos_new_atoms)
+		if any_sites_available == 0:
+			break
+		any_square_sites_available = len(squ_pos_new_atoms)
+		any_triangle_sites_available = len(tri_pos_new_atoms)
+
 		# Determine what we are doing, adding an atom to a 100 surface (square), to a 111 surface (triangle), or capping.
-		square_triangle_or_cap = uniform(0, 1)
-		if square_triangle_or_cap <= barrier_100_111:
+		add_atom_to_square_surface = add_atom_to_triangle_surface = perform_capping = False	
+
+		while True:
+			square_triangle_or_cap = uniform(0, 1)
+			if square_triangle_or_cap <= barrier_100_111:
+				if any_square_sites_available == 0:
+					continue
+				add_atom_to_square_surface = True
+			elif barrier_100_111 < square_triangle_or_cap <= barrier_100_cap:
+				if any_triangle_sites_available == 0:
+					continue
+				add_atom_to_triangle_surface = True
+			else:
+				if any_sites_available == 0:
+					continue
+				perform_capping = True
+
+		# Set up system based on if we are adding an atom to a 100 (square) or 111 (triangle) surface, or capping.
+		if add_atom_to_square_surface:
 			positions_to_add = squ_pos_new_atoms
 			positions_to_add_index = squ_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
-		elif barrier_100_111 < square_triangle_or_cap <= barrier_100_cap:
+		elif add_atom_to_triangle_surface:
 			positions_to_add = tri_pos_new_atoms
 			positions_to_add_index = tri_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
-		else:
-			positions_to_add = tri_pos_new_atoms
-			positions_to_add_index = tri_pos_new_atoms_indices
+		elif perform_capping:
+			if any_square_sites_available == 0:
+				positions_to_add = tri_pos_new_atoms
+				positions_to_add_index = tri_pos_new_atoms_indices
+			if any_triangle_sites_available == 0: 
+				positions_to_add = squ_pos_new_atoms
+				positions_to_add_index = squ_pos_new_atoms_indices
+			else:
+				add_Br_to_square_or_triangle = uniform(0, 1)
+				if add_Br_to_square_or_triangle > 0.5:
+					positions_to_add = tri_pos_new_atoms
+					positions_to_add_index = tri_pos_new_atoms_indices
+				else:
+					positions_to_add = squ_pos_new_atoms
+					positions_to_add_index = squ_pos_new_atoms_indices
 			symbol = 'Br'
 			cap = True
-
-		# To remove soon
-		if len(squ_pos_new_atoms) == 0:
-			break
 
 		# Determine which site to add an atom to.
 		random_number = randrange(0, len(positions_to_add), 1)
