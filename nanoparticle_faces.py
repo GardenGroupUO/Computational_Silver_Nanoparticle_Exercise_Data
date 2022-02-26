@@ -22,11 +22,12 @@ def faces_of_nanoparticles():
     for n in atoms_100a:
         colours[n] = jmol_colors[atomic_numbers['O']] # 'Fe' 
 
+    '''
+    # Second nearest neighbours
     atoms_100b = [65, 110,182, 145]
     for n in atoms_100b:
         colours[n] = jmol_colors[atomic_numbers['P']] # 'Pd'
-
-
+    '''
 
     # ---------------------------------------------------------
 
@@ -38,11 +39,12 @@ def faces_of_nanoparticles():
     for n in atoms_111a:
         colours[n] = (188/255.0, 45/255.0, 255/255.0) #jmol_colors[atomic_numbers['Hf']] # 'Fe'
 
+    '''
+    # Second nearest neighbours
     atoms_111b = [189, 147, 131, 115, 169, 196] #[200, 189, 191, 147, 196, 195, 130, 146, 131, 169, 167, 115]
     for n in atoms_111b:
         colours[n] = jmol_colors[atomic_numbers['Th']]  # (17/255.0, 138/255.0, 178/255.0) #jmol_colors[atomic_numbers['Ca']] # 'Mg' 
-
-
+    '''
 
     return atoms, colours
 
