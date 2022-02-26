@@ -134,9 +134,11 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 			cap = False
 		elif perform_capping:
 			if any_square_sites_available == 0:
+				print('Adding to Triangle')
 				positions_to_add = tri_pos_new_atoms
 				positions_to_add_index = tri_pos_new_atoms_indices
 			if any_triangle_sites_available == 0: 
+				print('Adding to Square')
 				positions_to_add = squ_pos_new_atoms
 				positions_to_add_index = squ_pos_new_atoms_indices
 			else:
@@ -277,3 +279,6 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	print('The simulation has now finished')
 	print('----------------------------------')
 	return traj_path
+
+
+
