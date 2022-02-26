@@ -31,7 +31,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 	# determine the barriers in chance between making 111 surfaces, 100 surfaces, or capping with a bromine.
 	barrier_100_111 = chance_of_creating_new_100_surface_111_surface_bromine_capping[0]
-	barrier_100_cap = chance_of_creating_new_100_surface_111_surface_bromine_capping[0] + chance_of_creating_new_100_surface_111_surface_bromine_capping[1]
+	barrier_111_cap = chance_of_creating_new_100_surface_111_surface_bromine_capping[0] + chance_of_creating_new_100_surface_111_surface_bromine_capping[1]
 
 	# read in the initial nanoparticle system
 	system = read(path_to_input)
@@ -110,7 +110,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 					continue
 				add_atom_to_square_surface = True
 				break
-			elif barrier_100_111 < square_triangle_or_cap <= barrier_100_cap:
+			elif barrier_100_111 < square_triangle_or_cap <= barrier_111_cap:
 				if any_triangle_sites_available == 0:
 					continue
 				add_atom_to_triangle_surface = True
@@ -123,16 +123,19 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 		# Set up system based on if we are adding an atom to a 100 (square) or 111 (triangle) surface, or capping.
 		if add_atom_to_square_surface:
+			print(1)
 			positions_to_add = squ_pos_new_atoms
 			positions_to_add_index = squ_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
 		elif add_atom_to_triangle_surface:
+			print(2)
 			positions_to_add = tri_pos_new_atoms
 			positions_to_add_index = tri_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 			cap = False
 		elif perform_capping:
+			print(3)
 			if any_square_sites_available == 0:
 				positions_to_add = tri_pos_new_atoms
 				positions_to_add_index = tri_pos_new_atoms_indices
@@ -153,7 +156,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		print('----------------------------------')
 		if add_atom_to_square_surface:
 			print('Adding atom '+str(counter)+' ('+str(symbol)+') to square site.')
-		elif any_triangle_sites_available:
+		elif add_atom_to_triangle_surface:
 			print('Adding atom '+str(counter)+' ('+str(symbol)+') to triangle site.')
 		elif perform_capping:
 			print('Adding Capping Agent.')
