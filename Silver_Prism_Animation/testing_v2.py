@@ -2,7 +2,7 @@ from ase.io import read
 from ase.visualize import view
 from silver_nanoprism_growing_model_v2 import silver_nanoprism_growing_model
 
-prefix = 'small' # 'mid3'  'small' 'large'
+prefix = 'large' # 'mid3'  'small' 'large'
 path_to_file = prefix+'_initial_seed.xyz'
 
 chance_of_creating_new_100_surface_111_surface_bromine_capping = [0.7,0.05,0.25]
