@@ -92,7 +92,7 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
 		# Determine when the simulation is over
-		any_sites_available = len(surface_neighbourlist)
+		any_sites_available = len(squ_pos_new_atoms)
 		if any_sites_available == 0:
 			break
 		any_square_sites_available = len(squ_pos_new_atoms)
@@ -245,10 +245,10 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		# I.e. find all the new square and triangle surfaces created by adding this atom to the nanoparticle.
 		# This involves finding all the square and triangle surfaces involving this new atom and its neighbours
 
-		if cap:
-			indices_to_explore = []
-		else:
-			indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
+		#if cap:
+		#	indices_to_explore = []
+		#else:
+		indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
 		#print('getting triangle surfaces')
 		triangles = get_applied_three_fold_sites(surface_neighbourlist,triangles,surface_atoms_turned_bulk,indices_to_explore)
 		#print('getting square surfaces')
