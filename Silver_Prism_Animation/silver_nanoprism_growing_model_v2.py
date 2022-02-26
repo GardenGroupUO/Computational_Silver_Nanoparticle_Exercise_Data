@@ -99,7 +99,9 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		any_triangle_sites_available = len(tri_pos_new_atoms)
 
 		# Determine what we are doing, adding an atom to a 100 surface (square), to a 111 surface (triangle), or capping.
-		add_atom_to_square_surface = add_atom_to_triangle_surface = perform_capping = False	
+		add_atom_to_square_surface = False
+		add_atom_to_triangle_surface = False
+		perform_capping = False	
 
 		while True:
 			square_triangle_or_cap = uniform(0, 1)
