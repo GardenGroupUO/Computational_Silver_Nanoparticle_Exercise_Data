@@ -99,8 +99,8 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 			positions_to_add_index = tri_pos_new_atoms_indices
 			symbol = nanoparticle_symbol
 		else:
-			positions_to_add = squ_pos_new_atoms + tri_pos_new_atoms
-			positions_to_add_index = squ_pos_new_atoms_indices + tri_pos_new_atoms_indices	
+			positions_to_add = tri_pos_new_atoms
+			positions_to_add_index = tri_pos_new_atoms_indices
 			symbol = 'Br'	
 
 		print('squares: '+str(len(squ_pos_new_atoms)))
