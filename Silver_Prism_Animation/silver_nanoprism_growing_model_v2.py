@@ -281,44 +281,44 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 			system[add_capping_to_which_surface_atom].symbol = 'Br'
 			for bromine_index in atoms_to_not_add_new_atoms_to:
 				print('CAPPING')
-				print('##########')
+				#print('##########')
 				for index in range(len(triangles)-1,-1,-1):
 					if bromine_index in triangles[index]:
-						print('Removing '+str(triangles[index]))
+						#print('Removing '+str(triangles[index]))
 						del triangles[index]
-				print('##########')
+				#print('##########')
 				for index in range(len(squares)-1,-1,-1):
 					if bromine_index in squares[index]:
-						print('Removing '+str(squares[index]))
+						#print('Removing '+str(squares[index]))
 						del squares[index]
-				print('##########')
+				#print('##########')
 				for index in range(len(nearly_squares)-1,-1,-1):
 					if bromine_index in nearly_squares[index]:
-						print('Removing '+str(nearly_squares[index]))
+						#print('Removing '+str(nearly_squares[index]))
 						del nearly_squares[index]
 
-				print('##########')
+				#print('##########')
 				for index in range(len(tri_pos_new_atoms_indices)-1,-1,-1):
 					if bromine_index in tri_pos_new_atoms_indices[index]:
-						print('Removing '+str(tri_pos_new_atoms[index]))
-						print('Removing '+str(tri_pos_new_atoms_indices[index]))
+						#print('Removing '+str(tri_pos_new_atoms[index]))
+						#print('Removing '+str(tri_pos_new_atoms_indices[index]))
 						del tri_pos_new_atoms[index]
 						del tri_pos_new_atoms_indices[index]
-				print('##########')
+				#print('##########')
 				for index in range(len(squ_pos_new_atoms_indices)-1,-1,-1):
 					if bromine_index in squ_pos_new_atoms_indices[index]:
-						print('Removing '+str(squ_pos_new_atoms[index]))
-						print('Removing '+str(squ_pos_new_atoms_indices[index]))
+						#print('Removing '+str(squ_pos_new_atoms[index]))
+						#print('Removing '+str(squ_pos_new_atoms_indices[index]))
 						del squ_pos_new_atoms[index]
 						del squ_pos_new_atoms_indices[index]
-				print('##########')
+				#print('##########')
 				for index in range(len(nearly_squ_pos_new_atoms_indices)-1,-1,-1):
 					if bromine_index in nearly_squ_pos_new_atoms_indices[index]:
-						print('Removing '+str(nearly_squ_pos_new_atoms[index]))
-						print('Removing '+str(nearly_squ_pos_new_atoms_indices[index]))
+						#print('Removing '+str(nearly_squ_pos_new_atoms[index]))
+						#print('Removing '+str(nearly_squ_pos_new_atoms_indices[index]))
 						del nearly_squ_pos_new_atoms[index]
 						del nearly_squ_pos_new_atoms_indices[index]
-				print('##########')
+				#print('##########')
 				if bromine_index in surface_neighbourlist_excluding_capping.keys():
 					surface_neighbourlist_excluding_capping.remove(bromine_index)
 
