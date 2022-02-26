@@ -90,6 +90,8 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	all_squ_pos_new_atoms_indices = []
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
+	bromine_indices = []
+
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
 		# Determine when the simulation is over
 		any_sites_available = len(squ_pos_new_atoms)
@@ -133,7 +135,6 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 			symbol = nanoparticle_symbol
 			cap = False
 		elif perform_capping:
-			print('CAPPING')
 			if any_square_sites_available == 0:
 				print('Adding to Triangle')
 				positions_to_add = tri_pos_new_atoms
@@ -199,6 +200,8 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		# Create the new atom and place it in the nanoparticle system. 
 		atom = Atom(symbol=symbol,position=random_position,tag=counter)		
 		system.append(atom)
+		if cap:
+			bromine_indices.append(len(cluster_positions)-1)
 
 		# Add this atom to the full_neighbourlist <- FULL NEIGHBOUR LIST
 		cluster_positions = system.get_positions()
@@ -251,50 +254,51 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		squares, nearly_squares = get_applied_four_fold_sites(surface_neighbourlist,system,cutoff,   squares,nearly_squares,   surface_atoms_turned_bulk,indices_to_explore)
 		all_squares.append(list(squares)) # add the squares to the history of squares if needed for debugging. 
 		#print('getting new possible positions')
-		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore)
+		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore,      bromine_indices)
 		all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) # add the nearly_squares to the history of nearly_squares if needed for debugging. 
 
 		# remove all 
 		if cap:
-			print('CAPPING')
-			print('##########')
-			for index in range(len(triangles)-1,-1,-1):
-				if end_of_system in triangles[index]:
-					print('Removing '+str(triangles[index]))
-					del triangles[index]
-			print('##########')
-			for index in range(len(squares)-1,-1,-1):
-				if end_of_system in squares[index]:
-					print('Removing '+str(squares[index]))
-					del squares[index]
-			print('##########')
-			for index in range(len(nearly_squares)-1,-1,-1):
-				if end_of_system in nearly_squares[index]:
-					print('Removing '+str(nearly_squares[index]))
-					del nearly_squares[index]
+			for bromine_index in bromine_indices:
+				print('CAPPING')
+				print('##########')
+				for index in range(len(triangles)-1,-1,-1):
+					if bromine_index in triangles[index]:
+						print('Removing '+str(triangles[index]))
+						del triangles[index]
+				print('##########')
+				for index in range(len(squares)-1,-1,-1):
+					if bromine_index in squares[index]:
+						print('Removing '+str(squares[index]))
+						del squares[index]
+				print('##########')
+				for index in range(len(nearly_squares)-1,-1,-1):
+					if bromine_index in nearly_squares[index]:
+						print('Removing '+str(nearly_squares[index]))
+						del nearly_squares[index]
 
-			print('##########')
-			for index in range(len(tri_pos_new_atoms_indices)-1,-1,-1):
-				if end_of_system in tri_pos_new_atoms_indices[index]:
-					print('Removing '+str(tri_pos_new_atoms[index]))
-					print('Removing '+str(tri_pos_new_atoms_indices[index]))
-					del tri_pos_new_atoms[index]
-					del tri_pos_new_atoms_indices[index]
-			print('##########')
-			for index in range(len(squ_pos_new_atoms_indices)-1,-1,-1):
-				if end_of_system in squ_pos_new_atoms_indices[index]:
-					print('Removing '+str(squ_pos_new_atoms[index]))
-					print('Removing '+str(squ_pos_new_atoms_indices[index]))
-					del squ_pos_new_atoms[index]
-					del squ_pos_new_atoms_indices[index]
-			print('##########')
-			for index in range(len(nearly_squ_pos_new_atoms_indices)-1,-1,-1):
-				if end_of_system in nearly_squ_pos_new_atoms_indices[index]:
-					print('Removing '+str(nearly_squ_pos_new_atoms[index]))
-					print('Removing '+str(nearly_squ_pos_new_atoms_indices[index]))
-					del nearly_squ_pos_new_atoms[index]
-					del nearly_squ_pos_new_atoms_indices[index]
-			print('##########')
+				print('##########')
+				for index in range(len(tri_pos_new_atoms_indices)-1,-1,-1):
+					if bromine_index in tri_pos_new_atoms_indices[index]:
+						print('Removing '+str(tri_pos_new_atoms[index]))
+						print('Removing '+str(tri_pos_new_atoms_indices[index]))
+						del tri_pos_new_atoms[index]
+						del tri_pos_new_atoms_indices[index]
+				print('##########')
+				for index in range(len(squ_pos_new_atoms_indices)-1,-1,-1):
+					if bromine_index in squ_pos_new_atoms_indices[index]:
+						print('Removing '+str(squ_pos_new_atoms[index]))
+						print('Removing '+str(squ_pos_new_atoms_indices[index]))
+						del squ_pos_new_atoms[index]
+						del squ_pos_new_atoms_indices[index]
+				print('##########')
+				for index in range(len(nearly_squ_pos_new_atoms_indices)-1,-1,-1):
+					if bromine_index in nearly_squ_pos_new_atoms_indices[index]:
+						print('Removing '+str(nearly_squ_pos_new_atoms[index]))
+						print('Removing '+str(nearly_squ_pos_new_atoms_indices[index]))
+						del nearly_squ_pos_new_atoms[index]
+						del nearly_squ_pos_new_atoms_indices[index]
+				print('##########')
 
 		# Tag all the square surfaces. 
 		tags = system.get_tags() #get_chemical_symbols()
