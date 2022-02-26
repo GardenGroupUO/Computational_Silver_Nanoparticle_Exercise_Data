@@ -11,6 +11,8 @@ try:
 	from three_and_four_fold_sites import get_three_fold_sites, get_four_fold_sites
 	from three_and_four_fold_sites import get_applied_three_fold_sites, get_applied_four_fold_sites
 	from three_and_four_fold_sites import get_positions_for_new_atoms, update_positions_for_new_atoms, same_position
+
+	from other_methods import determine_where_to_place_capping_Br
 except Exception as ee:
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.surface_finder import doubledict, neighbourlist
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.surface_finder import get_surface_atoms, get_distance
@@ -19,8 +21,7 @@ except Exception as ee:
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.three_and_four_fold_sites import get_applied_three_fold_sites, get_applied_four_fold_sites
 	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.three_and_four_fold_sites import get_positions_for_new_atoms, update_positions_for_new_atoms, same_position
 
-from ase.calculators.emt import EMT
-from ase.optimize import FIRE
+	from Computational_Silver_Nanoparticle_Exercise_Data.Silver_Prism_Animation.other_methods import determine_where_to_place_capping_Br
 
 from random import uniform, randrange
 
@@ -29,22 +30,17 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 	if not (0.0 <= change_of_creating_new_100_surface <= 1.0):
 		raise Exception('change_of_creating_new_100_surface must be between 0.0 and 1.0. You gave change_of_creating_new_100_surface='+str(change_of_creating_new_100_surface))
 
+	# read in the initial nanoparticle system
 	system = read(path_to_input)
 	system.set_tags(0)
-	system.set_calculator(EMT())
-	#print('locally optimising')
-	#dyn = FIRE(system)
-	#print('locally optimising')
-	#dyn.run(fmax=0.001,steps=5000)
 
+	# Other initial variables
 	traj_path = '.'.join(path_to_input.split('.')[:-1:])+'_animation.traj'
-
 	symbol = system[0].symbol
-
 	cutoff = 3.0
-
 	cluster_positions = system.get_positions()
 
+	# Make the initial nrighbourhood matrix
 	print('making initial distance matrix')
 	print('making initial full neighbours matrix')
 	distances_between_atoms = doubledict()
@@ -56,6 +52,8 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			if distance <= cutoff:
 				full_neighbourlist.set(index1,index2)
 
+	# Get the neighbourhoods of only surface atoms, as well as the triangles, squares, and nearly squares
+	# Also get the position of where to place the next atom on the surface
 	print('Getting surface neighbour lists')
 	surface_neighbourlist = get_surface_atoms(system,distances_between_atoms,full_neighbourlist,cutoff,last_index=True)
 	print('getting triangle surfaces')
@@ -64,8 +62,8 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 	squares, nearly_squares = get_four_fold_sites(surface_neighbourlist,system,cutoff)
 	print('getting new possible positions')
 	tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = get_positions_for_new_atoms(system,triangles,squares,nearly_squares)
-	#import pdb; pdb.set_trace()
 
+	#Tag which atoms are squares for my interest. For debugging
 	tags = system.get_tags() #get_chemical_symbols()
 	for index in range(len(tags)):
 		tags[index] = 0 # 'Ag'
@@ -74,11 +72,13 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			tags[index] = 1 # 'Fe'
 	system.set_tags(tags) #set_chemical_symbols(tags)
 
+	# Create a new trajectory file to save simulation to
 	if os.path.exists(traj_path):
 		os.remove(traj_path)
 	with Trajectory(traj_path,'a') as traj_file:
 		traj_file.write(system.copy())
 
+	# Make a note of history of surface data, including 100 surfaces. For debugging
 	surface_data = []
 	surface_data.append(surface_neighbourlist.copy())
 	all_squares = []
@@ -86,12 +86,11 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 	all_squ_pos_new_atoms_indices = []
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
-	counter = 0
-	while counter < max_no_of_atoms_added_in_simulation:
-		counter += 1
+	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
 		print('----------------------------------')
 		print('Adding atom '+str(counter))
-		#print()
+
+		# Set up system based on if we are adding an atom to a 100 (square) or 111 (triangle) surface. 
 		square_or_triangle = uniform(0, 1)
 		if square_or_triangle <= change_of_creating_new_100_surface:
 			positions_to_add = squ_pos_new_atoms
@@ -100,17 +99,23 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			positions_to_add = tri_pos_new_atoms
 			positions_to_add_index = tri_pos_new_atoms_indices
 
+		# Print details
 		print('squares: '+str(len(squ_pos_new_atoms)))
 		print('triangles: '+str(len(tri_pos_new_atoms)))
 		if len(squ_pos_new_atoms) == 0:
 			break
 
+		# Determine which site to add an atom to.
 		random_number = randrange(0, len(positions_to_add), 1)
 		random_position = positions_to_add[random_number].copy()
 		index_set_to_check = tuple(positions_to_add_index[random_number])
 
+		# Remove this position from the list, as we are now adding an atom to this position
 		del positions_to_add[random_number]
 		del positions_to_add_index[random_number]
+
+		# If this position is found in the squ_pos_new_atoms and tri_pos_new_atoms lists, 
+		# remove them to prevent another atom being added to this site, as we are adding an atom to this site now.  
 		if any([same_position(random_position,atom.position) for atom in system]):
 			for index in range(len(squ_pos_new_atoms)-1,-1,-1):
 				check_position = squ_pos_new_atoms[index]
@@ -123,8 +128,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 					del tri_pos_new_atoms[index]
 					del tri_pos_new_atoms_indices[index]
 
-		atom = Atom(symbol=symbol,position=random_position,tag=counter)
-
+		# remove the index_set_to_check from the triangles, nearly_squares, and squares lists.
 		if len(index_set_to_check) == 3:
 			if index_set_to_check in triangles:
 				triangles.remove(index_set_to_check)
@@ -134,14 +138,12 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			if index_set_to_check in squares:
 				squares.remove(index_set_to_check)
 		
+		# Create the new atom and place it in the nanoparticle system. 
+		atom = Atom(symbol=symbol,position=random_position,tag=counter)
 		system.append(atom)
-		#print('locally optimising')
-		#dyn = FIRE(system)#,logfile=None)
-		#print('locally optimising')
-		#dyn.run(fmax=0.001,steps=5000)
 
+		# Add this atom to the full_neighbourlist <- FULL NEIGHBOUR LIST
 		cluster_positions = system.get_positions()
-
 		#print('making initial full neighbours matrix')
 		end_of_system = len(cluster_positions)-1
 		for index in range(end_of_system):
@@ -150,6 +152,9 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			if distance <= cutoff:
 				full_neighbourlist.set(index,end_of_system)
 
+		# Check that this newly added atom was placed in a position that it has neighbours.
+		# If it does not, we dont want that to happen, all our atoms added should have at least one neighbour
+		# If something has gone wrong, this exception should tell us by having a fit. 
 		try:
 			len(full_neighbourlist.get(end_of_system))
 		except:
@@ -163,6 +168,8 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			return traj_path
 			import pdb; pdb.set_trace()
 
+		# Determine if any surface atoms that neighbour the newly added neighbour have now become bulk atoms. 
+		# <- NEIGHBOUR LIST OF ONLY THE SURFACE
 		#print('Getting surface neighbour lists')
 		surface_atoms_turned_bulk = []
 		for index in full_neighbourlist.get(end_of_system):
@@ -173,6 +180,9 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 				surface_neighbourlist.set(index,end_of_system)
 		surface_data.append(surface_neighbourlist.copy())
 
+		# We now want to determine the new places that atoms could be added to the surface
+		# I.e. find all the new square and triangle surfaces created by adding this atom to the nanoparticle.
+		# This involves finding all the square and triangle surfaces involving this new atom and its neighbours
 		indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
 		#print('getting triangle surfaces')
 		triangles = get_applied_three_fold_sites(surface_neighbourlist,triangles,surface_atoms_turned_bulk,indices_to_explore)
@@ -183,6 +193,7 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore)
 		all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices))
 
+		# Tag all the square surfaces. 
 		tags = system.get_tags() #get_chemical_symbols()
 		for index in range(len(tags)):
 			tags[index] = 0 #'Ag'
@@ -191,7 +202,20 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 				tags[index] = 1 #'Fe'
 		system.set_tags(tags) #set_chemical_symbols(tags)
 
+		# Write data to the trajectory file. 
 		#print('Adding image to Traj')
+		with Trajectory(traj_path,'a') as traj_file:
+			traj_file.write(system.copy())
+
+	# Adding Bromines as capping agents
+	rest_of_atoms_to_cap = list(set(surface_neighbourlist.keys()))
+	shuffle(rest_of_atoms_to_cap)
+	for index in rest_of_atoms_to_cap:
+		cap_position = determine_where_to_place_capping_Br(index,system,full_neighbourlist)
+		# Create the new atom and place it in the nanoparticle system. 
+		atom = Atom(symbol='Br',position=cap_position,tag=counter)		
+		system.append(atom)
+		# Write data to the trajectory file. 
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
@@ -199,3 +223,9 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 	print('The simulation has now finished')
 	print('----------------------------------')
 	return traj_path
+
+
+
+
+
+

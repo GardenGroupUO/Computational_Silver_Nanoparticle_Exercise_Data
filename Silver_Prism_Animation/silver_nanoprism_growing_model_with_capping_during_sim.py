@@ -42,7 +42,6 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	# read in the initial nanoparticle system
 	system = read(path_to_input)
 	system.set_tags(0)
-	system.set_calculator(EMT())
 
 	# Other initial variables
 	traj_path = '.'.join(path_to_input.split('.')[:-1:])+'_animation.traj'
