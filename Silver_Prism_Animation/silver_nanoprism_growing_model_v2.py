@@ -244,10 +244,6 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		# We now want to determine the new places that atoms could be added to the surface
 		# I.e. find all the new square and triangle surfaces created by adding this atom to the nanoparticle.
 		# This involves finding all the square and triangle surfaces involving this new atom and its neighbours
-
-		#if cap:
-		#	indices_to_explore = []
-		#else:
 		indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
 		#print('getting triangle surfaces')
 		triangles = get_applied_three_fold_sites(surface_neighbourlist,triangles,surface_atoms_turned_bulk,indices_to_explore)
@@ -257,6 +253,11 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		#print('getting new possible positions')
 		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore)
 		all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) # add the nearly_squares to the history of nearly_squares if needed for debugging. 
+
+		# remove all 
+		if cap:
+			import pdb; pdb.set_trace()
+
 
 		# Tag all the square surfaces. 
 		tags = system.get_tags() #get_chemical_symbols()
