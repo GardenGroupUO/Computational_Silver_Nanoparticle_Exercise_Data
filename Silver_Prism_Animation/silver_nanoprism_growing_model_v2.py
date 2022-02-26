@@ -91,11 +91,6 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
-		print('----------------------------------')
-		print('Adding atom '+str(counter))
-		print('squares: '+str(len(squ_pos_new_atoms)))
-		print('triangles: '+str(len(tri_pos_new_atoms)))
-
 		# Determine when the simulation is over
 		any_sites_available = len(squ_pos_new_atoms+tri_pos_new_atoms)
 		if any_sites_available == 0:
@@ -152,6 +147,16 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 					positions_to_add_index = squ_pos_new_atoms_indices
 			symbol = 'Br'
 			cap = True
+
+		print('----------------------------------')
+		if add_atom_to_square_surface:
+			print('Adding atom '+str(counter)+' ('+str(symbol)+') to square site.')
+		elif any_triangle_sites_available:
+			print('Adding atom '+str(counter)+' ('+str(symbol)+') to triangle site.')
+		elif perform_capping:
+			print('Adding Capping Agent.')
+		print('squares: '+str(len(squ_pos_new_atoms)))
+		print('triangles: '+str(len(tri_pos_new_atoms)))
 
 		# Determine which site to add an atom to.
 		random_number = randrange(0, len(positions_to_add), 1)
@@ -262,6 +267,10 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
+	print('----------------------------------')
+	print('Adding atom '+str(counter))
+	print('squares: '+str(len(squ_pos_new_atoms)))
+	print('triangles: '+str(len(tri_pos_new_atoms)))
 	print('----------------------------------')
 	print('The simulation has now finished')
 	print('----------------------------------')
