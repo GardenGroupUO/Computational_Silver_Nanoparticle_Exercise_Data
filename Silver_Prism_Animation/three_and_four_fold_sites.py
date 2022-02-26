@@ -313,7 +313,7 @@ def get_positions_for_new_atoms(system,triangles,squares,nearly_squares):
 
 	return tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices
 
-def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,       tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore,      bromine_indices):
+def update_positions_for_new_atoms(system,triangles,squares,nearly_squares,       tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore):
 	for index in surface_atoms_turned_bulk:
 		for ii in range(len(tri_pos_new_atoms_indices)-1,-1,-1):
 			if index in tri_pos_new_atoms_indices[ii]:

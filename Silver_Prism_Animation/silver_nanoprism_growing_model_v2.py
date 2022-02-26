@@ -1,4 +1,5 @@
 import os
+from copy import deepcopy
 
 from ase import Atom
 from ase.io import read, write, Trajectory
@@ -22,7 +23,7 @@ except Exception as ee:
 from ase.calculators.emt import EMT
 from ase.optimize import FIRE
 
-from random import uniform, randrange
+from random import uniform, randrange, choice, shuffle
 
 def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surface_111_surface_bromine_capping,max_no_of_atoms_added_in_simulation=1000):
 
@@ -60,10 +61,11 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	# Also get the position of where to place the next atom on the surface
 	print('Getting surface neighbour lists')
 	surface_neighbourlist = get_surface_atoms(system,distances_between_atoms,full_neighbourlist,cutoff,last_index=True)
+	surface_neighbourlist_excluding_capping = deepcopy(surface_neighbourlist)
 	print('getting triangle surfaces')
-	triangles = get_three_fold_sites(surface_neighbourlist)
+	triangles = get_three_fold_sites(surface_neighbourlist_excluding_capping)
 	print('getting square surfaces')
-	squares, nearly_squares = get_four_fold_sites(surface_neighbourlist,system,cutoff)
+	squares, nearly_squares = get_four_fold_sites(surface_neighbourlist_excluding_capping,system,cutoff)
 	print('getting new possible positions')
 	tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = get_positions_for_new_atoms(system,triangles,squares,nearly_squares)
 
@@ -84,17 +86,17 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 	# Make a note of history of surface data, including 100 surfaces. 
 	surface_data = []
-	surface_data.append(surface_neighbourlist.copy())
+	surface_data.append(surface_neighbourlist_excluding_capping.copy())
 	all_squares = []
 	all_squares.append(list(squares))
 	all_squ_pos_new_atoms_indices = []
 	all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) 
 
-	bromine_indices = []
+	atoms_to_not_add_new_atoms_to = []
 
 	for counter in range(1,max_no_of_atoms_added_in_simulation+1):
 		# Determine when the simulation is over
-		any_sites_available = len(squ_pos_new_atoms)
+		any_sites_available = len(squ_pos_new_atoms) + len(tri_pos_new_atoms)
 		if any_sites_available == 0:
 			break
 		any_square_sites_available = len(squ_pos_new_atoms)
@@ -135,23 +137,30 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 			symbol = nanoparticle_symbol
 			cap = False
 		elif perform_capping:
-			if any_square_sites_available == 0:
-				print('Adding to Triangle')
-				positions_to_add = tri_pos_new_atoms
-				positions_to_add_index = tri_pos_new_atoms_indices
-			elif any_triangle_sites_available == 0: 
-				print('Adding to Square')
-				positions_to_add = squ_pos_new_atoms
-				positions_to_add_index = squ_pos_new_atoms_indices
-			else:
-				add_Br_to_square_or_triangle = uniform(0, 1)
-				if add_Br_to_square_or_triangle > 0.5:
-					positions_to_add = tri_pos_new_atoms
-					positions_to_add_index = tri_pos_new_atoms_indices
-				else:
-					positions_to_add = squ_pos_new_atoms
-					positions_to_add_index = squ_pos_new_atoms_indices
-			symbol = 'Br'
+			#import pdb; pdb.set_trace()
+			while True:
+				add_capping_to_which_surface_atom = choice(list(surface_neighbourlist_excluding_capping.keys()))
+				no_of_neighbours = len(full_neighbourlist[add_capping_to_which_surface_atom])
+
+				has_squ_surface = False
+				for squ_indices in squ_pos_new_atoms_indices:
+					if add_capping_to_which_surface_atom in squ_indices:
+						has_squ_surface = True
+						break
+				if has_squ_surface:
+					if no_of_neighbours <= 8:
+						break
+
+				has_tri_surface = False
+				for tri_indices in tri_pos_new_atoms_indices:
+					if add_capping_to_which_surface_atom in tri_indices:
+						has_tri_surface = True
+						break
+				if has_tri_surface:
+					if no_of_neighbours <= 9:
+						break
+				
+			atoms_to_not_add_new_atoms_to.append(add_capping_to_which_surface_atom)
 			cap = True
 
 		print('----------------------------------')
@@ -164,102 +173,113 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 		print('squares: '+str(len(squ_pos_new_atoms)))
 		print('triangles: '+str(len(tri_pos_new_atoms)))
 
-		# Determine which site to add an atom to.
-		random_number = randrange(0, len(positions_to_add), 1)
-		random_position = positions_to_add[random_number].copy()
-		index_set_to_check = tuple(positions_to_add_index[random_number])
+		if not cap:
+			# Determine which site to add an atom to.
+			random_number = randrange(0, len(positions_to_add), 1)
+			random_position = positions_to_add[random_number].copy()
+			index_set_to_check = tuple(positions_to_add_index[random_number])
 
-		# Remove this position from the list, as we are now adding an atom to this position
-		del positions_to_add[random_number]
-		del positions_to_add_index[random_number]
+			# Remove this position from the list, as we are now adding an atom to this position
+			del positions_to_add[random_number]
+			del positions_to_add_index[random_number]
 
-		# If this position is found in the squ_pos_new_atoms and tri_pos_new_atoms lists, 
-		# remove them to prevent another atom being added to this site, as we are adding an atom to this site now.  
-		if any([same_position(random_position,atom.position) for atom in system]):
-			for index in range(len(squ_pos_new_atoms)-1,-1,-1):
-				check_position = squ_pos_new_atoms[index]
-				if same_position(random_position,check_position):
-					del squ_pos_new_atoms[index]
-					del squ_pos_new_atoms_indices[index]
-			for index in range(len(tri_pos_new_atoms)-1,-1,-1):
-				check_position = tri_pos_new_atoms[index]
-				if same_position(random_position,check_position):
-					del tri_pos_new_atoms[index]
-					del tri_pos_new_atoms_indices[index]
+			# If this position is found in the squ_pos_new_atoms and tri_pos_new_atoms lists, 
+			# remove them to prevent another atom being added to this site, as we are adding an atom to this site now.  
+			if any([same_position(random_position,atom.position) for atom in system]):
+				for index in range(len(squ_pos_new_atoms)-1,-1,-1):
+					check_position = squ_pos_new_atoms[index]
+					if same_position(random_position,check_position):
+						del squ_pos_new_atoms[index]
+						del squ_pos_new_atoms_indices[index]
+				for index in range(len(tri_pos_new_atoms)-1,-1,-1):
+					check_position = tri_pos_new_atoms[index]
+					if same_position(random_position,check_position):
+						del tri_pos_new_atoms[index]
+						del tri_pos_new_atoms_indices[index]
 
-		# remove the index_set_to_check from the triangles, nearly_squares, and squares lists.
-		if len(index_set_to_check) == 3:
-			if index_set_to_check in triangles:
-				triangles.remove(index_set_to_check)
-			if index_set_to_check in nearly_squares:
-				nearly_squares.remove(index_set_to_check)
-		elif len(index_set_to_check) == 4:
-			if index_set_to_check in squares:
-				squares.remove(index_set_to_check)
+			# remove the index_set_to_check from the triangles, nearly_squares, and squares lists.
+			if len(index_set_to_check) == 3:
+				if index_set_to_check in triangles:
+					triangles.remove(index_set_to_check)
+				if index_set_to_check in nearly_squares:
+					nearly_squares.remove(index_set_to_check)
+			elif len(index_set_to_check) == 4:
+				if index_set_to_check in squares:
+					squares.remove(index_set_to_check)
 
-		# Create the new atom and place it in the nanoparticle system. 
-		atom = Atom(symbol=symbol,position=random_position,tag=counter)		
-		system.append(atom)
-		if cap:
-			bromine_indices.append(len(cluster_positions)-1)
+			# Create the new atom and place it in the nanoparticle system. 
+			atom = Atom(symbol=symbol,position=random_position,tag=counter)		
+			system.append(atom)
 
-		# Add this atom to the full_neighbourlist <- FULL NEIGHBOUR LIST
-		cluster_positions = system.get_positions()
-		#print('making initial full neighbours matrix')
-		end_of_system = len(cluster_positions)-1
-		for index in range(end_of_system):
-			distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
-			distances_between_atoms[(index,end_of_system)] = distance
-			if distance <= cutoff:
-				full_neighbourlist.set(index,end_of_system)
-
-		# Check that this newly added atom was placed in a position that it has neighbours.
-		# If it does not, we dont want that to happen, all our atoms added should have at least one neighbour
-		# If something has gone wrong, this exception should tell us by having a fit. 
-		try:
-			len(full_neighbourlist.get(end_of_system))
-		except:
-			print('check')
-			dists = []
+			# Add this atom to the full_neighbourlist <- FULL NEIGHBOUR LIST
+			cluster_positions = system.get_positions()
+			#print('making initial full neighbours matrix')
 			end_of_system = len(cluster_positions)-1
 			for index in range(end_of_system):
 				distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
-				dists.append(distance)
-			print(min(dists))
-			import pdb; pdb.set_trace()
-			return traj_path
-			
+				distances_between_atoms[(index,end_of_system)] = distance
+				if distance <= cutoff:
+					full_neighbourlist.set(index,end_of_system)
 
-		# Determine if any surface atoms that neighbour the newly added neighbour have now become bulk atoms. 
-		# <- NEIGHBOUR LIST OF ONLY THE SURFACE
-		#print('Getting surface neighbour lists')
-		surface_atoms_turned_bulk = []
-		for index in full_neighbourlist.get(end_of_system):
-			if len(full_neighbourlist.get(index)) == 12:
-				# This atom is now a bulk atom, so remove it from surface_neighbourlist
-				surface_neighbourlist.remove(index)
-				surface_atoms_turned_bulk.append(index)
-			else:
-				# Add that this newly added atom neighbours the index atom in the surface_neighbourlist
-				surface_neighbourlist.set(index,end_of_system)
-		surface_data.append(surface_neighbourlist.copy()) # add this to the history of the surface information for debugging if needed
+			# Check that this newly added atom was placed in a position that it has neighbours.
+			# If it does not, we dont want that to happen, all our atoms added should have at least one neighbour
+			# If something has gone wrong, this exception should tell us by having a fit. 
+			try:
+				len(full_neighbourlist.get(end_of_system))
+			except:
+				print('check')
+				dists = []
+				end_of_system = len(cluster_positions)-1
+				for index in range(end_of_system):
+					distance = get_distance(cluster_positions[index],cluster_positions[end_of_system])
+					dists.append(distance)
+				print(min(dists))
+				import pdb; pdb.set_trace()
+				return traj_path
+				
 
-		# We now want to determine the new places that atoms could be added to the surface
-		# I.e. find all the new square and triangle surfaces created by adding this atom to the nanoparticle.
-		# This involves finding all the square and triangle surfaces involving this new atom and its neighbours
-		indices_to_explore = surface_neighbourlist[end_of_system] + [end_of_system]
-		#print('getting triangle surfaces')
-		triangles = get_applied_three_fold_sites(surface_neighbourlist,triangles,surface_atoms_turned_bulk,indices_to_explore)
-		#print('getting square surfaces')
-		squares, nearly_squares = get_applied_four_fold_sites(surface_neighbourlist,system,cutoff,   squares,nearly_squares,   surface_atoms_turned_bulk,indices_to_explore)
-		all_squares.append(list(squares)) # add the squares to the history of squares if needed for debugging. 
-		#print('getting new possible positions')
-		tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore,      bromine_indices)
-		all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) # add the nearly_squares to the history of nearly_squares if needed for debugging. 
+			# Determine if any surface atoms that neighbour the newly added neighbour have now become bulk atoms. 
+			# <- NEIGHBOUR LIST OF ONLY THE SURFACE
+			#print('Getting surface neighbour lists')
+			surface_atoms_turned_bulk = []
+			for index in full_neighbourlist.get(end_of_system):
+				if len(full_neighbourlist.get(index)) == 12:
+					# This atom is now a bulk atom, so remove it from surface_neighbourlist and surface_neighbourlist_excluding_capping
+					surface_neighbourlist_excluding_capping.remove(index)
+					surface_neighbourlist.remove(index)
+					surface_atoms_turned_bulk.append(index)
+				else:
+					# Add that this newly added atom neighbours the index atom in the surface_neighbourlist_excluding_capping
+					surface_neighbourlist.set(index,end_of_system)
+					surface_neighbourlist_excluding_capping.set(index,end_of_system)
+			surface_data.append(surface_neighbourlist_excluding_capping.copy()) # add this to the history of the surface information for debugging if needed
 
-		# remove all 
-		if cap:
-			for bromine_index in bromine_indices:
+			# We now want to determine the new places that atoms could be added to the surface
+			# I.e. find all the new square and triangle surfaces created by adding this atom to the nanoparticle.
+			# This involves finding all the square and triangle surfaces involving this new atom and its neighbours
+			indices_to_explore = surface_neighbourlist_excluding_capping[end_of_system] + [end_of_system]
+			#print('getting triangle surfaces')
+			triangles = get_applied_three_fold_sites(surface_neighbourlist_excluding_capping,triangles,surface_atoms_turned_bulk,indices_to_explore)
+			#print('getting square surfaces')
+			squares, nearly_squares = get_applied_four_fold_sites(surface_neighbourlist_excluding_capping,system,cutoff,   squares,nearly_squares,   surface_atoms_turned_bulk,indices_to_explore)
+			all_squares.append(list(squares)) # add the squares to the history of squares if needed for debugging. 
+			#print('getting new possible positions')
+			tri_pos_new_atoms, tri_pos_new_atoms_indices, nearly_squ_pos_new_atoms, nearly_squ_pos_new_atoms_indices, squ_pos_new_atoms, squ_pos_new_atoms_indices = update_positions_for_new_atoms(system,triangles,squares,nearly_squares,      tri_pos_new_atoms,tri_pos_new_atoms_indices,nearly_squ_pos_new_atoms,nearly_squ_pos_new_atoms_indices,squ_pos_new_atoms,squ_pos_new_atoms_indices,      surface_atoms_turned_bulk,indices_to_explore)
+			all_squ_pos_new_atoms_indices.append(list(squ_pos_new_atoms_indices)) # add the nearly_squares to the history of nearly_squares if needed for debugging. 
+
+			# Tag all the square surfaces. 
+			tags = system.get_tags() #get_chemical_symbols()
+			for index in range(len(tags)):
+				tags[index] = 0 #'Ag'
+			for indices in squares: #squ_pos_new_atoms_indices:
+				for index in indices:
+					tags[index] = 1 #'Fe'
+			system.set_tags(tags) #set_chemical_symbols(tags)
+
+		else:
+			#import pdb; pdb.set_trace()
+			system[add_capping_to_which_surface_atom].symbol = 'Br'
+			for bromine_index in atoms_to_not_add_new_atoms_to:
 				print('CAPPING')
 				print('##########')
 				for index in range(len(triangles)-1,-1,-1):
@@ -299,15 +319,8 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 						del nearly_squ_pos_new_atoms[index]
 						del nearly_squ_pos_new_atoms_indices[index]
 				print('##########')
-
-		# Tag all the square surfaces. 
-		tags = system.get_tags() #get_chemical_symbols()
-		for index in range(len(tags)):
-			tags[index] = 0 #'Ag'
-		for indices in squares: #squ_pos_new_atoms_indices:
-			for index in indices:
-				tags[index] = 1 #'Fe'
-		system.set_tags(tags) #set_chemical_symbols(tags)
+				if bromine_index in surface_neighbourlist_excluding_capping.keys():
+					surface_neighbourlist_excluding_capping.remove(bromine_index)
 
 		# Write data to the trajectory file. 
 		#print('Adding image to Traj')
@@ -321,6 +334,14 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 	print('----------------------------------')
 	print('The simulation has now finished')
 	print('----------------------------------')
+	rest_of_atoms_to_cap = list(set(surface_neighbourlist.keys()) ^ set(atoms_to_not_add_new_atoms_to))
+
+	shuffle(rest_of_atoms_to_cap)
+	for index in rest_of_atoms_to_cap:
+		system[index].symbol = 'Br'
+		with Trajectory(traj_path,'a') as traj_file:
+			traj_file.write(system.copy())
+
 	return traj_path
 
 
