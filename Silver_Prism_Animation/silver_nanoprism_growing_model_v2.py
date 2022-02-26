@@ -112,14 +112,17 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 				if any_square_sites_available == 0:
 					continue
 				add_atom_to_square_surface = True
+				break
 			elif barrier_100_111 < square_triangle_or_cap <= barrier_100_cap:
 				if any_triangle_sites_available == 0:
 					continue
 				add_atom_to_triangle_surface = True
+				break
 			else:
 				if any_sites_available == 0:
 					continue
 				perform_capping = True
+				break
 
 		# Set up system based on if we are adding an atom to a 100 (square) or 111 (triangle) surface, or capping.
 		if add_atom_to_square_surface:
