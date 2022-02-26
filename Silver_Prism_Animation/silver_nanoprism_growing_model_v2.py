@@ -1,4 +1,5 @@
 import os
+import numpy as np
 from copy import deepcopy
 
 from ase import Atom
@@ -278,9 +279,20 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 		else:
 			#import pdb; pdb.set_trace()
-			system[add_capping_to_which_surface_atom].symbol = 'Br'
+			#system[add_capping_to_which_surface_atom].symbol = 'Br'
+
+			com = system.get_center_of_mass()
+			pos = system[add_capping_to_which_surface_atom].position
+			vector = pos - com
+			vector /= np.linalg.norm(vector)
+			cap_position = pos + vector*2.5
+
+			# Create the new atom and place it in the nanoparticle system. 
+			atom = Atom(symbol='Br',position=cap_position,tag=counter)		
+			system.append(atom)
+
 			for bromine_index in atoms_to_not_add_new_atoms_to:
-				print('CAPPING')
+				#print('CAPPING')
 				#print('##########')
 				for index in range(len(triangles)-1,-1,-1):
 					if bromine_index in triangles[index]:
@@ -338,7 +350,18 @@ def silver_nanoprism_growing_model(path_to_input,chance_of_creating_new_100_surf
 
 	shuffle(rest_of_atoms_to_cap)
 	for index in rest_of_atoms_to_cap:
-		system[index].symbol = 'Br'
+
+		com = system.get_center_of_mass()
+		pos = system[index].position
+		vector = pos - com
+		vector /= np.linalg.norm(vector)
+		cap_position = pos + vector*2.5
+
+		# Create the new atom and place it in the nanoparticle system. 
+		atom = Atom(symbol='Br',position=cap_position,tag=counter)		
+		system.append(atom)
+
+
 		with Trajectory(traj_path,'a') as traj_file:
 			traj_file.write(system.copy())
 
