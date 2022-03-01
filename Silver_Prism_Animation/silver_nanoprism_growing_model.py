@@ -25,7 +25,7 @@ except Exception as ee:
 
 from random import uniform, randrange, shuffle
 
-def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface,max_no_of_atoms_added_in_simulation=1000):
+def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surface,max_no_of_atoms_added_in_simulation=1000,cap_at_end_of_simulation=False):
 
 	if not (0.0 <= change_of_creating_new_100_surface <= 1.0):
 		raise Exception('change_of_creating_new_100_surface must be between 0.0 and 1.0. You gave change_of_creating_new_100_surface='+str(change_of_creating_new_100_surface))
@@ -208,16 +208,17 @@ def silver_nanoprism_growing_model(path_to_input,change_of_creating_new_100_surf
 			traj_file.write(system.copy())
 
 	# Adding Bromines as capping agents
-	rest_of_atoms_to_cap = list(set(surface_neighbourlist.keys()))
-	shuffle(rest_of_atoms_to_cap)
-	for index in rest_of_atoms_to_cap:
-		cap_position = determine_where_to_place_capping_Br(index,system,full_neighbourlist)
-		# Create the new atom and place it in the nanoparticle system. 
-		atom = Atom(symbol='Br',position=cap_position,tag=counter)		
-		system.append(atom)
-		# Write data to the trajectory file. 
-		with Trajectory(traj_path,'a') as traj_file:
-			traj_file.write(system.copy())
+	if cap_at_end_of_simulation:
+		rest_of_atoms_to_cap = list(set(surface_neighbourlist.keys()))
+		shuffle(rest_of_atoms_to_cap)
+		for index in rest_of_atoms_to_cap:
+			cap_position = determine_where_to_place_capping_Br(index,system,full_neighbourlist)
+			# Create the new atom and place it in the nanoparticle system. 
+			atom = Atom(symbol='Br',position=cap_position,tag=counter)		
+			system.append(atom)
+			# Write data to the trajectory file. 
+			with Trajectory(traj_path,'a') as traj_file:
+				traj_file.write(system.copy())
 
 	print('----------------------------------')
 	print('The simulation has now finished')
